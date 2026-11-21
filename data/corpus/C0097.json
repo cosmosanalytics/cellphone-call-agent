@@ -1,0 +1,135 @@
+{
+ "call_id": "C0097",
+ "intent": "request_credit",
+ "mood": "neutral",
+ "account_id": "A100211",
+ "phone": "415-555-0100",
+ "pin": "6164",
+ "names": [
+  "Priya",
+  "Scott"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 17,
+  "payments_made": 20,
+  "past_due": true,
+  "trips": [
+   [
+    "Spain",
+    4
+   ]
+  ],
+  "last_courtesy_credit": null,
+  "device": "Galaxy S25"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.38
+  },
+  {
+   "role": "caller",
+   "text": "I was charged for roaming on my last bill. Can you take that off?",
+   "acts": [
+    "request_credit"
+   ],
+   "act": "request_credit",
+   "start": 7.17,
+   "end": 10.66
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.29,
+   "end": 17.82
+  },
+  {
+   "role": "caller",
+   "text": "It's 415-555-0100.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 18.47,
+   "end": 22.16
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 22.99,
+   "end": 26.48
+  },
+  {
+   "role": "caller",
+   "text": "It's 6164.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 27.13,
+   "end": 28.77
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Priya, you're verified. I see you're on Unlimited Starter. I've applied a one-time courtesy credit of $40.00 for the roaming charges. You'll see it on your next bill. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_credit",
+    "anything_else"
+   ],
+   "act": "answer_credit",
+   "start": 29.21,
+   "end": 45.28
+  },
+  {
+   "role": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 46.05,
+   "end": 48.11
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 48.69,
+   "end": 53.51
+  }
+ ],
+ "facts": [
+  {
+   "intent": "request_credit",
+   "plan_id": "UNS",
+   "approved": true,
+   "reason": null,
+   "amount": 40.0
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "heldout",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 54.28
+}

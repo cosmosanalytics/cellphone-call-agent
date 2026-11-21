@@ -1,0 +1,150 @@
+{
+ "call_id": "C0036",
+ "intent": "ask_roaming",
+ "mood": "neutral",
+ "account_id": "A100238",
+ "phone": "720-555-0132",
+ "pin": "6267",
+ "names": [
+  "Olivia",
+  "Walker"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 98,
+  "payments_made": 15,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "iPhone 16"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.16
+  },
+  {
+   "role": "caller",
+   "text": "Hi, I'm traveling abroad soon and want to know what roaming will cost.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.81,
+   "end": 11.55
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 12.03,
+   "end": 18.66
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 720-555-0132.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 19.18,
+   "end": 24.13
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 24.65,
+   "end": 28.24
+  },
+  {
+   "role": "caller",
+   "text": "It's 6267.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 28.88,
+   "end": 30.59
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Olivia, you're verified. I see you're on Unlimited Plus. Which country are you traveling to, and for how many days?",
+   "acts": [
+    "verify_ok",
+    "ask_country"
+   ],
+   "act": "verify_ok",
+   "start": 31.26,
+   "end": 40.48
+  },
+  {
+   "role": "caller",
+   "text": "I'm going to Germany for 10 days.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 41.28,
+   "end": 43.61
+  },
+  {
+   "role": "agent",
+   "text": "Good news, roaming in Germany is included on your plan at no extra charge, so you can use your phone there normally. Is there anything else I can help you with today?",
+   "acts": [
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 44.1,
+   "end": 54.34
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 55.07,
+   "end": 57.29
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 58.07,
+   "end": 62.66
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "UNP",
+   "country": "Germany",
+   "zone": 2,
+   "roaming_included": true
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 63.23
+}

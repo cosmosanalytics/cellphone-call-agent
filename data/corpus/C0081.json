@@ -1,0 +1,120 @@
+{
+ "call_id": "C0081",
+ "intent": "ask_bill",
+ "mood": "neutral",
+ "account_id": "A100225",
+ "phone": "617-555-0140",
+ "pin": "5431",
+ "names": [
+  "Maria",
+  "Martinez"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 9,
+  "payments_made": 16,
+  "past_due": false,
+  "trips": [
+   [
+    "Germany",
+    6
+   ]
+  ],
+  "last_courtesy_credit": null,
+  "device": "Pixel 9"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.13
+  },
+  {
+   "role": "caller",
+   "text": "Why is my bill so high this month?",
+   "acts": [
+    "ask_bill"
+   ],
+   "act": "ask_bill",
+   "start": 6.87,
+   "end": 9.14
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 9.9,
+   "end": 16.77
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 617-555-0140 and my PIN is 5431.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 17.26,
+   "end": 24.6
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Maria, you're verified. I see you're on Basic 5 GB. Your current bill is $168.75. That's your Basic 5 GB plan at $35.00, the Pixel 9 installment of $27.00, taxes and fees of $6.75, plus data overage of $40.00 for 4 GB, plus roaming in Germany for 6 days at $60.00. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_bill",
+    "anything_else"
+   ],
+   "act": "answer_bill",
+   "start": 25.26,
+   "end": 56.37
+  },
+  {
+   "role": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 57.26,
+   "end": 60.1
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 60.88,
+   "end": 65.52
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_bill",
+   "plan_id": "BAS",
+   "total": 168.75,
+   "roaming": [
+    {
+     "country": "Germany",
+     "zone": 2,
+     "included": false
+    }
+   ]
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 66.27
+}

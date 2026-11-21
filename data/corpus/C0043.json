@@ -1,0 +1,110 @@
+{
+ "call_id": "C0043",
+ "intent": "ask_roaming",
+ "mood": "neutral",
+ "account_id": "A100201",
+ "phone": "415-555-0130",
+ "pin": "9455",
+ "names": [
+  "Nadia",
+  "Johnson"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 7,
+  "payments_made": 1,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.22
+  },
+  {
+   "role": "caller",
+   "text": "I'm going to Canada next month for 6 days. Do I need a day pass?",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 7.04,
+   "end": 11.83
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 12.22,
+   "end": 19.27
+  },
+  {
+   "role": "caller",
+   "text": "The number is 415-555-0130, PIN 9455.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 20.11,
+   "end": 27.65
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Nadia, you're verified. I see you're on Unlimited Plus. Good news, roaming in Canada is included on your plan at no extra charge, so you can use your phone there normally. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 28.44,
+   "end": 44.12
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 44.53,
+   "end": 46.57
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 47.36,
+   "end": 51.93
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "UNP",
+   "country": "Canada",
+   "zone": 1,
+   "roaming_included": true
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 52.5
+}

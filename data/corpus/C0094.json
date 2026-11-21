@@ -1,0 +1,151 @@
+{
+ "call_id": "C0094",
+ "intent": "ask_roaming",
+ "mood": "neutral",
+ "account_id": "A100259",
+ "phone": "415-555-0144",
+ "pin": "0807",
+ "names": [
+  "Wei",
+  "Patel"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 76,
+  "payments_made": 6,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.0
+  },
+  {
+   "role": "caller",
+   "text": "Will my phone work in Spain? I'll be there for 12 days.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.37,
+   "end": 9.73
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 10.12,
+   "end": 16.98
+  },
+  {
+   "role": "caller",
+   "text": "It's 415-555-0144.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 17.4,
+   "end": 20.85
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 21.65,
+   "end": 25.09
+  },
+  {
+   "role": "caller",
+   "text": "It's 0807.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 25.51,
+   "end": 27.35
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Wei, you're verified. I see you're on Unlimited Starter. Roaming in Spain isn't included on your plan. The Europe day pass is $10.00 per day, so 12 days would be $120.00. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 28.1,
+   "end": 50.44
+  },
+  {
+   "role": "caller",
+   "text": "This is really frustrating.",
+   "acts": [
+    "express_frustration"
+   ],
+   "act": "express_frustration",
+   "start": 51.09,
+   "end": 52.52
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "acts": [
+    "empathize",
+    "anything_else"
+   ],
+   "act": "empathize",
+   "start": 53.34,
+   "end": 64.39
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 65.28,
+   "end": 67.23
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 68.01,
+   "end": 72.78
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "UNS",
+   "country": "Spain",
+   "zone": 2,
+   "roaming_included": false
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "heldout",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 73.38
+}

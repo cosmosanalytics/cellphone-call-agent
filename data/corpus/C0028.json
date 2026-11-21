@@ -1,0 +1,150 @@
+{
+ "call_id": "C0028",
+ "intent": "ask_roaming",
+ "mood": "neutral",
+ "account_id": "A100252",
+ "phone": "720-555-0110",
+ "pin": "4125",
+ "names": [
+  "Marcus",
+  "Nguyen"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 5,
+  "payments_made": 22,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.16
+  },
+  {
+   "role": "caller",
+   "text": "Hi, I'm traveling abroad soon and want to know what roaming will cost.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.84,
+   "end": 11.38
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.91,
+   "end": 18.6
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 720-555-0110.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 19.31,
+   "end": 24.56
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 25.12,
+   "end": 28.71
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 4125.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 29.49,
+   "end": 31.92
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Marcus, you're verified. I see you're on Unlimited Starter. Which country are you traveling to, and for how many days?",
+   "acts": [
+    "verify_ok",
+    "ask_country"
+   ],
+   "act": "verify_ok",
+   "start": 32.61,
+   "end": 41.78
+  },
+  {
+   "role": "caller",
+   "text": "I'm going to Italy for 4 days.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 42.55,
+   "end": 44.94
+  },
+  {
+   "role": "agent",
+   "text": "Roaming in Italy isn't included on your plan. The Europe day pass is $10.00 per day, so 4 days would be $40.00. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "acts": [
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 45.59,
+   "end": 61.16
+  },
+  {
+   "role": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 61.79,
+   "end": 64.58
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 65.32,
+   "end": 70.26
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "UNS",
+   "country": "Italy",
+   "zone": 2,
+   "roaming_included": false
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 70.89
+}

@@ -1,0 +1,172 @@
+{
+ "call_id": "C0055",
+ "intent": "ask_roaming",
+ "mood": "frustrated",
+ "account_id": "A100255",
+ "phone": "206-555-0163",
+ "pin": "1104",
+ "names": [
+  "Marcus",
+  "Hall"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 6,
+  "payments_made": 15,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Galaxy S25"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 5.97
+  },
+  {
+   "role": "caller",
+   "text": "Honestly, I'm pretty annoyed. Hi, I'm traveling abroad soon and want to know what roaming will cost.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.56,
+   "end": 12.75
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "empathize",
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 13.26,
+   "end": 24.92
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 206-555-0163.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 25.64,
+   "end": 30.09
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 30.67,
+   "end": 34.07
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 1104.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 34.91,
+   "end": 36.9
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Marcus, you're verified. I see you're on Basic 5 GB. Which country are you traveling to, and for how many days?",
+   "acts": [
+    "verify_ok",
+    "ask_country"
+   ],
+   "act": "verify_ok",
+   "start": 37.48,
+   "end": 47.55
+  },
+  {
+   "role": "caller",
+   "text": "I'm going to Japan for 12 days.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 48.35,
+   "end": 50.59
+  },
+  {
+   "role": "agent",
+   "text": "Roaming in Japan isn't included on your plan. The Asia-Pacific and South America day pass is $15.00 per day, so 12 days would be $180.00. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "acts": [
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 51.26,
+   "end": 69.41
+  },
+  {
+   "role": "caller",
+   "text": "This is really frustrating.",
+   "acts": [
+    "express_frustration"
+   ],
+   "act": "express_frustration",
+   "start": 69.81,
+   "end": 71.28
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "acts": [
+    "empathize",
+    "anything_else"
+   ],
+   "act": "empathize",
+   "start": 71.68,
+   "end": 82.3
+  },
+  {
+   "role": "caller",
+   "text": "Can I talk to a real person, please?",
+   "acts": [
+    "request_human"
+   ],
+   "act": "request_human",
+   "start": 82.86,
+   "end": 85.2
+  },
+  {
+   "role": "agent",
+   "text": "Of course. I'm transferring you to a specialist now. Please hold.",
+   "acts": [
+    "transfer_human"
+   ],
+   "act": "transfer_human",
+   "start": 85.92,
+   "end": 91.54
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "BAS",
+   "country": "Japan",
+   "zone": 3,
+   "roaming_included": false
+  }
+ ],
+ "outcome": "escalated",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 92.37
+}

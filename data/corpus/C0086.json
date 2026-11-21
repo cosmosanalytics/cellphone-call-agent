@@ -1,0 +1,150 @@
+{
+ "call_id": "C0086",
+ "intent": "ask_roaming",
+ "mood": "neutral",
+ "account_id": "A100216",
+ "phone": "617-555-0126",
+ "pin": "3265",
+ "names": [
+  "Robert",
+  "Martinez"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 66,
+  "payments_made": 5,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.09
+  },
+  {
+   "role": "caller",
+   "text": "Will my phone work in United Kingdom? I'll be there for 5 days.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.64,
+   "end": 9.85
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 10.25,
+   "end": 17.11
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 617-555-0126 and my PIN is 4376.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 17.58,
+   "end": 24.04
+  },
+  {
+   "role": "agent",
+   "text": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your four-digit account PIN again?",
+   "acts": [
+    "verify_fail"
+   ],
+   "act": "verify_fail",
+   "start": 24.75,
+   "end": 33.31
+  },
+  {
+   "role": "caller",
+   "text": "It's 617-555-0126.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 33.77,
+   "end": 37.45
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 38.09,
+   "end": 41.57
+  },
+  {
+   "role": "caller",
+   "text": "It's 3265.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 42.15,
+   "end": 43.54
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Robert, you're verified. I see you're on Unlimited Starter. Roaming in United Kingdom isn't included on your plan. The Europe day pass is $10.00 per day, so 5 days would be $50.00. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 43.91,
+   "end": 64.96
+  },
+  {
+   "role": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 65.51,
+   "end": 67.02
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 67.66,
+   "end": 72.24
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "UNS",
+   "country": "United Kingdom",
+   "zone": 2,
+   "roaming_included": false
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 73.05
+}

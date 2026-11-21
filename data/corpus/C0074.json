@@ -1,0 +1,109 @@
+{
+ "call_id": "C0074",
+ "intent": "ask_upgrade",
+ "mood": "neutral",
+ "account_id": "A100216",
+ "phone": "617-555-0126",
+ "pin": "3265",
+ "names": [
+  "Robert",
+  "Martinez"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 66,
+  "payments_made": 6,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 5.95
+  },
+  {
+   "role": "caller",
+   "text": "Can I upgrade my phone yet?",
+   "acts": [
+    "ask_upgrade"
+   ],
+   "act": "ask_upgrade",
+   "start": 6.41,
+   "end": 7.7
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 8.51,
+   "end": 15.52
+  },
+  {
+   "role": "caller",
+   "text": "The number is 617-555-0126, PIN 3265.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 16.41,
+   "end": 22.81
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Robert, you're verified. I see you're on Unlimited Starter. I'm sorry, you're not eligible to upgrade yet. Your Moto G has 6 of 24 installments paid and your plan needs 12. You can upgrade early if you pay off the remaining balance of $144.00. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_upgrade",
+    "anything_else"
+   ],
+   "act": "answer_upgrade",
+   "start": 23.54,
+   "end": 47.41
+  },
+  {
+   "role": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 48.15,
+   "end": 49.67
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 50.46,
+   "end": 55.0
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_upgrade",
+   "plan_id": "UNS",
+   "eligible": false,
+   "reason": "NOT_ENOUGH_PAYMENTS"
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 55.8
+}

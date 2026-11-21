@@ -1,0 +1,130 @@
+{
+ "call_id": "C0082",
+ "intent": "ask_roaming",
+ "mood": "neutral",
+ "account_id": "A100236",
+ "phone": "646-555-0167",
+ "pin": "0510",
+ "names": [
+  "Daniel",
+  "Patel"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 79,
+  "payments_made": 4,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "iPhone 16"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 5.83
+  },
+  {
+   "role": "caller",
+   "text": "Hi, I'm traveling abroad soon and want to know what roaming will cost.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.43,
+   "end": 10.07
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 10.66,
+   "end": 17.09
+  },
+  {
+   "role": "caller",
+   "text": "The number is 646-555-0167, PIN 0510.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 17.6,
+   "end": 24.08
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Daniel, you're verified. I see you're on Unlimited Plus. Which country are you traveling to, and for how many days?",
+   "acts": [
+    "verify_ok",
+    "ask_country"
+   ],
+   "act": "verify_ok",
+   "start": 24.46,
+   "end": 33.39
+  },
+  {
+   "role": "caller",
+   "text": "I'm going to Brazil for 4 days.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 34.04,
+   "end": 35.4
+  },
+  {
+   "role": "agent",
+   "text": "Roaming in Brazil isn't included on your plan. The Asia-Pacific and South America day pass is $15.00 per day, so 4 days would be $60.00. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "acts": [
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 35.95,
+   "end": 53.05
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 53.79,
+   "end": 55.04
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 55.71,
+   "end": 60.44
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "UNP",
+   "country": "Brazil",
+   "zone": 3,
+   "roaming_included": false
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 61.09
+}

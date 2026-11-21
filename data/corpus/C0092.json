@@ -1,0 +1,114 @@
+{
+ "call_id": "C0092",
+ "intent": "request_credit",
+ "mood": "neutral",
+ "account_id": "A100253",
+ "phone": "415-555-0109",
+ "pin": "4564",
+ "names": [
+  "Marcus",
+  "Lewis"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 54,
+  "payments_made": 20,
+  "past_due": true,
+  "trips": [
+   [
+    "Spain",
+    6
+   ]
+  ],
+  "last_courtesy_credit": null,
+  "device": "Pixel 9"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.02
+  },
+  {
+   "role": "caller",
+   "text": "I'd like a credit for the extra charges on my bill.",
+   "acts": [
+    "request_credit"
+   ],
+   "act": "request_credit",
+   "start": 6.84,
+   "end": 9.67
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 10.16,
+   "end": 16.99
+  },
+  {
+   "role": "caller",
+   "text": "It's 415-555-0109.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 17.72,
+   "end": 21.58
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 22.4,
+   "end": 25.75
+  },
+  {
+   "role": "caller",
+   "text": "It's 4564.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 26.41,
+   "end": 27.96
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Marcus, you're verified. I see you're on Unlimited Starter. That charge is $60.00, which is above what I can credit on this call, so I'm transferring you to a billing specialist who can review it. Please hold.",
+   "acts": [
+    "verify_ok",
+    "transfer_human"
+   ],
+   "act": "transfer_human",
+   "start": 28.31,
+   "end": 42.71
+  }
+ ],
+ "facts": [
+  {
+   "intent": "request_credit",
+   "plan_id": "UNS",
+   "approved": false,
+   "reason": "OVER_LIMIT",
+   "amount": 60.0
+  }
+ ],
+ "outcome": "escalated",
+ "verified": true,
+ "split": "heldout",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 43.07
+}

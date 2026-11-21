@@ -1,0 +1,10 @@
+streamlit>=1.40
+numpy
+scipy
+pandas
+soundfile
+jiwer
+scikit-learn
+faster-whisper==1.2.1
+piper-tts==1.8.0
+huggingface_hub

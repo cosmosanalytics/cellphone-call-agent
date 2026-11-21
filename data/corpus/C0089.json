@@ -1,0 +1,94 @@
+{
+ "call_id": "C0089",
+ "intent": "request_credit",
+ "mood": "neutral",
+ "account_id": "A100242",
+ "phone": "512-555-0114",
+ "pin": "8055",
+ "names": [
+  "Kevin",
+  "Garcia"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 119,
+  "payments_made": 12,
+  "past_due": false,
+  "trips": [
+   [
+    "India",
+    7
+   ]
+  ],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.35
+  },
+  {
+   "role": "caller",
+   "text": "I was charged for roaming on my last bill. Can you take that off?",
+   "acts": [
+    "request_credit"
+   ],
+   "act": "request_credit",
+   "start": 6.9,
+   "end": 10.78
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.21,
+   "end": 18.13
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 512-555-0114 and my PIN is 8055.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 18.98,
+   "end": 24.73
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Kevin, you're verified. I see you're on Unlimited Plus. That charge is $105.00, which is above what I can credit on this call, so I'm transferring you to a billing specialist who can review it. Please hold.",
+   "acts": [
+    "verify_ok",
+    "transfer_human"
+   ],
+   "act": "transfer_human",
+   "start": 25.36,
+   "end": 41.09
+  }
+ ],
+ "facts": [
+  {
+   "intent": "request_credit",
+   "plan_id": "UNP",
+   "approved": false,
+   "reason": "OVER_LIMIT",
+   "amount": 105.0
+  }
+ ],
+ "outcome": "escalated",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 41.86
+}

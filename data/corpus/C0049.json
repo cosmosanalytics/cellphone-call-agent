@@ -1,0 +1,110 @@
+{
+ "call_id": "C0049",
+ "intent": "request_credit",
+ "mood": "frustrated",
+ "account_id": "A100230",
+ "phone": "512-555-0104",
+ "pin": "7080",
+ "names": [
+  "Olivia",
+  "Smith"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 11,
+  "payments_made": 17,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.19
+  },
+  {
+   "role": "caller",
+   "text": "Honestly, I'm pretty annoyed. Can you waive the data overage charge? I didn't realize I went over.",
+   "acts": [
+    "request_credit"
+   ],
+   "act": "request_credit",
+   "start": 6.73,
+   "end": 11.46
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "empathize",
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 12.31,
+   "end": 23.57
+  },
+  {
+   "role": "caller",
+   "text": "It's 512-555-0104.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 23.97,
+   "end": 27.39
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 28.15,
+   "end": 31.54
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 7080.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 32.3,
+   "end": 34.27
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Olivia, you're verified. I see you're on Basic 5 GB. That charge is $60.00, which is above what I can credit on this call, so I'm transferring you to a billing specialist who can review it. Please hold.",
+   "acts": [
+    "verify_ok",
+    "transfer_human"
+   ],
+   "act": "transfer_human",
+   "start": 34.99,
+   "end": 50.46
+  }
+ ],
+ "facts": [
+  {
+   "intent": "request_credit",
+   "plan_id": "BAS",
+   "approved": false,
+   "reason": "OVER_LIMIT",
+   "amount": 60.0
+  }
+ ],
+ "outcome": "escalated",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 50.86
+}

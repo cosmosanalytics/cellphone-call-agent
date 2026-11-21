@@ -1,0 +1,129 @@
+{
+ "call_id": "C0075",
+ "intent": "ask_bill",
+ "mood": "neutral",
+ "account_id": "A100202",
+ "phone": "312-555-0171",
+ "pin": "1688",
+ "names": [
+  "Samuel",
+  "Brown"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 10,
+  "payments_made": 11,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Galaxy S25"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.36
+  },
+  {
+   "role": "caller",
+   "text": "Can you explain my bill? It's higher than usual.",
+   "acts": [
+    "ask_bill"
+   ],
+   "act": "ask_bill",
+   "start": 7.19,
+   "end": 9.99
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 10.44,
+   "end": 17.33
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 312-555-0171.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 18.1,
+   "end": 22.54
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 23.23,
+   "end": 26.62
+  },
+  {
+   "role": "caller",
+   "text": "It's 1688.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 27.37,
+   "end": 28.82
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Samuel, you're verified. I see you're on Basic 5 GB. Your current bill is $125.75. That's your Basic 5 GB plan at $35.00, the Galaxy S25 installment of $34.00, taxes and fees of $6.75, plus data overage of $50.00 for 5 GB. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_bill",
+    "anything_else"
+   ],
+   "act": "answer_bill",
+   "start": 29.65,
+   "end": 59.08
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 59.86,
+   "end": 61.67
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 62.33,
+   "end": 67.28
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_bill",
+   "plan_id": "BAS",
+   "total": 125.75,
+   "roaming": []
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 67.98
+}

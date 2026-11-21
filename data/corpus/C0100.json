@@ -1,0 +1,120 @@
+{
+ "call_id": "C0100",
+ "intent": "ask_upgrade",
+ "mood": "neutral",
+ "account_id": "A100219",
+ "phone": "206-555-0137",
+ "pin": "9557",
+ "names": [
+  "Jorge",
+  "Lewis"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 38,
+  "payments_made": 23,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": "2026-05-19",
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.01
+  },
+  {
+   "role": "caller",
+   "text": "I'd like to upgrade to the new iPhone 16. Am I eligible?",
+   "acts": [
+    "ask_upgrade"
+   ],
+   "act": "ask_upgrade",
+   "start": 6.64,
+   "end": 10.24
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 10.73,
+   "end": 17.35
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 206-555-0137.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 18.04,
+   "end": 22.47
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 23.2,
+   "end": 26.63
+  },
+  {
+   "role": "caller",
+   "text": "It's 0668.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 27.17,
+   "end": 28.78
+  },
+  {
+   "role": "agent",
+   "text": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your four-digit account PIN again?",
+   "acts": [
+    "verify_fail"
+   ],
+   "act": "verify_fail",
+   "start": 29.23,
+   "end": 37.61
+  },
+  {
+   "role": "caller",
+   "text": "The number is 206-555-0137, PIN 0668.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 38.24,
+   "end": 43.9
+  },
+  {
+   "role": "agent",
+   "text": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold.",
+   "acts": [
+    "transfer_human"
+   ],
+   "act": "transfer_human",
+   "start": 44.59,
+   "end": 52.62
+  }
+ ],
+ "facts": [],
+ "outcome": "escalated",
+ "verified": false,
+ "split": "heldout",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 53.15
+}

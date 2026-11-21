@@ -1,0 +1,131 @@
+{
+ "call_id": "C0038",
+ "intent": "ask_data",
+ "mood": "frustrated",
+ "account_id": "A100225",
+ "phone": "617-555-0140",
+ "pin": "5431",
+ "names": [
+  "Maria",
+  "Martinez"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 10,
+  "payments_made": 16,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Pixel 9"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 5.86
+  },
+  {
+   "role": "caller",
+   "text": "Hi there. How much data do I have left?",
+   "acts": [
+    "ask_data"
+   ],
+   "act": "ask_data",
+   "start": 6.51,
+   "end": 9.36
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 9.82,
+   "end": 16.53
+  },
+  {
+   "role": "caller",
+   "text": "The number is 617-555-0140, PIN 5431.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 17.14,
+   "end": 24.16
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Maria, you're verified. I see you're on Basic 5 GB. You've used 10 GB of your 5 GB this cycle, so 5 GB is billed as data overage at $10 per GB, $50.00 so far. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_data",
+    "anything_else"
+   ],
+   "act": "answer_data",
+   "start": 24.76,
+   "end": 45.54
+  },
+  {
+   "role": "caller",
+   "text": "That's ridiculous. Nobody told me about that.",
+   "acts": [
+    "express_frustration"
+   ],
+   "act": "express_frustration",
+   "start": 46.26,
+   "end": 49.89
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "acts": [
+    "empathize",
+    "anything_else"
+   ],
+   "act": "empathize",
+   "start": 50.35,
+   "end": 61.01
+  },
+  {
+   "role": "caller",
+   "text": "Can I talk to a real person, please?",
+   "acts": [
+    "request_human"
+   ],
+   "act": "request_human",
+   "start": 61.4,
+   "end": 64.02
+  },
+  {
+   "role": "agent",
+   "text": "Of course. I'm transferring you to a specialist now. Please hold.",
+   "acts": [
+    "transfer_human"
+   ],
+   "act": "transfer_human",
+   "start": 64.57,
+   "end": 70.05
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_data",
+   "plan_id": "BAS",
+   "used": 10,
+   "throttled": false,
+   "overage": 50.0
+  }
+ ],
+ "outcome": "escalated",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 70.41
+}

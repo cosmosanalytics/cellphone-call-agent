@@ -1,0 +1,156 @@
+{
+ "call_id": "C0031",
+ "intent": "request_credit",
+ "mood": "frustrated",
+ "account_id": "A100238",
+ "phone": "720-555-0132",
+ "pin": "6267",
+ "names": [
+  "Olivia",
+  "Walker"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 98,
+  "payments_made": 15,
+  "past_due": false,
+  "trips": [
+   [
+    "Mexico",
+    5
+   ]
+  ],
+  "last_courtesy_credit": null,
+  "device": "iPhone 16"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.13
+  },
+  {
+   "role": "caller",
+   "text": "I'd like a credit for the extra charges on my bill.",
+   "acts": [
+    "request_credit"
+   ],
+   "act": "request_credit",
+   "start": 6.72,
+   "end": 9.61
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 10.14,
+   "end": 16.65
+  },
+  {
+   "role": "caller",
+   "text": "It's 720-555-0132.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 17.4,
+   "end": 21.18
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 21.93,
+   "end": 25.49
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 6267.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 26.25,
+   "end": 28.1
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Olivia, you're verified. I see you're on Unlimited Plus. I'm sorry, I can't credit that because only roaming and data overage charges are eligible for a courtesy credit. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_credit",
+    "anything_else"
+   ],
+   "act": "answer_credit",
+   "start": 28.78,
+   "end": 44.29
+  },
+  {
+   "role": "caller",
+   "text": "That's ridiculous. Nobody told me about that.",
+   "acts": [
+    "express_frustration"
+   ],
+   "act": "express_frustration",
+   "start": 44.71,
+   "end": 47.68
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "acts": [
+    "empathize",
+    "anything_else"
+   ],
+   "act": "empathize",
+   "start": 48.31,
+   "end": 58.98
+  },
+  {
+   "role": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 59.36,
+   "end": 61.27
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 61.91,
+   "end": 66.54
+  }
+ ],
+ "facts": [
+  {
+   "intent": "request_credit",
+   "plan_id": "UNP",
+   "approved": false,
+   "reason": "NOT_CREDITABLE",
+   "amount": 0.0
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 67.05
+}

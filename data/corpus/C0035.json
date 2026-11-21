@@ -1,0 +1,131 @@
+{
+ "call_id": "C0035",
+ "intent": "ask_upgrade",
+ "mood": "frustrated",
+ "account_id": "A100209",
+ "phone": "646-555-0133",
+ "pin": "0884",
+ "names": [
+  "Linda",
+  "Hall"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 3,
+  "payments_made": 1,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.22
+  },
+  {
+   "role": "caller",
+   "text": "Honestly, I'm pretty annoyed. I'd like to upgrade to the new iPhone 16. Am I eligible?",
+   "acts": [
+    "ask_upgrade"
+   ],
+   "act": "ask_upgrade",
+   "start": 6.66,
+   "end": 11.35
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "empathize",
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.83,
+   "end": 23.28
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 646-555-0133 and my PIN is 0884.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 24.06,
+   "end": 30.55
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Linda, you're verified. I see you're on Basic 5 GB. I'm sorry, you're not eligible to upgrade yet. Your Moto G has 1 of 24 installments paid and your plan needs 12. You can upgrade early if you pay off the remaining balance of $184.00. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_upgrade",
+    "anything_else"
+   ],
+   "act": "answer_upgrade",
+   "start": 31.34,
+   "end": 54.66
+  },
+  {
+   "role": "caller",
+   "text": "This is really frustrating.",
+   "acts": [
+    "express_frustration"
+   ],
+   "act": "express_frustration",
+   "start": 55.28,
+   "end": 56.43
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "acts": [
+    "empathize",
+    "anything_else"
+   ],
+   "act": "empathize",
+   "start": 57.1,
+   "end": 67.98
+  },
+  {
+   "role": "caller",
+   "text": "I want to speak to a supervisor.",
+   "acts": [
+    "request_human"
+   ],
+   "act": "request_human",
+   "start": 68.35,
+   "end": 69.85
+  },
+  {
+   "role": "agent",
+   "text": "Of course. I'm transferring you to a specialist now. Please hold.",
+   "acts": [
+    "transfer_human"
+   ],
+   "act": "transfer_human",
+   "start": 70.59,
+   "end": 76.33
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_upgrade",
+   "plan_id": "BAS",
+   "eligible": false,
+   "reason": "NOT_ENOUGH_PAYMENTS"
+  }
+ ],
+ "outcome": "escalated",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 77.15
+}

@@ -1,0 +1,110 @@
+{
+ "call_id": "C0057",
+ "intent": "ask_data",
+ "mood": "frustrated",
+ "account_id": "A100226",
+ "phone": "415-555-0129",
+ "pin": "2122",
+ "names": [
+  "Kevin",
+  "Lopez"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 141,
+  "payments_made": 21,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.31
+  },
+  {
+   "role": "caller",
+   "text": "This is the second time I'm calling. Hi, my internet has been really slow lately. Is something wrong with my data?",
+   "acts": [
+    "ask_data"
+   ],
+   "act": "ask_data",
+   "start": 6.8,
+   "end": 13.23
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 13.61,
+   "end": 20.24
+  },
+  {
+   "role": "caller",
+   "text": "The number is 415-555-0129, PIN 2122.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 20.84,
+   "end": 26.25
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Kevin, you're verified. I see you're on Unlimited Plus. You've used 141 GB this cycle, and you're still at full speed. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_data",
+    "anything_else"
+   ],
+   "act": "answer_data",
+   "start": 26.85,
+   "end": 41.18
+  },
+  {
+   "role": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 41.59,
+   "end": 44.03
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 44.47,
+   "end": 49.48
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_data",
+   "plan_id": "UNP",
+   "used": 141,
+   "throttled": false,
+   "overage": 0.0
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 50.11
+}

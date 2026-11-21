@@ -1,0 +1,180 @@
+{
+ "call_id": "C0091",
+ "intent": "ask_bill",
+ "mood": "neutral",
+ "account_id": "A100210",
+ "phone": "305-555-0150",
+ "pin": "2659",
+ "names": [
+  "Priya",
+  "Lewis"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 66,
+  "payments_made": 10,
+  "past_due": false,
+  "trips": [
+   [
+    "India",
+    8
+   ]
+  ],
+  "last_courtesy_credit": null,
+  "device": "iPhone 16"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 5.98
+  },
+  {
+   "role": "caller",
+   "text": "Can you explain my bill? It's higher than usual.",
+   "acts": [
+    "ask_bill"
+   ],
+   "act": "ask_bill",
+   "start": 6.49,
+   "end": 9.23
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 9.67,
+   "end": 16.77
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 305-555-0150.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 17.6,
+   "end": 21.91
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 22.32,
+   "end": 25.93
+  },
+  {
+   "role": "caller",
+   "text": "It's 3770.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 26.43,
+   "end": 28.11
+  },
+  {
+   "role": "agent",
+   "text": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your four-digit account PIN again?",
+   "acts": [
+    "verify_fail"
+   ],
+   "act": "verify_fail",
+   "start": 28.59,
+   "end": 37.33
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 305-555-0150.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 37.73,
+   "end": 41.86
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 42.56,
+   "end": 46.15
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 2659.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 46.98,
+   "end": 48.91
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Priya, you're verified. I see you're on Unlimited Starter. Your current bill is $216.75. That's your Unlimited Starter plan at $55.00, the iPhone 16 installment of $35.00, taxes and fees of $6.75, plus roaming in India for 8 days at $120.00. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_bill",
+    "anything_else"
+   ],
+   "act": "answer_bill",
+   "start": 49.4,
+   "end": 76.44
+  },
+  {
+   "role": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 76.86,
+   "end": 78.88
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 79.61,
+   "end": 84.41
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_bill",
+   "plan_id": "UNS",
+   "total": 216.75,
+   "roaming": [
+    {
+     "country": "India",
+     "zone": 3,
+     "included": false
+    }
+   ]
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "heldout",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 85.13
+}

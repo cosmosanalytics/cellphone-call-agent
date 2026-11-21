@@ -1,0 +1,136 @@
+{
+ "call_id": "C0044",
+ "intent": "request_credit",
+ "mood": "frustrated",
+ "account_id": "A100252",
+ "phone": "720-555-0110",
+ "pin": "4125",
+ "names": [
+  "Marcus",
+  "Nguyen"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 5,
+  "payments_made": 22,
+  "past_due": false,
+  "trips": [
+   [
+    "Mexico",
+    6
+   ]
+  ],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.16
+  },
+  {
+   "role": "caller",
+   "text": "I'd like a credit for the extra charges on my bill.",
+   "acts": [
+    "request_credit"
+   ],
+   "act": "request_credit",
+   "start": 6.99,
+   "end": 9.23
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 10.03,
+   "end": 17.1
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 720-555-0110 and my PIN is 4125.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 17.62,
+   "end": 24.19
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Marcus, you're verified. I see you're on Unlimited Starter. I'm sorry, I can't credit that because only roaming and data overage charges are eligible for a courtesy credit. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_credit",
+    "anything_else"
+   ],
+   "act": "answer_credit",
+   "start": 24.82,
+   "end": 41.18
+  },
+  {
+   "role": "caller",
+   "text": "Are you kidding me? I pay for this every month.",
+   "acts": [
+    "express_frustration"
+   ],
+   "act": "express_frustration",
+   "start": 41.55,
+   "end": 43.46
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "acts": [
+    "empathize",
+    "anything_else"
+   ],
+   "act": "empathize",
+   "start": 44.04,
+   "end": 54.85
+  },
+  {
+   "role": "caller",
+   "text": "I want to speak to a supervisor.",
+   "acts": [
+    "request_human"
+   ],
+   "act": "request_human",
+   "start": 55.39,
+   "end": 56.85
+  },
+  {
+   "role": "agent",
+   "text": "Of course. I'm transferring you to a specialist now. Please hold.",
+   "acts": [
+    "transfer_human"
+   ],
+   "act": "transfer_human",
+   "start": 57.61,
+   "end": 63.34
+  }
+ ],
+ "facts": [
+  {
+   "intent": "request_credit",
+   "plan_id": "UNS",
+   "approved": false,
+   "reason": "NOT_CREDITABLE",
+   "amount": 0.0
+  }
+ ],
+ "outcome": "escalated",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 63.83
+}

@@ -1,0 +1,110 @@
+{
+ "call_id": "C0063",
+ "intent": "ask_data",
+ "mood": "neutral",
+ "account_id": "A100216",
+ "phone": "617-555-0126",
+ "pin": "3265",
+ "names": [
+  "Robert",
+  "Martinez"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 103,
+  "payments_made": 5,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.13
+  },
+  {
+   "role": "caller",
+   "text": "Hi there. How much data do I have left?",
+   "acts": [
+    "ask_data"
+   ],
+   "act": "ask_data",
+   "start": 6.75,
+   "end": 8.74
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 9.5,
+   "end": 16.11
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 617-555-0126 and my PIN is 3265.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 16.63,
+   "end": 23.05
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Robert, you're verified. I see you're on Unlimited Starter. You've used 103 GB this cycle. You're past your priority data, so speeds are reduced until the cycle resets on December 1st. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_data",
+    "anything_else"
+   ],
+   "act": "answer_data",
+   "start": 23.42,
+   "end": 41.87
+  },
+  {
+   "role": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 42.53,
+   "end": 44.18
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 44.71,
+   "end": 49.28
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_data",
+   "plan_id": "UNS",
+   "used": 103,
+   "throttled": true,
+   "overage": 0.0
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 50.15
+}

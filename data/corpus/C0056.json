@@ -1,0 +1,161 @@
+{
+ "call_id": "C0056",
+ "intent": "ask_bill",
+ "mood": "neutral",
+ "account_id": "A100209",
+ "phone": "646-555-0133",
+ "pin": "0884",
+ "names": [
+  "Linda",
+  "Hall"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 10,
+  "payments_made": 24,
+  "past_due": false,
+  "trips": [
+   [
+    "Germany",
+    7
+   ]
+  ],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.23
+  },
+  {
+   "role": "caller",
+   "text": "Can you explain my bill? It's higher than usual.",
+   "acts": [
+    "ask_bill"
+   ],
+   "act": "ask_bill",
+   "start": 7.09,
+   "end": 9.83
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 10.5,
+   "end": 17.33
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 646-555-0133.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 18.14,
+   "end": 22.5
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 22.9,
+   "end": 26.56
+  },
+  {
+   "role": "caller",
+   "text": "It's 0884.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 26.91,
+   "end": 28.63
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Linda, you're verified. I see you're on Basic 5 GB. Your current bill is $161.75. That's your Basic 5 GB plan at $35.00, taxes and fees of $6.75, plus data overage of $50.00 for 5 GB, plus roaming in Germany for 7 days at $70.00. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_bill",
+    "anything_else"
+   ],
+   "act": "answer_bill",
+   "start": 29.36,
+   "end": 58.68
+  },
+  {
+   "role": "caller",
+   "text": "Are you kidding me? I pay for this every month.",
+   "acts": [
+    "express_frustration"
+   ],
+   "act": "express_frustration",
+   "start": 59.53,
+   "end": 62.16
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "acts": [
+    "empathize",
+    "anything_else"
+   ],
+   "act": "empathize",
+   "start": 63.04,
+   "end": 73.85
+  },
+  {
+   "role": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 74.69,
+   "end": 76.83
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 77.27,
+   "end": 82.0
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_bill",
+   "plan_id": "BAS",
+   "total": 161.75,
+   "roaming": [
+    {
+     "country": "Germany",
+     "zone": 2,
+     "included": false
+    }
+   ]
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 82.57
+}

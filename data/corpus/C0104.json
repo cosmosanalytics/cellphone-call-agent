@@ -1,0 +1,109 @@
+{
+ "call_id": "C0104",
+ "intent": "ask_upgrade",
+ "mood": "neutral",
+ "account_id": "A100250",
+ "phone": "206-555-0111",
+ "pin": "2084",
+ "names": [
+  "Marcus",
+  "Garcia"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 4,
+  "payments_made": 2,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "iPhone 16"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.37
+  },
+  {
+   "role": "caller",
+   "text": "Can I upgrade my phone yet?",
+   "acts": [
+    "ask_upgrade"
+   ],
+   "act": "ask_upgrade",
+   "start": 7.05,
+   "end": 9.01
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 9.88,
+   "end": 16.49
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 206-555-0111 and my PIN is 2084.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 17.39,
+   "end": 24.64
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Marcus, you're verified. I see you're on Basic 5 GB. I'm sorry, you're not eligible to upgrade yet. Your iPhone 16 has 2 of 24 installments paid and your plan needs 12. You can upgrade early if you pay off the remaining balance of $770.00. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_upgrade",
+    "anything_else"
+   ],
+   "act": "answer_upgrade",
+   "start": 25.43,
+   "end": 49.19
+  },
+  {
+   "role": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 49.71,
+   "end": 52.5
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 53.31,
+   "end": 58.09
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_upgrade",
+   "plan_id": "BAS",
+   "eligible": false,
+   "reason": "NOT_ENOUGH_PAYMENTS"
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "heldout",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 58.57
+}

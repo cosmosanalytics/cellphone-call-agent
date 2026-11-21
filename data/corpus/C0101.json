@@ -1,0 +1,125 @@
+{
+ "call_id": "C0101",
+ "intent": "request_credit",
+ "mood": "neutral",
+ "account_id": "A100205",
+ "phone": "646-555-0162",
+ "pin": "9738",
+ "names": [
+  "Emily",
+  "Wilson"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 76,
+  "payments_made": 18,
+  "past_due": false,
+  "trips": [
+   [
+    "Japan",
+    5
+   ]
+  ],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 5.84
+  },
+  {
+   "role": "caller",
+   "text": "I'd like a credit for the extra charges on my bill.",
+   "acts": [
+    "request_credit"
+   ],
+   "act": "request_credit",
+   "start": 6.28,
+   "end": 8.98
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 9.68,
+   "end": 16.53
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 646-555-0162 and my PIN is 0849.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 16.94,
+   "end": 22.63
+  },
+  {
+   "role": "agent",
+   "text": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your four-digit account PIN again?",
+   "acts": [
+    "verify_fail"
+   ],
+   "act": "verify_fail",
+   "start": 23.21,
+   "end": 31.43
+  },
+  {
+   "role": "caller",
+   "text": "It's 646-555-0162.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 31.99,
+   "end": 35.8
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 36.27,
+   "end": 39.71
+  },
+  {
+   "role": "caller",
+   "text": "It's 0849.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 40.42,
+   "end": 41.98
+  },
+  {
+   "role": "agent",
+   "text": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold.",
+   "acts": [
+    "transfer_human"
+   ],
+   "act": "transfer_human",
+   "start": 42.75,
+   "end": 50.8
+  }
+ ],
+ "facts": [],
+ "outcome": "escalated",
+ "verified": false,
+ "split": "heldout",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 51.33
+}

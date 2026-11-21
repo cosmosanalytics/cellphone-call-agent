@@ -1,0 +1,110 @@
+{
+ "call_id": "C0045",
+ "intent": "ask_roaming",
+ "mood": "neutral",
+ "account_id": "A100243",
+ "phone": "305-555-0144",
+ "pin": "3207",
+ "names": [
+  "Hannah",
+  "Smith"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 47,
+  "payments_made": 23,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": "2025-10-05",
+  "device": "iPhone 16"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 5.88
+  },
+  {
+   "role": "caller",
+   "text": "I'm going to Italy next month for 11 days. Do I need a day pass?",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.44,
+   "end": 11.31
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.79,
+   "end": 18.36
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 305-555-0144 and my PIN is 3207.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 18.72,
+   "end": 26.31
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Hannah, you're verified. I see you're on Unlimited Starter. Roaming in Italy isn't included on your plan. The Europe day pass is $10.00 per day, so 11 days would be $110.00. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 27.18,
+   "end": 49.57
+  },
+  {
+   "role": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 49.99,
+   "end": 53.08
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 53.66,
+   "end": 58.44
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "UNS",
+   "country": "Italy",
+   "zone": 2,
+   "roaming_included": false
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 59.02
+}

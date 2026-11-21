@@ -1,0 +1,150 @@
+{
+ "call_id": "C0106",
+ "intent": "ask_roaming",
+ "mood": "neutral",
+ "account_id": "A100228",
+ "phone": "512-555-0110",
+ "pin": "6844",
+ "names": [
+  "Emily",
+  "Young"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 13,
+  "payments_made": 19,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": "2025-04-30",
+  "device": "Pixel 9"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.24
+  },
+  {
+   "role": "caller",
+   "text": "Hi, I'm traveling abroad soon and want to know what roaming will cost.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.87,
+   "end": 11.16
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.97,
+   "end": 19.09
+  },
+  {
+   "role": "caller",
+   "text": "It's 512-555-0110.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 19.84,
+   "end": 23.57
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 24.17,
+   "end": 27.73
+  },
+  {
+   "role": "caller",
+   "text": "It's 6844.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 28.4,
+   "end": 29.92
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Emily, you're verified. I see you're on Unlimited Starter. Which country are you traveling to, and for how many days?",
+   "acts": [
+    "verify_ok",
+    "ask_country"
+   ],
+   "act": "verify_ok",
+   "start": 30.72,
+   "end": 40.43
+  },
+  {
+   "role": "caller",
+   "text": "I'm going to Mexico for 3 days.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 40.81,
+   "end": 42.96
+  },
+  {
+   "role": "agent",
+   "text": "Good news, roaming in Mexico is included on your plan at no extra charge, so you can use your phone there normally. Is there anything else I can help you with today?",
+   "acts": [
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 43.65,
+   "end": 54.35
+  },
+  {
+   "role": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 55.2,
+   "end": 57.49
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 58.1,
+   "end": 62.7
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "UNS",
+   "country": "Mexico",
+   "zone": 1,
+   "roaming_included": true
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "heldout",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 63.56
+}

@@ -1,0 +1,152 @@
+{
+ "call_id": "C0016",
+ "intent": "ask_roaming",
+ "mood": "frustrated",
+ "account_id": "A100203",
+ "phone": "312-555-0179",
+ "pin": "4911",
+ "names": [
+  "Olivia",
+  "Wilson"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 9,
+  "payments_made": 20,
+  "past_due": true,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Galaxy S25"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.35
+  },
+  {
+   "role": "caller",
+   "text": "Honestly, I'm pretty annoyed. Will my phone work in France? I'll be there for 3 days.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.79,
+   "end": 11.92
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "empathize",
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 12.36,
+   "end": 23.9
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 312-555-0179.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 24.59,
+   "end": 28.8
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 29.67,
+   "end": 33.18
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 4911.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 33.82,
+   "end": 35.65
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Olivia, you're verified. I see you're on Basic 5 GB. Roaming in France isn't included on your plan. The Europe day pass is $10.00 per day, so 3 days would be $30.00. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 36.2,
+   "end": 57.64
+  },
+  {
+   "role": "caller",
+   "text": "This is really frustrating.",
+   "acts": [
+    "express_frustration"
+   ],
+   "act": "express_frustration",
+   "start": 58.35,
+   "end": 59.91
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "acts": [
+    "empathize",
+    "anything_else"
+   ],
+   "act": "empathize",
+   "start": 60.42,
+   "end": 71.55
+  },
+  {
+   "role": "caller",
+   "text": "I want to speak to a supervisor.",
+   "acts": [
+    "request_human"
+   ],
+   "act": "request_human",
+   "start": 72.06,
+   "end": 73.96
+  },
+  {
+   "role": "agent",
+   "text": "Of course. I'm transferring you to a specialist now. Please hold.",
+   "acts": [
+    "transfer_human"
+   ],
+   "act": "transfer_human",
+   "start": 74.44,
+   "end": 79.84
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "BAS",
+   "country": "France",
+   "zone": 2,
+   "roaming_included": false
+  }
+ ],
+ "outcome": "escalated",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 80.28
+}

@@ -1,0 +1,130 @@
+{
+ "call_id": "C0030",
+ "intent": "ask_data",
+ "mood": "neutral",
+ "account_id": "A100236",
+ "phone": "646-555-0167",
+ "pin": "0510",
+ "names": [
+  "Daniel",
+  "Patel"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 47,
+  "payments_made": 4,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "iPhone 16"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.37
+  },
+  {
+   "role": "caller",
+   "text": "Hi, my internet has been really slow lately. Is something wrong with my data?",
+   "acts": [
+    "ask_data"
+   ],
+   "act": "ask_data",
+   "start": 7.06,
+   "end": 11.01
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.78,
+   "end": 18.44
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 646-555-0167.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 19.02,
+   "end": 23.39
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 24.03,
+   "end": 27.4
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 0510.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 27.97,
+   "end": 30.0
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Daniel, you're verified. I see you're on Unlimited Plus. You've used 47 GB this cycle, and you're still at full speed. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_data",
+    "anything_else"
+   ],
+   "act": "answer_data",
+   "start": 30.42,
+   "end": 43.4
+  },
+  {
+   "role": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 44.26,
+   "end": 45.64
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 46.42,
+   "end": 51.29
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_data",
+   "plan_id": "UNP",
+   "used": 47,
+   "throttled": false,
+   "overage": 0.0
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 52.08
+}

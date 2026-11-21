@@ -1,0 +1,110 @@
+{
+ "call_id": "C0048",
+ "intent": "ask_data",
+ "mood": "neutral",
+ "account_id": "A100239",
+ "phone": "512-555-0198",
+ "pin": "7903",
+ "names": [
+  "Linda",
+  "Garcia"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 10,
+  "payments_made": 15,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": "2026-07-12",
+  "device": "iPhone 16"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 5.92
+  },
+  {
+   "role": "caller",
+   "text": "Hi, my internet has been really slow lately. Is something wrong with my data?",
+   "acts": [
+    "ask_data"
+   ],
+   "act": "ask_data",
+   "start": 6.28,
+   "end": 11.37
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.75,
+   "end": 18.65
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 512-555-0198 and my PIN is 7903.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 19.49,
+   "end": 26.7
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Linda, you're verified. I see you're on Basic 5 GB. You've used 10 GB of your 5 GB this cycle, so 5 GB is billed as data overage at $10 per GB, $50.00 so far. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_data",
+    "anything_else"
+   ],
+   "act": "answer_data",
+   "start": 27.25,
+   "end": 47.41
+  },
+  {
+   "role": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 47.91,
+   "end": 50.09
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 50.95,
+   "end": 55.66
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_data",
+   "plan_id": "BAS",
+   "used": 10,
+   "throttled": false,
+   "overage": 50.0
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 56.17
+}

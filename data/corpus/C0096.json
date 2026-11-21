@@ -1,0 +1,110 @@
+{
+ "call_id": "C0096",
+ "intent": "ask_roaming",
+ "mood": "neutral",
+ "account_id": "A100258",
+ "phone": "646-555-0142",
+ "pin": "7248",
+ "names": [
+  "Jorge",
+  "Chen"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 9,
+  "payments_made": 3,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": "2026-01-08",
+  "device": "Galaxy S25"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.05
+  },
+  {
+   "role": "caller",
+   "text": "I'm going to Canada next month for 9 days. Do I need a day pass?",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.5,
+   "end": 11.26
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.76,
+   "end": 18.31
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 646-555-0142 and my PIN is 7248.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 19.05,
+   "end": 26.15
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Jorge, you're verified. I see you're on Basic 5 GB. Roaming in Canada isn't included on your plan. The North America day pass is $5.00 per day, so 9 days would be $45.00. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 26.54,
+   "end": 49.51
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 50.4,
+   "end": 52.54
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 53.11,
+   "end": 58.06
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "BAS",
+   "country": "Canada",
+   "zone": 1,
+   "roaming_included": false
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "heldout",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 58.83
+}

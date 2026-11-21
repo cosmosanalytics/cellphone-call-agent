@@ -1,0 +1,110 @@
+{
+ "call_id": "C0007",
+ "intent": "ask_roaming",
+ "mood": "neutral",
+ "account_id": "A100253",
+ "phone": "415-555-0109",
+ "pin": "4564",
+ "names": [
+  "Marcus",
+  "Lewis"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 54,
+  "payments_made": 20,
+  "past_due": true,
+  "trips": [],
+  "last_courtesy_credit": "2025-05-01",
+  "device": "Pixel 9"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 5.97
+  },
+  {
+   "role": "caller",
+   "text": "Will my phone work in Japan? I'll be there for 12 days.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.74,
+   "end": 10.08
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 10.86,
+   "end": 17.84
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 415-555-0109 and my PIN is 4564.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 18.73,
+   "end": 24.18
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Marcus, you're verified. I see you're on Unlimited Starter. Roaming in Japan isn't included on your plan. The Asia-Pacific and South America day pass is $15.00 per day, so 12 days would be $180.00. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 24.59,
+   "end": 48.33
+  },
+  {
+   "role": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 49.03,
+   "end": 51.3
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 51.69,
+   "end": 56.24
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "UNS",
+   "country": "Japan",
+   "zone": 3,
+   "roaming_included": false
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 57.03
+}

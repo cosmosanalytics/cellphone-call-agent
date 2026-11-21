@@ -1,0 +1,140 @@
+{
+ "call_id": "C0011",
+ "intent": "ask_bill",
+ "mood": "frustrated",
+ "account_id": "A100236",
+ "phone": "646-555-0167",
+ "pin": "0510",
+ "names": [
+  "Daniel",
+  "Patel"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 79,
+  "payments_made": 4,
+  "past_due": false,
+  "trips": [
+   [
+    "Canada",
+    3
+   ]
+  ],
+  "last_courtesy_credit": null,
+  "device": "iPhone 16"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.05
+  },
+  {
+   "role": "caller",
+   "text": "This is the second time I'm calling. Why is my bill so high this month?",
+   "acts": [
+    "ask_bill"
+   ],
+   "act": "ask_bill",
+   "start": 6.42,
+   "end": 11.0
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.74,
+   "end": 18.95
+  },
+  {
+   "role": "caller",
+   "text": "It's 646-555-0167.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 19.32,
+   "end": 23.87
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 24.23,
+   "end": 27.65
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 0510.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 28.4,
+   "end": 30.99
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Daniel, you're verified. I see you're on Unlimited Plus. Your current bill is $116.75. That's your Unlimited Plus plan at $75.00, the iPhone 16 installment of $35.00, taxes and fees of $6.75. Your usage in Canada was included on your plan, so there's no roaming charge. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_bill",
+    "anything_else"
+   ],
+   "act": "answer_bill",
+   "start": 31.61,
+   "end": 60.71
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 61.38,
+   "end": 63.53
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 64.22,
+   "end": 69.11
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_bill",
+   "plan_id": "UNP",
+   "total": 116.75,
+   "roaming": [
+    {
+     "country": "Canada",
+     "zone": 1,
+     "included": true
+    }
+   ]
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 69.84
+}

@@ -1,0 +1,140 @@
+{
+ "call_id": "C0084",
+ "intent": "ask_bill",
+ "mood": "neutral",
+ "account_id": "A100222",
+ "phone": "720-555-0164",
+ "pin": "6826",
+ "names": [
+  "Olivia",
+  "Nguyen"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 76,
+  "payments_made": 12,
+  "past_due": false,
+  "trips": [
+   [
+    "Mexico",
+    4
+   ]
+  ],
+  "last_courtesy_credit": null,
+  "device": "iPhone 16"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.19
+  },
+  {
+   "role": "caller",
+   "text": "Why is my bill so high this month?",
+   "acts": [
+    "ask_bill"
+   ],
+   "act": "ask_bill",
+   "start": 6.66,
+   "end": 8.42
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 9.25,
+   "end": 15.97
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 720-555-0164.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 16.52,
+   "end": 20.8
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 21.55,
+   "end": 24.97
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 6826.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 25.7,
+   "end": 27.65
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Olivia, you're verified. I see you're on Unlimited Plus. Your current bill is $116.75. That's your Unlimited Plus plan at $75.00, the iPhone 16 installment of $35.00, taxes and fees of $6.75. Your usage in Mexico was included on your plan, so there's no roaming charge. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_bill",
+    "anything_else"
+   ],
+   "act": "answer_bill",
+   "start": 28.46,
+   "end": 57.91
+  },
+  {
+   "role": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 58.58,
+   "end": 60.22
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 60.59,
+   "end": 65.27
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_bill",
+   "plan_id": "UNP",
+   "total": 116.75,
+   "roaming": [
+    {
+     "country": "Mexico",
+     "zone": 1,
+     "included": true
+    }
+   ]
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 66.17
+}

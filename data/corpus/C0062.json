@@ -1,0 +1,111 @@
+{
+ "call_id": "C0062",
+ "intent": "ask_data",
+ "mood": "frustrated",
+ "account_id": "A100217",
+ "phone": "617-555-0111",
+ "pin": "2081",
+ "names": [
+  "Kevin",
+  "Brown"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 13,
+  "payments_made": 4,
+  "past_due": true,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "iPhone 16"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 5.85
+  },
+  {
+   "role": "caller",
+   "text": "Honestly, I'm pretty annoyed. Hi there. How much data do I have left?",
+   "acts": [
+    "ask_data"
+   ],
+   "act": "ask_data",
+   "start": 6.39,
+   "end": 10.66
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "empathize",
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.2,
+   "end": 22.78
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 617-555-0111 and my PIN is 2081.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 23.42,
+   "end": 29.35
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Kevin, you're verified. I see you're on Unlimited Plus. You've used 13 GB this cycle, and you're still at full speed. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_data",
+    "anything_else"
+   ],
+   "act": "answer_data",
+   "start": 30.02,
+   "end": 43.54
+  },
+  {
+   "role": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 44.09,
+   "end": 46.49
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 47.1,
+   "end": 52.04
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_data",
+   "plan_id": "UNP",
+   "used": 13,
+   "throttled": false,
+   "overage": 0.0
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 52.57
+}

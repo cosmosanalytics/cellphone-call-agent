@@ -1,0 +1,125 @@
+{
+ "call_id": "C0005",
+ "intent": "ask_bill",
+ "mood": "neutral",
+ "account_id": "A100257",
+ "phone": "646-555-0150",
+ "pin": "7366",
+ "names": [
+  "Kevin",
+  "Martinez"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 1,
+  "payments_made": 23,
+  "past_due": false,
+  "trips": [
+   [
+    "Japan",
+    9
+   ]
+  ],
+  "last_courtesy_credit": "2026-08-01",
+  "device": "Pixel 9"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.17
+  },
+  {
+   "role": "caller",
+   "text": "I just got back from Japan and I want to know if I was charged roaming on my bill.",
+   "acts": [
+    "ask_bill"
+   ],
+   "act": "ask_bill",
+   "start": 6.77,
+   "end": 10.49
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.14,
+   "end": 18.07
+  },
+  {
+   "role": "caller",
+   "text": "The number is 646-555-0150, PIN 8477.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 18.7,
+   "end": 24.79
+  },
+  {
+   "role": "agent",
+   "text": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your four-digit account PIN again?",
+   "acts": [
+    "verify_fail"
+   ],
+   "act": "verify_fail",
+   "start": 25.19,
+   "end": 33.08
+  },
+  {
+   "role": "caller",
+   "text": "It's 646-555-0150.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 33.96,
+   "end": 37.63
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 38.41,
+   "end": 42.0
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 8477.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 42.62,
+   "end": 44.65
+  },
+  {
+   "role": "agent",
+   "text": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold.",
+   "acts": [
+    "transfer_human"
+   ],
+   "act": "transfer_human",
+   "start": 45.2,
+   "end": 53.11
+  }
+ ],
+ "facts": [],
+ "outcome": "escalated",
+ "verified": false,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 53.79
+}

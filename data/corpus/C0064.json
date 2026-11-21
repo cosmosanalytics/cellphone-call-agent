@@ -1,0 +1,129 @@
+{
+ "call_id": "C0064",
+ "intent": "ask_upgrade",
+ "mood": "neutral",
+ "account_id": "A100206",
+ "phone": "415-555-0111",
+ "pin": "0369",
+ "names": [
+  "Hannah",
+  "Wilson"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 90,
+  "payments_made": 7,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": "2026-06-24",
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.45
+  },
+  {
+   "role": "caller",
+   "text": "I'd like to upgrade to the new iPhone 16. Am I eligible?",
+   "acts": [
+    "ask_upgrade"
+   ],
+   "act": "ask_upgrade",
+   "start": 7.2,
+   "end": 11.69
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 12.51,
+   "end": 19.54
+  },
+  {
+   "role": "caller",
+   "text": "It's 415-555-0111.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 20.04,
+   "end": 24.54
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 24.9,
+   "end": 28.37
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 0369.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 28.86,
+   "end": 31.25
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Hannah, you're verified. I see you're on Unlimited Plus. Good news, you're eligible to upgrade today. Your Moto G has 7 of 24 installments paid, and the remaining balance of $136.00 would be due at upgrade. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_upgrade",
+    "anything_else"
+   ],
+   "act": "answer_upgrade",
+   "start": 31.74,
+   "end": 51.27
+  },
+  {
+   "role": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 51.89,
+   "end": 54.66
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 55.17,
+   "end": 59.8
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_upgrade",
+   "plan_id": "UNP",
+   "eligible": true,
+   "reason": null
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 60.43
+}

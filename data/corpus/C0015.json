@@ -1,0 +1,151 @@
+{
+ "call_id": "C0015",
+ "intent": "ask_roaming",
+ "mood": "frustrated",
+ "account_id": "A100207",
+ "phone": "720-555-0107",
+ "pin": "9002",
+ "names": [
+  "Olivia",
+  "Martinez"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 5,
+  "payments_made": 4,
+  "past_due": true,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Pixel 9"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.02
+  },
+  {
+   "role": "caller",
+   "text": "Will my phone work in India? I'll be there for 4 days.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.43,
+   "end": 9.72
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 10.61,
+   "end": 17.77
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 720-555-0107.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 18.15,
+   "end": 22.45
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 23.33,
+   "end": 26.8
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 9002.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 27.27,
+   "end": 29.41
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Olivia, you're verified. I see you're on Basic 5 GB. Roaming in India isn't included on your plan. The Asia-Pacific and South America day pass is $15.00 per day, so 4 days would be $60.00. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 29.86,
+   "end": 52.81
+  },
+  {
+   "role": "caller",
+   "text": "That's ridiculous. Nobody told me about that.",
+   "acts": [
+    "express_frustration"
+   ],
+   "act": "express_frustration",
+   "start": 53.44,
+   "end": 56.53
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "acts": [
+    "empathize",
+    "anything_else"
+   ],
+   "act": "empathize",
+   "start": 57.0,
+   "end": 67.35
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 67.92,
+   "end": 69.79
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 70.2,
+   "end": 74.67
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "BAS",
+   "country": "India",
+   "zone": 3,
+   "roaming_included": false
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 75.16
+}

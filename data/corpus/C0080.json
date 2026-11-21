@@ -1,0 +1,110 @@
+{
+ "call_id": "C0080",
+ "intent": "ask_roaming",
+ "mood": "neutral",
+ "account_id": "A100213",
+ "phone": "617-555-0118",
+ "pin": "6008",
+ "names": [
+  "Sofia",
+  "Hall"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 72,
+  "payments_made": 11,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Galaxy S25"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.4
+  },
+  {
+   "role": "caller",
+   "text": "I'm traveling to Spain for 11 days next week. Will I be charged for using my phone there?",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 7.18,
+   "end": 11.16
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.88,
+   "end": 18.88
+  },
+  {
+   "role": "caller",
+   "text": "The number is 617-555-0118, PIN 6008.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 19.39,
+   "end": 25.78
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Sofia, you're verified. I see you're on Unlimited Starter. Roaming in Spain isn't included on your plan. The Europe day pass is $10.00 per day, so 11 days would be $110.00. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 26.65,
+   "end": 48.89
+  },
+  {
+   "role": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 49.61,
+   "end": 51.01
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 51.72,
+   "end": 56.35
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "UNS",
+   "country": "Spain",
+   "zone": 2,
+   "roaming_included": false
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 57.12
+}

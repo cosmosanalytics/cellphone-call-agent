@@ -1,0 +1,110 @@
+{
+ "call_id": "C0109",
+ "intent": "ask_roaming",
+ "mood": "frustrated",
+ "account_id": "A100217",
+ "phone": "617-555-0111",
+ "pin": "2081",
+ "names": [
+  "Kevin",
+  "Brown"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 56,
+  "payments_made": 4,
+  "past_due": true,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "iPhone 16"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 5.86
+  },
+  {
+   "role": "caller",
+   "text": "Will my phone work in Germany? I'll be there for 4 days.",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.35,
+   "end": 9.08
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 9.53,
+   "end": 16.53
+  },
+  {
+   "role": "caller",
+   "text": "The number is 617-555-0111, PIN 2081.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 16.94,
+   "end": 23.11
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Kevin, you're verified. I see you're on Unlimited Plus. Good news, roaming in Germany is included on your plan at no extra charge, so you can use your phone there normally. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 23.85,
+   "end": 39.81
+  },
+  {
+   "role": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 40.52,
+   "end": 41.95
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 42.67,
+   "end": 47.65
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "UNP",
+   "country": "Germany",
+   "zone": 2,
+   "roaming_included": true
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "heldout",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 48.51
+}

@@ -1,0 +1,120 @@
+{
+ "call_id": "C0029",
+ "intent": "ask_bill",
+ "mood": "neutral",
+ "account_id": "A100201",
+ "phone": "415-555-0130",
+ "pin": "9455",
+ "names": [
+  "Nadia",
+  "Johnson"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 7,
+  "payments_made": 1,
+  "past_due": false,
+  "trips": [
+   [
+    "Canada",
+    4
+   ]
+  ],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.43
+  },
+  {
+   "role": "caller",
+   "text": "Why is my bill so high this month?",
+   "acts": [
+    "ask_bill"
+   ],
+   "act": "ask_bill",
+   "start": 6.85,
+   "end": 8.69
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 9.34,
+   "end": 16.21
+  },
+  {
+   "role": "caller",
+   "text": "The number is 415-555-0130, PIN 9455.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 16.87,
+   "end": 22.46
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Nadia, you're verified. I see you're on Unlimited Plus. Your current bill is $89.75. That's your Unlimited Plus plan at $75.00, the Moto G installment of $8.00, taxes and fees of $6.75. Your usage in Canada was included on your plan, so there's no roaming charge. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_bill",
+    "anything_else"
+   ],
+   "act": "answer_bill",
+   "start": 23.31,
+   "end": 52.34
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 53.14,
+   "end": 55.08
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 55.5,
+   "end": 60.39
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_bill",
+   "plan_id": "UNP",
+   "total": 89.75,
+   "roaming": [
+    {
+     "country": "Canada",
+     "zone": 1,
+     "included": true
+    }
+   ]
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 60.89
+}

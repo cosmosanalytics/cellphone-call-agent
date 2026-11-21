@@ -1,0 +1,130 @@
+{
+ "call_id": "C0050",
+ "intent": "ask_roaming",
+ "mood": "neutral",
+ "account_id": "A100211",
+ "phone": "415-555-0100",
+ "pin": "6164",
+ "names": [
+  "Priya",
+  "Scott"
+ ],
+ "plan_id": "UNS",
+ "snapshot": {
+  "data_used_gb": 17,
+  "payments_made": 20,
+  "past_due": true,
+  "trips": [],
+  "last_courtesy_credit": "2025-10-14",
+  "device": "Galaxy S25"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 5.84
+  },
+  {
+   "role": "caller",
+   "text": "I'm traveling to Canada for 8 days next week. Will I be charged for using my phone there?",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.51,
+   "end": 11.55
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 12.08,
+   "end": 18.86
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 415-555-0100.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 19.73,
+   "end": 23.92
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 24.7,
+   "end": 28.37
+  },
+  {
+   "role": "caller",
+   "text": "It's 6164.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 29.17,
+   "end": 30.69
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Priya, you're verified. I see you're on Unlimited Starter. Good news, roaming in Canada is included on your plan at no extra charge, so you can use your phone there normally. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 31.25,
+   "end": 47.71
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 48.54,
+   "end": 50.62
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 51.26,
+   "end": 55.74
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "UNS",
+   "country": "Canada",
+   "zone": 1,
+   "roaming_included": true
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 56.48
+}

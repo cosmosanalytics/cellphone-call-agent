@@ -1,0 +1,120 @@
+{
+ "call_id": "C0087",
+ "intent": "ask_bill",
+ "mood": "neutral",
+ "account_id": "A100248",
+ "phone": "720-555-0154",
+ "pin": "9332",
+ "names": [
+  "Jorge",
+  "Lopez"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 4,
+  "payments_made": 0,
+  "past_due": false,
+  "trips": [
+   [
+    "Germany",
+    2
+   ]
+  ],
+  "last_courtesy_credit": null,
+  "device": "Galaxy S25"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 5.84
+  },
+  {
+   "role": "caller",
+   "text": "Can you explain my bill? It's higher than usual.",
+   "acts": [
+    "ask_bill"
+   ],
+   "act": "ask_bill",
+   "start": 6.31,
+   "end": 8.51
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 8.98,
+   "end": 15.56
+  },
+  {
+   "role": "caller",
+   "text": "The number is 720-555-0154, PIN 9332.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 16.33,
+   "end": 22.62
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Jorge, you're verified. I see you're on Basic 5 GB. Your current bill is $95.75. That's your Basic 5 GB plan at $35.00, the Galaxy S25 installment of $34.00, taxes and fees of $6.75, plus roaming in Germany for 2 days at $20.00. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_bill",
+    "anything_else"
+   ],
+   "act": "answer_bill",
+   "start": 23.5,
+   "end": 51.29
+  },
+  {
+   "role": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 51.7,
+   "end": 53.18
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 53.67,
+   "end": 58.62
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_bill",
+   "plan_id": "BAS",
+   "total": 95.75,
+   "roaming": [
+    {
+     "country": "Germany",
+     "zone": 2,
+     "included": false
+    }
+   ]
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 59.37
+}

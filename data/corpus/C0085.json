@@ -1,0 +1,130 @@
+{
+ "call_id": "C0085",
+ "intent": "ask_data",
+ "mood": "neutral",
+ "account_id": "A100206",
+ "phone": "415-555-0111",
+ "pin": "0369",
+ "names": [
+  "Hannah",
+  "Wilson"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 50,
+  "payments_made": 11,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": "2026-06-24",
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.33
+  },
+  {
+   "role": "caller",
+   "text": "Why is my data so slow? Pages take forever to load.",
+   "acts": [
+    "ask_data"
+   ],
+   "act": "ask_data",
+   "start": 6.84,
+   "end": 10.64
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.19,
+   "end": 17.99
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 415-555-0111 and my PIN is 1480.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 18.43,
+   "end": 25.77
+  },
+  {
+   "role": "agent",
+   "text": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your four-digit account PIN again?",
+   "acts": [
+    "verify_fail"
+   ],
+   "act": "verify_fail",
+   "start": 26.21,
+   "end": 34.16
+  },
+  {
+   "role": "caller",
+   "text": "The number is 415-555-0111, PIN 0369.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 34.88,
+   "end": 41.8
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Hannah, you're verified. I see you're on Unlimited Plus. You've used 50 GB this cycle, and you're still at full speed. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_data",
+    "anything_else"
+   ],
+   "act": "answer_data",
+   "start": 42.45,
+   "end": 55.89
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 56.72,
+   "end": 58.94
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 59.53,
+   "end": 64.4
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_data",
+   "plan_id": "UNP",
+   "used": 50,
+   "throttled": false,
+   "overage": 0.0
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 64.89
+}

@@ -1,0 +1,109 @@
+{
+ "call_id": "C0001",
+ "intent": "ask_bill",
+ "mood": "neutral",
+ "account_id": "A100220",
+ "phone": "312-555-0156",
+ "pin": "8695",
+ "names": [
+  "Emily",
+  "Hall"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 27,
+  "payments_made": 24,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": "2025-03-27",
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 5.92
+  },
+  {
+   "role": "caller",
+   "text": "Why is my bill so high this month?",
+   "acts": [
+    "ask_bill"
+   ],
+   "act": "ask_bill",
+   "start": 6.78,
+   "end": 8.87
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 9.43,
+   "end": 16.44
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 312-555-0156 and my PIN is 8695.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 17.02,
+   "end": 24.35
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Emily, you're verified. I see you're on Unlimited Plus. Your current bill is $81.75. That's your Unlimited Plus plan at $75.00, taxes and fees of $6.75. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_bill",
+    "anything_else"
+   ],
+   "act": "answer_bill",
+   "start": 24.81,
+   "end": 45.47
+  },
+  {
+   "role": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 46.01,
+   "end": 48.29
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 48.65,
+   "end": 53.32
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_bill",
+   "plan_id": "UNP",
+   "total": 81.75,
+   "roaming": []
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 54.18
+}

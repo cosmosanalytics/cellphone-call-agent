@@ -1,0 +1,152 @@
+{
+ "call_id": "C0000",
+ "intent": "ask_roaming",
+ "mood": "frustrated",
+ "account_id": "A100235",
+ "phone": "646-555-0184",
+ "pin": "0717",
+ "names": [
+  "Tyler",
+  "Nguyen"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 97,
+  "payments_made": 23,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.42
+  },
+  {
+   "role": "caller",
+   "text": "Honestly, I'm pretty annoyed. I'm going to India next month for 10 days. Do I need a day pass?",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 7.3,
+   "end": 11.93
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "empathize",
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 12.62,
+   "end": 23.71
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 646-555-0184.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 24.07,
+   "end": 28.33
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 28.71,
+   "end": 32.08
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 0717.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 32.56,
+   "end": 34.58
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Tyler, you're verified. I see you're on Unlimited Plus. Roaming in India isn't included on your plan. The Asia-Pacific and South America day pass is $15.00 per day, so 10 days would be $150.00. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 35.19,
+   "end": 58.51
+  },
+  {
+   "role": "caller",
+   "text": "Are you kidding me? I pay for this every month.",
+   "acts": [
+    "express_frustration"
+   ],
+   "act": "express_frustration",
+   "start": 59.32,
+   "end": 61.24
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "acts": [
+    "empathize",
+    "anything_else"
+   ],
+   "act": "empathize",
+   "start": 61.94,
+   "end": 72.72
+  },
+  {
+   "role": "caller",
+   "text": "I want to speak to a supervisor.",
+   "acts": [
+    "request_human"
+   ],
+   "act": "request_human",
+   "start": 73.43,
+   "end": 74.9
+  },
+  {
+   "role": "agent",
+   "text": "Of course. I'm transferring you to a specialist now. Please hold.",
+   "acts": [
+    "transfer_human"
+   ],
+   "act": "transfer_human",
+   "start": 75.4,
+   "end": 81.37
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "UNP",
+   "country": "India",
+   "zone": 3,
+   "roaming_included": false
+  }
+ ],
+ "outcome": "escalated",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 82.26
+}

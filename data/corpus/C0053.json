@@ -1,0 +1,109 @@
+{
+ "call_id": "C0053",
+ "intent": "ask_upgrade",
+ "mood": "neutral",
+ "account_id": "A100209",
+ "phone": "646-555-0133",
+ "pin": "0884",
+ "names": [
+  "Linda",
+  "Hall"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 3,
+  "payments_made": 11,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.46
+  },
+  {
+   "role": "caller",
+   "text": "Can I upgrade my phone yet?",
+   "acts": [
+    "ask_upgrade"
+   ],
+   "act": "ask_upgrade",
+   "start": 6.92,
+   "end": 8.85
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 9.68,
+   "end": 16.58
+  },
+  {
+   "role": "caller",
+   "text": "The number is 646-555-0133, PIN 0884.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 17.04,
+   "end": 24.32
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Linda, you're verified. I see you're on Basic 5 GB. I'm sorry, you're not eligible to upgrade yet. Your Moto G has 11 of 24 installments paid and your plan needs 12. You can upgrade early if you pay off the remaining balance of $104.00. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_upgrade",
+    "anything_else"
+   ],
+   "act": "answer_upgrade",
+   "start": 24.91,
+   "end": 47.41
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 47.95,
+   "end": 50.09
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 50.79,
+   "end": 55.37
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_upgrade",
+   "plan_id": "BAS",
+   "eligible": false,
+   "reason": "NOT_ENOUGH_PAYMENTS"
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "train",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 56.06
+}
