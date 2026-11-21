@@ -1,0 +1,132 @@
+{
+ "call_id": "C0116",
+ "intent": "ask_data",
+ "mood": "frustrated",
+ "account_id": "A100209",
+ "phone": "646-555-0133",
+ "pin": "0884",
+ "names": [
+  "Linda",
+  "Hall"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 9,
+  "payments_made": 24,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.43
+  },
+  {
+   "role": "caller",
+   "text": "Honestly, I'm pretty annoyed. I want to check how much data I've used this month.",
+   "acts": [
+    "ask_data"
+   ],
+   "act": "ask_data",
+   "start": 6.91,
+   "end": 12.77
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "empathize",
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 13.24,
+   "end": 24.51
+  },
+  {
+   "role": "caller",
+   "text": "The number is 646-555-0133, PIN 0884.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 25.02,
+   "end": 31.91
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Linda, you're verified. I see you're on Basic 5 GB. You've used 9 GB of your 5 GB this cycle, so 4 GB is billed as data overage at $10 per GB, $40.00 so far. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_data",
+    "anything_else"
+   ],
+   "act": "answer_data",
+   "start": 32.31,
+   "end": 52.19
+  },
+  {
+   "role": "caller",
+   "text": "That's ridiculous. Nobody told me about that.",
+   "acts": [
+    "express_frustration"
+   ],
+   "act": "express_frustration",
+   "start": 52.78,
+   "end": 56.23
+  },
+  {
+   "role": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "acts": [
+    "empathize",
+    "anything_else"
+   ],
+   "act": "empathize",
+   "start": 56.9,
+   "end": 68.18
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 68.68,
+   "end": 70.86
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 71.42,
+   "end": 76.07
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_data",
+   "plan_id": "BAS",
+   "used": 9,
+   "throttled": false,
+   "overage": 40.0
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "heldout",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_GB-alan-medium",
+ "duration": 76.67
+}

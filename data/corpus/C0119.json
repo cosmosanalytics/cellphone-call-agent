@@ -1,0 +1,130 @@
+{
+ "call_id": "C0119",
+ "intent": "ask_roaming",
+ "mood": "neutral",
+ "account_id": "A100235",
+ "phone": "646-555-0184",
+ "pin": "0717",
+ "names": [
+  "Tyler",
+  "Nguyen"
+ ],
+ "plan_id": "UNP",
+ "snapshot": {
+  "data_used_gb": 97,
+  "payments_made": 23,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": null,
+  "device": "Moto G"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.06
+  },
+  {
+   "role": "caller",
+   "text": "I'm going to United Kingdom next month for 10 days. Do I need a day pass?",
+   "acts": [
+    "ask_roaming"
+   ],
+   "act": "ask_roaming",
+   "start": 6.52,
+   "end": 10.91
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 11.47,
+   "end": 18.26
+  },
+  {
+   "role": "caller",
+   "text": "It's 646-555-0184.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 19.05,
+   "end": 22.53
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 22.95,
+   "end": 26.51
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 0717.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 27.31,
+   "end": 29.5
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Tyler, you're verified. I see you're on Unlimited Plus. Good news, roaming in United Kingdom is included on your plan at no extra charge, so you can use your phone there normally. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_roaming",
+    "anything_else"
+   ],
+   "act": "answer_roaming",
+   "start": 30.25,
+   "end": 46.31
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 46.94,
+   "end": 48.83
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 49.24,
+   "end": 53.83
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_roaming",
+   "plan_id": "UNP",
+   "country": "United Kingdom",
+   "zone": 2,
+   "roaming_included": true
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "heldout",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 54.22
+}

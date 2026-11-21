@@ -1,0 +1,129 @@
+{
+ "call_id": "C0111",
+ "intent": "ask_upgrade",
+ "mood": "neutral",
+ "account_id": "A100239",
+ "phone": "512-555-0198",
+ "pin": "7903",
+ "names": [
+  "Linda",
+  "Garcia"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 4,
+  "payments_made": 5,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": "2026-07-12",
+  "device": "iPhone 16"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.24
+  },
+  {
+   "role": "caller",
+   "text": "I'd like to upgrade to the new Moto G. Am I eligible?",
+   "acts": [
+    "ask_upgrade"
+   ],
+   "act": "ask_upgrade",
+   "start": 6.94,
+   "end": 9.54
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 10.23,
+   "end": 16.98
+  },
+  {
+   "role": "caller",
+   "text": "Sure, it's 512-555-0198.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 17.33,
+   "end": 21.59
+  },
+  {
+   "role": "agent",
+   "text": "Thanks. And your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 22.28,
+   "end": 26.0
+  },
+  {
+   "role": "caller",
+   "text": "My PIN is 7903.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 26.68,
+   "end": 28.81
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Linda, you're verified. I see you're on Basic 5 GB. I'm sorry, you're not eligible to upgrade yet. Your iPhone 16 has 5 of 24 installments paid and your plan needs 12. You can upgrade early if you pay off the remaining balance of $665.00. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_upgrade",
+    "anything_else"
+   ],
+   "act": "answer_upgrade",
+   "start": 29.58,
+   "end": 55.65
+  },
+  {
+   "role": "caller",
+   "text": "No, that's all. Thank you.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 56.25,
+   "end": 57.52
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 58.09,
+   "end": 62.62
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_upgrade",
+   "plan_id": "BAS",
+   "eligible": false,
+   "reason": "NOT_ENOUGH_PAYMENTS"
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "heldout",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-ryan-medium",
+ "duration": 63.16
+}

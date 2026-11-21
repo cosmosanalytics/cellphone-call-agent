@@ -1,0 +1,113 @@
+{
+ "call_id": "C0002",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.64,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.48,
+   "end": 8.76,
+   "text_raw": "I want to check how much data I've used this month.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I want to check how much data I've used this month.",
+   "act": "ask_data",
+   "text_redacted": "I want to check how much data I've used this month."
+  },
+  {
+   "start": 10.1,
+   "end": 16.62,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?"
+  },
+  {
+   "start": 17.52,
+   "end": 22.86,
+   "text_raw": "The number is 415-555-0111, PIN 0369.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 415-555-0111, PIN 0369.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE], [PIN]."
+  },
+  {
+   "start": 23.7,
+   "end": 36.68,
+   "text_raw": "Thank you, Hannah, you're verified. I see you're on Unlimited Plus. You've used 124 GB this cycle and you're still at full speed. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Hannah, you're verified. I see you're on Unlimited Plus. You've used 124 GB this cycle and you're still at full speed. Is there anything else I can help you with today?",
+   "act": "answer_data",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Unlimited Plus. You've used 124 GB this cycle and you're still at full speed. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 37.86,
+   "end": 39.7,
+   "text_raw": "No, that's all. Thank you.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's all. Thank you.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's all. Thank you."
+  },
+  {
+   "start": 40.46,
+   "end": 44.78,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNP",
+  "intent": "ask_data",
+  "verified": true,
+  "escalated": false,
+  "roaming": [],
+  "used": 124,
+  "throttled": false
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8875,
+  "terms_total": 4,
+  "terms_hit": 4,
+  "terms_hit_raw": 4,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

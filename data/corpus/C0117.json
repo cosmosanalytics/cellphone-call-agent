@@ -1,0 +1,109 @@
+{
+ "call_id": "C0117",
+ "intent": "ask_bill",
+ "mood": "neutral",
+ "account_id": "A100214",
+ "phone": "617-555-0181",
+ "pin": "8073",
+ "names": [
+  "Priya",
+  "Hall"
+ ],
+ "plan_id": "BAS",
+ "snapshot": {
+  "data_used_gb": 8,
+  "payments_made": 23,
+  "past_due": false,
+  "trips": [],
+  "last_courtesy_credit": "2026-09-23",
+  "device": "Pixel 9"
+ },
+ "turns": [
+  {
+   "role": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "acts": [
+    "greeting"
+   ],
+   "act": "greeting",
+   "start": 0.3,
+   "end": 6.48
+  },
+  {
+   "role": "caller",
+   "text": "Why is my bill so high this month?",
+   "acts": [
+    "ask_bill"
+   ],
+   "act": "ask_bill",
+   "start": 6.96,
+   "end": 8.82
+  },
+  {
+   "role": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four-digit account PIN?",
+   "acts": [
+    "request_verification"
+   ],
+   "act": "request_verification",
+   "start": 9.42,
+   "end": 16.38
+  },
+  {
+   "role": "caller",
+   "text": "The number is 617-555-0181, PIN 8073.",
+   "acts": [
+    "give_identity"
+   ],
+   "act": "give_identity",
+   "start": 17.28,
+   "end": 22.57
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Priya, you're verified. I see you're on Basic 5 GB. Your current bill is $98.75. That's your Basic 5 GB plan at $35.00, the Pixel 9 installment of $27.00, taxes and fees of $6.75, plus data overage of $30.00 for 3 GB. Is there anything else I can help you with today?",
+   "acts": [
+    "verify_ok",
+    "answer_bill",
+    "anything_else"
+   ],
+   "act": "answer_bill",
+   "start": 23.18,
+   "end": 50.03
+  },
+  {
+   "role": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "acts": [
+    "thank_bye"
+   ],
+   "act": "thank_bye",
+   "start": 50.85,
+   "end": 52.95
+  },
+  {
+   "role": "agent",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "acts": [
+    "closing"
+   ],
+   "act": "closing",
+   "start": 53.53,
+   "end": 58.49
+  }
+ ],
+ "facts": [
+  {
+   "intent": "ask_bill",
+   "plan_id": "BAS",
+   "total": 98.75,
+   "roaming": []
+  }
+ ],
+ "outcome": "resolved",
+ "verified": true,
+ "split": "heldout",
+ "agent_voice": "en_US-amy-medium",
+ "caller_voice": "en_US-lessac-medium",
+ "duration": 58.84
+}
