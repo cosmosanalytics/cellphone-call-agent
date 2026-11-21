@@ -1,0 +1,12 @@
+{
+ "calls": 120,
+ "wer": 0.0097,
+ "wer_raw": 0.0097,
+ "role_acc": 1.0,
+ "role_acc_textonly": 0.8753,
+ "term_recall": 1.0,
+ "term_recall_raw": 1.0,
+ "redaction_recall": 1.0,
+ "turn_count_match": 1.0,
+ "act_acc": 0.9946
+}

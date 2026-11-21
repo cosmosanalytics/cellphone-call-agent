@@ -1,0 +1,127 @@
+{
+ "call_id": "C0087",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.48,
+   "end": 5.54,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.34,
+   "end": 8.48,
+   "text_raw": "Can you explain my bill? It's higher than usual.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Can you explain my bill? It's higher than usual.",
+   "act": "ask_bill",
+   "text_redacted": "Can you explain my bill? It's higher than usual."
+  },
+  {
+   "start": 9.2,
+   "end": 15.24,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 16.32,
+   "end": 22.6,
+   "text_raw": "The number is 720. 555-0154, PIN 9332.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 720. 555-0154, PIN 9332.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE], [PIN]."
+  },
+  {
+   "start": 23.8,
+   "end": 50.96,
+   "text_raw": "Thank you Jorge, you're verified. I see you're on Basic 5 GB. Your current bill is $95.75. That's your basic 5 GB plan at $35, the Galaxy S25 installment of $34, taxes and fees of $6.75, plus roaming in Germany for two days at $20. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you Jorge, you're verified. I see you're on Basic 5 GB Your current bill is $95.75. That's your Basic 5 GB plan at $35, the Galaxy S25 installment of $34, taxes and fees of $6.75, plus roaming in Germany for two days at $20. Is there anything else I can help you with today?",
+   "act": "answer_bill",
+   "text_redacted": "Thank you [NAME], you're verified. I see you're on Basic 5 GB Your current bill is $95.75. That's your Basic 5 GB plan at $35, the Galaxy S25 installment of $34, taxes and fees of $6.75, plus roaming in Germany for two days at $20. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 51.7,
+   "end": 53.18,
+   "text_raw": "Nope, that's everything, bye.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Nope, that's everything, bye.",
+   "act": "thank_bye",
+   "text_redacted": "Nope, that's everything, bye."
+  },
+  {
+   "start": 53.92,
+   "end": 58.22,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "basic 5 GB",
+   "to": "Basic 5 GB"
+  },
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_bill",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "Germany",
+    "zone": 2,
+    "included": false,
+    "src": "bill"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.918,
+  "terms_total": 8,
+  "terms_hit": 8,
+  "terms_hit_raw": 8,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

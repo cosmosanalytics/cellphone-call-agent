@@ -211,7 +211,7 @@ AGENT_ACTS = [   # ordered by priority: a turn's primary act is its most consequ
     ("transfer_human", r"transferring you|transfer you|connect you (to|with)"),
     ("verify_fail", r"doesn'?t match|does not match|couldn'?t verify|wasn'?t able to verify"),
     ("verify_ok", r"you'?re verified|thanks? for verifying|i'?ve verified"),
-    ("request_verification", r"phone number (on|for) the account|four[- ]digit (account )?pin|your account pin"),
+    ("request_verification", r"phone number (on|for) the account|(four|4)[- ]digit (account )?pin|your account pin"),
     ("ask_country", r"which country|where are you (traveling|travelling|going|headed)"),
     ("clarify", r"which charge|didn'?t catch"),
     ("empathize", r"understand|sorry|apolog"),

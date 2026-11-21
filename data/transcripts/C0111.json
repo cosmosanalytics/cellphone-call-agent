@@ -1,0 +1,135 @@
+{
+ "call_id": "C0111",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.54,
+   "end": 5.92,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.94,
+   "end": 9.54,
+   "text_raw": "I'd like to upgrade to the new Moto G. Am I eligible?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'd like to upgrade to the new Moto G. Am I eligible?",
+   "act": "ask_upgrade",
+   "text_redacted": "I'd like to upgrade to the new Moto G. Am I eligible?"
+  },
+  {
+   "start": 10.46,
+   "end": 16.68,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 17.36,
+   "end": 21.6,
+   "text_raw": "Sure, it's 512. 555-0198.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 512. 555-0198.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE]."
+  },
+  {
+   "start": 22.6,
+   "end": 25.66,
+   "text_raw": "Thanks. And your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4-digit account PIN?"
+  },
+  {
+   "start": 26.68,
+   "end": 28.82,
+   "text_raw": "My PIN is 7903.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "My PIN is 7903.",
+   "act": "give_identity",
+   "text_redacted": "My [PIN]."
+  },
+  {
+   "start": 29.9,
+   "end": 55.32,
+   "text_raw": "Thank you, Linde. You're verified. I see you're on Basic 5 GB. I'm sorry. You're not eligible to upgrade yet. Your iPhone 16 has 5 of 24 installments paid and your plan needs 12. You can upgrade early if you pay off the remaining balance of $665.00. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Linde. You're verified. I see you're on Basic 5 GB I'm sorry. You're not eligible to upgrade yet. Your iPhone 16 has 5 of 24 installments paid and your plan needs 12. You can upgrade early if you pay off the remaining balance of $665.00. Is there anything else I can help you with today?",
+   "act": "answer_upgrade",
+   "text_redacted": "Thank you, Linde. You're verified. I see you're on Basic 5 GB I'm sorry. You're not eligible to upgrade yet. Your iPhone 16 has 5 of 24 installments paid and your plan needs 12. You can upgrade early if you pay off the remaining balance of $665.00. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 56.26,
+   "end": 57.52,
+   "text_raw": "No, that's all. Thank you.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's all. Thank you.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's all. Thank you."
+  },
+  {
+   "start": 58.34,
+   "end": 62.28,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_upgrade",
+  "verified": true,
+  "escalated": false,
+  "roaming": [],
+  "upgrade_eligible": false,
+  "payments_made": 5
+ },
+ "split": "heldout",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0074,
+  "wer_raw": 0.0074,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8709,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 1.0
+ }
+}

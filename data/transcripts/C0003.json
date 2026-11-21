@@ -1,0 +1,199 @@
+{
+ "call_id": "C0003",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.56,
+   "end": 5.92,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.78,
+   "end": 9.78,
+   "text_raw": "I want to check how much data I've used this month.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I want to check how much data I've used this month.",
+   "act": "ask_data",
+   "text_redacted": "I want to check how much data I've used this month."
+  },
+  {
+   "start": 11.14,
+   "end": 17.68,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?"
+  },
+  {
+   "start": 18.46,
+   "end": 23.72,
+   "text_raw": "Sure, it's 512-555-0198.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 512-555-0198.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE]."
+  },
+  {
+   "start": 25.0,
+   "end": 27.94,
+   "text_raw": "Thanks! And your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks! And your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks! And your 4 digit account PIN?"
+  },
+  {
+   "start": 28.9,
+   "end": 31.16,
+   "text_raw": "My PIN is 9014.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "My PIN is 9014.",
+   "act": "give_identity",
+   "text_redacted": "My [PIN]."
+  },
+  {
+   "start": 31.96,
+   "end": 39.9,
+   "text_raw": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4 digit account PIN again?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4 digit account PIN again?",
+   "act": "verify_fail",
+   "text_redacted": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4 digit account PIN again?"
+  },
+  {
+   "start": 40.74,
+   "end": 45.84,
+   "text_raw": "Sure, it's 512-555-0198.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 512-555-0198.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE]."
+  },
+  {
+   "start": 46.78,
+   "end": 49.78,
+   "text_raw": "Thanks. And your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4 digit account PIN?"
+  },
+  {
+   "start": 50.84,
+   "end": 53.1,
+   "text_raw": "My PIN is 7903.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "My PIN is 7903.",
+   "act": "give_identity",
+   "text_redacted": "My [PIN]."
+  },
+  {
+   "start": 54.02,
+   "end": 73.2,
+   "text_raw": "Thank you, Lindy, you're verified. I see you're on Basic 5 GB. You've used 6 GB of your 5 GB this cycle, so 1 GB is billed as data overage at $10 per GB. $10 so far. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Lindy, you're verified. I see you're on Basic 5 GB You've used 6 GB of your 5 GB this cycle, so 1 GB is billed as data overage at $10 per GB. $10 so far. Is there anything else I can help you with today?",
+   "act": "answer_data",
+   "text_redacted": "Thank you, Lindy, you're verified. I see you're on Basic 5 GB You've used 6 GB of your 5 GB this cycle, so 1 GB is billed as data overage at $10 per GB. $10 so far. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 73.94,
+   "end": 77.14,
+   "text_raw": "That's ridiculous. Nobody told me about that.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "That's ridiculous. Nobody told me about that.",
+   "act": "express_frustration",
+   "text_redacted": "That's ridiculous. Nobody told me about that."
+  },
+  {
+   "start": 78.18,
+   "end": 88.9,
+   "text_raw": "I completely understand your frustration, and I am sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "I completely understand your frustration, and I am sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "act": "empathize",
+   "text_redacted": "I completely understand your frustration, and I am sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 89.98,
+   "end": 92.6,
+   "text_raw": "No, that's it. Thanks for your help.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's it. Thanks for your help."
+  },
+  {
+   "start": 93.96,
+   "end": 97.98,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_data",
+  "verified": true,
+  "escalated": false,
+  "roaming": []
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0149,
+  "wer_raw": 0.0149,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.752,
+  "terms_total": 5,
+  "terms_hit": 5,
+  "terms_hit_raw": 5,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 15,
+  "turns_hyp": 15,
+  "act_acc": 1.0
+ }
+}

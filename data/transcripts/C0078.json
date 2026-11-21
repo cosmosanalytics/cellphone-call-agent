@@ -1,0 +1,131 @@
+{
+ "call_id": "C0078",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.84,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.84,
+   "end": 8.64,
+   "text_raw": "Why is my bill so high this month?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Why is my bill so high this month?",
+   "act": "ask_bill",
+   "text_redacted": "Why is my bill so high this month?"
+  },
+  {
+   "start": 9.64,
+   "end": 15.98,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 17.24,
+   "end": 21.94,
+   "text_raw": "It's 415-555-0129.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 415-555-0129.",
+   "act": "give_identity",
+   "text_redacted": "It's [PHONE]."
+  },
+  {
+   "start": 22.76,
+   "end": 25.58,
+   "text_raw": "Thanks. And your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4-digit account PIN?"
+  },
+  {
+   "start": 26.42,
+   "end": 28.28,
+   "text_raw": "My PIN is 2122.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "My PIN is 2122.",
+   "act": "give_identity",
+   "text_redacted": "My [PIN]."
+  },
+  {
+   "start": 29.34,
+   "end": 50.46,
+   "text_raw": "Thank you, Kevin. You're verified. I see you're on Unlimited Plus. Your current bill is $89.75. That's your Unlimited Plus plan at $75, the Moto G installment of $8, taxes and fees of $6.75. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Kevin. You're verified. I see you're on Unlimited Plus. Your current bill is $89.75. That's your Unlimited Plus plan at $75, the Moto G installment of $8, taxes and fees of $6.75. Is there anything else I can help you with today?",
+   "act": "answer_bill",
+   "text_redacted": "Thank you, [NAME]. You're verified. I see you're on Unlimited Plus. Your current bill is $89.75. That's your Unlimited Plus plan at $75, the Moto G installment of $8, taxes and fees of $6.75. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 51.36,
+   "end": 53.5,
+   "text_raw": "Nope, that's everything, bye.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Nope, that's everything, bye.",
+   "act": "thank_bye",
+   "text_redacted": "Nope, that's everything, bye."
+  },
+  {
+   "start": 54.72,
+   "end": 58.82,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNP",
+  "intent": "ask_bill",
+  "verified": true,
+  "escalated": false,
+  "roaming": []
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8622,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 1.0
+ }
+}

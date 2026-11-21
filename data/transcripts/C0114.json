@@ -1,0 +1,115 @@
+{
+ "call_id": "C0114",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.76,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.62,
+   "end": 13.02,
+   "text_raw": "I'm travelling to United Kingdom for 11 days next week. Will I be charged for using my phone there?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'm travelling to United Kingdom for 11 days next week. Will I be charged for using my phone there?",
+   "act": "ask_roaming",
+   "text_redacted": "I'm travelling to United Kingdom for 11 days next week. Will I be charged for using my phone there?"
+  },
+  {
+   "start": 13.8,
+   "end": 20.12,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 21.4,
+   "end": 28.4,
+   "text_raw": "The number is 415-555-0150 PIN 0845.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 415-555-0150 PIN 0845.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE] [PIN]."
+  },
+  {
+   "start": 29.4,
+   "end": 50.84,
+   "text_raw": "Thank you, Sophia, you're verified. I see you're on Unlimited Starter. Roaming in United Kingdom isn't included on your plan. The Europe day pass is $10 per day, so 11 days would be $110. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Sophia, you're verified. I see you're on Unlimited Starter. Roaming in United Kingdom isn't included on your plan. The Europe day pass is $10 per day, so 11 days would be $110. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "act": "answer_roaming",
+   "text_redacted": "Thank you, Sophia, you're verified. I see you're on Unlimited Starter. Roaming in United Kingdom isn't included on your plan. The Europe day pass is $10 per day, so 11 days would be $110. It only charges on days you use your phone there. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 51.94,
+   "end": 54.4,
+   "text_raw": "No, that's it. Thanks for your help.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's it. Thanks for your help."
+  },
+  {
+   "start": 55.5,
+   "end": 59.6,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  }
+ ],
+ "features": {
+  "plan_id": "UNS",
+  "intent": "ask_roaming",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "United Kingdom",
+    "zone": 2,
+    "included": false,
+    "src": "quote"
+   }
+  ]
+ },
+ "split": "heldout",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0149,
+  "wer_raw": 0.0149,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9226,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

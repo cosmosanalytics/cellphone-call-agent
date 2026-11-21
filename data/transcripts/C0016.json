@@ -1,0 +1,163 @@
+{
+ "call_id": "C0016",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.98,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.84,
+   "end": 11.72,
+   "text_raw": "Honestly, I'm pretty annoyed. Will my phone work in France? I'll be there for three days.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Honestly, I'm pretty annoyed. Will my phone work in France? I'll be there for three days.",
+   "act": "ask_roaming",
+   "text_redacted": "Honestly, I'm pretty annoyed. Will my phone work in France? I'll be there for three days."
+  },
+  {
+   "start": 12.6,
+   "end": 23.6,
+   "text_raw": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your four digit account PIN?"
+  },
+  {
+   "start": 24.58,
+   "end": 28.64,
+   "text_raw": "Sure, it's 312-555. 0179.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 312-555. 0179.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE]."
+  },
+  {
+   "start": 30.02,
+   "end": 32.84,
+   "text_raw": "Thanks. And your four digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your four digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your four digit account PIN?"
+  },
+  {
+   "start": 33.88,
+   "end": 35.5,
+   "text_raw": "My PIN is 4911.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "My PIN is 4911.",
+   "act": "give_identity",
+   "text_redacted": "My [PIN]."
+  },
+  {
+   "start": 36.48,
+   "end": 57.34,
+   "text_raw": "Thank you, Olivia, you're verified. I see you're on Basic 5 GB. Roaming in France isn't included on your plan. The Europe day pass is $10 per day, so three days would be $30. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Olivia, you're verified. I see you're on Basic 5 GB Roaming in France isn't included on your plan. The Europe day pass is $10 per day, so three days would be $30. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "act": "answer_roaming",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Basic 5 GB Roaming in France isn't included on your plan. The Europe day pass is $10 per day, so three days would be $30. It only charges on days you use your phone there. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 58.6,
+   "end": 59.84,
+   "text_raw": "This is really frustrating.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "This is really frustrating.",
+   "act": "express_frustration",
+   "text_redacted": "This is really frustrating."
+  },
+  {
+   "start": 60.66,
+   "end": 71.22,
+   "text_raw": "I completely understand your frustration, and I am sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "I completely understand your frustration, and I am sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "act": "empathize",
+   "text_redacted": "I completely understand your frustration, and I am sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 72.12,
+   "end": 73.76,
+   "text_raw": "I want to speak to a supervisor.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I want to speak to a supervisor.",
+   "act": "request_human",
+   "text_redacted": "I want to speak to a supervisor."
+  },
+  {
+   "start": 74.68,
+   "end": 79.52,
+   "text_raw": "Of course. I'm transferring you to a specialist now. Please hold.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Of course. I'm transferring you to a specialist now. Please hold.",
+   "act": "transfer_human",
+   "text_redacted": "Of course. I'm transferring you to a specialist now. Please hold."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_roaming",
+  "verified": true,
+  "escalated": true,
+  "roaming": [
+   {
+    "country": "France",
+    "zone": 2,
+    "included": false,
+    "src": "quote"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0108,
+  "wer_raw": 0.0108,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.7358,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 11,
+  "turns_hyp": 11,
+  "act_acc": 1.0
+ }
+}

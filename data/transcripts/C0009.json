@@ -1,0 +1,89 @@
+{
+ "call_id": "C0009",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.54,
+   "end": 5.98,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.76,
+   "end": 12.4,
+   "text_raw": "Honestly, I'm pretty annoyed. I'd like a credit for the extra charges on my bill.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Honestly, I'm pretty annoyed. I'd like a credit for the extra charges on my bill.",
+   "act": "request_credit",
+   "text_redacted": "Honestly, I'm pretty annoyed. I'd like a credit for the extra charges on my bill."
+  },
+  {
+   "start": 13.2,
+   "end": 23.86,
+   "text_raw": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 24.96,
+   "end": 32.3,
+   "text_raw": "Sure, it's 305 555 0110 and my PIN is 6545.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 305 555 0110 and my PIN is 6545.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE] and my [PIN]."
+  },
+  {
+   "start": 33.32,
+   "end": 47.86,
+   "text_raw": "Thank you, Asia, you're verified. I see you're on Unlimited Starter. That charge is $60.00. Which is above what I can credit on this call, so I'm transferring you to a billing specialist who can review it. Please hold.",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Asia, you're verified. I see you're on Unlimited Starter. That charge is $60.00. Which is above what I can credit on this call, so I'm transferring you to a billing specialist who can review it. Please hold.",
+   "act": "transfer_human",
+   "text_redacted": "Thank you, Asia, you're verified. I see you're on Unlimited Starter. That charge is $60.00. Which is above what I can credit on this call, so I'm transferring you to a billing specialist who can review it. Please hold."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  }
+ ],
+ "features": {
+  "plan_id": "UNS",
+  "intent": "request_credit",
+  "verified": true,
+  "escalated": true,
+  "roaming": [],
+  "credit_approved": false
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0091,
+  "wer_raw": 0.0091,
+  "role_acc": 1.0,
+  "role_acc_textonly": 1.0,
+  "terms_total": 3,
+  "terms_hit": 3,
+  "terms_hit_raw": 3,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 5,
+  "turns_hyp": 5,
+  "act_acc": 1.0
+ }
+}

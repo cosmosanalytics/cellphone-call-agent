@@ -1,0 +1,118 @@
+{
+ "call_id": "C0029",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.54,
+   "end": 6.06,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.92,
+   "end": 8.48,
+   "text_raw": "Why is my bill so high this month?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Why is my bill so high this month?",
+   "act": "ask_bill",
+   "text_redacted": "Why is my bill so high this month?"
+  },
+  {
+   "start": 9.58,
+   "end": 15.9,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 16.94,
+   "end": 22.24,
+   "text_raw": "The number is 415-555-0130. iPhone 9, 455.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 415-555-0130. iPhone 9, 455.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE]. iPhone [PIN]."
+  },
+  {
+   "start": 23.62,
+   "end": 52.0,
+   "text_raw": "Thank you, Nadia, you're verified. I see you're on Unlimited Plus. Your current bill is $89.75. That's your Unlimited Plus plan at $75, the Moto G installment of $8, taxes and fees of $6.75. Your usage in Canada was included on your plan, so there's no roaming charge. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Nadia, you're verified. I see you're on Unlimited Plus. Your current bill is $89.75. That's your Unlimited Plus plan at $75, the Moto G installment of $8, taxes and fees of $6.75. Your usage in Canada was included on your plan, so there's no roaming charge. Is there anything else I can help you with today?",
+   "act": "answer_bill",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Unlimited Plus. Your current bill is $89.75. That's your Unlimited Plus plan at $75, the Moto G installment of $8, taxes and fees of $6.75. Your usage in Canada was included on your plan, so there's no roaming charge. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 53.22,
+   "end": 54.98,
+   "text_raw": "No, that's all. Thank you.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's all. Thank you.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's all. Thank you."
+  },
+  {
+   "start": 55.74,
+   "end": 60.0,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNP",
+  "intent": "ask_bill",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "Canada",
+    "zone": 1,
+    "included": true,
+    "src": "bill"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0078,
+  "wer_raw": 0.0078,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9198,
+  "terms_total": 8,
+  "terms_hit": 8,
+  "terms_hit_raw": 8,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

@@ -1,0 +1,138 @@
+{
+ "call_id": "C0059",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.64,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.64,
+   "end": 10.88,
+   "text_raw": "Hi, I'm travelling abroad soon and want to know what roaming will cost.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Hi, I'm travelling abroad soon and want to know what roaming will cost.",
+   "act": "ask_roaming",
+   "text_redacted": "Hi, I'm travelling abroad soon and want to know what roaming will cost."
+  },
+  {
+   "start": 11.82,
+   "end": 18.02,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 19.16,
+   "end": 25.82,
+   "text_raw": "The number is 720 555 0132 PIN 6267.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 720 555 0132 PIN 6267.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE] [PIN]."
+  },
+  {
+   "start": 26.98,
+   "end": 35.54,
+   "text_raw": "Thank you, Olivia, you're verified. I see you're on Unlimited Plus. Which country are you traveling to and for how many days?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Olivia, you're verified. I see you're on Unlimited Plus. Which country are you traveling to and for how many days?",
+   "act": "verify_ok",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Unlimited Plus. Which country are you traveling to and for how many days?"
+  },
+  {
+   "start": 36.44,
+   "end": 38.76,
+   "text_raw": "I'm going to Germany for 9 days.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'm going to Germany for 9 days.",
+   "act": "ask_roaming",
+   "text_redacted": "I'm going to Germany for 9 days."
+  },
+  {
+   "start": 39.96,
+   "end": 49.88,
+   "text_raw": "Good news, Roaming in Germany is included on your plan at no extra charge, so you can use your phone there normally. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Good news, Roaming in Germany is included on your plan at no extra charge, so you can use your phone there normally. Is there anything else I can help you with today?",
+   "act": "answer_roaming",
+   "text_redacted": "Good news, Roaming in Germany is included on your plan at no extra charge, so you can use your phone there normally. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 51.0,
+   "end": 52.84,
+   "text_raw": "No, that's all, thank you.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's all, thank you.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's all, thank you."
+  },
+  {
+   "start": 53.96,
+   "end": 57.92,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNP",
+  "intent": "ask_roaming",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "Germany",
+    "zone": 2,
+    "included": true,
+    "src": "quote"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0076,
+  "wer_raw": 0.0076,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9189,
+  "terms_total": 5,
+  "terms_hit": 5,
+  "terms_hit_raw": 5,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 1.0
+ }
+}

@@ -1,0 +1,116 @@
+{
+ "call_id": "C0065",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.82,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.9,
+   "end": 10.54,
+   "text_raw": "Why is my data so slow? Pages take forever to load.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Why is my data so slow? Pages take forever to load.",
+   "act": "ask_data",
+   "text_redacted": "Why is my data so slow? Pages take forever to load."
+  },
+  {
+   "start": 11.52,
+   "end": 17.78,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 18.64,
+   "end": 25.92,
+   "text_raw": "The number is 206 555 0163 PIN 1104.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 206 555 0163 PIN 1104.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE] [PIN]."
+  },
+  {
+   "start": 27.16,
+   "end": 45.42,
+   "text_raw": "Thank you, Marcus. You're verified. I see you're on Basic 5 GB. You've used 9 GB of your 5 GB this cycle, so 4 GB is billed as data overage at $10 per GB, $40 so far. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Marcus. You're verified. I see you're on Basic 5 GB You've used 9 GB of your 5 GB this cycle, so 4 GB is billed as data overage at $10 per GB, $40 so far. Is there anything else I can help you with today?",
+   "act": "answer_data",
+   "text_redacted": "Thank you, [NAME]. You're verified. I see you're on Basic 5 GB You've used 9 GB of your 5 GB this cycle, so 4 GB is billed as data overage at $10 per GB, $40 so far. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 46.42,
+   "end": 48.54,
+   "text_raw": "Nope, that's everything. Bye.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "act": "thank_bye",
+   "text_redacted": "Nope, that's everything. Bye."
+  },
+  {
+   "start": 49.88,
+   "end": 54.12,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_data",
+  "verified": true,
+  "escalated": false,
+  "roaming": []
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.91,
+  "terms_total": 5,
+  "terms_hit": 5,
+  "terms_hit_raw": 5,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

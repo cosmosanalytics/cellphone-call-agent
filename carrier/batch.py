@@ -69,12 +69,18 @@ def process_audio(audio: np.ndarray, call_id: str, model: str | None = None, neu
         t["act"] = nlu.classify_act(t["role"], t["text"])
     phone = next((nlu.find_phone(t["text"]) for t in turns if t["role"] == "caller" and nlu.find_phone(t["text"])), None)
     acct = _bob.by_phone(phone) if phone else None
-    names = [acct.first, acct.last] if acct else []
+    names = [acct.first, acct.last] if acct else _names_from_agent(turns)
     for t in turns:
         t["text_redacted"], red = nlu.redact(t["text"], names, identity_turn=t["act"] == "give_identity")
         redactions += red
     return {"call_id": call_id, "model": model, "turns": turns, "term_fixes": fixes,
             "redactions": [{"type": r["type"]} for r in redactions], "features": extract_features(turns)}
+
+
+def _names_from_agent(turns: list[dict]) -> list[str]:
+    """When the phone number was misheard, the agent's verification line still names the caller."""
+    return sorted({m.group(1) for t in turns if t["role"] == "agent"
+                   for m in re.finditer(r"[Tt]hank you,? ([A-Z][a-z]+)[.,!]? [Yy]ou['’]?re verified", t["text"])})
 
 
 def extract_features(turns: list[dict]) -> dict:
@@ -87,19 +93,19 @@ def extract_features(turns: list[dict]) -> dict:
                "escalated": "transfer_human" in acts, "roaming": []}
     for t in agent:
         x = t["text"]
-        if re.search(r"used \d+ ?GB this cycle", x) and f["plan_id"] != "BAS":
+        if re.search(r"used \d+ ?GB", x) and not re.search(r"of your \d+ ?GB", x) and f["plan_id"] != "BAS":
             f["used"] = nlu.find_gb(x)
             f["throttled"] = bool(re.search(r"speeds are reduced|past your priority data", x, re.I)) if \
                 re.search(r"speeds are reduced|past your priority data|full speed", x, re.I) else None
-        for m in re.finditer(r"roaming in ([A-Z][a-z]+(?: [A-Z][a-z]+)?) (is included|isn'?t included|is not included)", x):
+        for m in re.finditer(r"(?i:roaming in) ([A-Z][a-z]+(?: [A-Z][a-z]+)?) (is included|isn[’']?t included|is not included)", x):
             c = nlu.find_country(m.group(1))
             if c:
                 f["roaming"].append({"country": c, "zone": nlu.COUNTRIES[c], "included": m.group(2) == "is included", "src": "quote"})
-        for m in re.finditer(r"plus roaming in ([A-Z][a-z]+(?: [A-Z][a-z]+)?)", x):
+        for m in re.finditer(r"plus (?i:roaming in) ([A-Z][a-z]+(?: [A-Z][a-z]+)?)", x):
             c = nlu.find_country(m.group(1))
             if c:
                 f["roaming"].append({"country": c, "zone": nlu.COUNTRIES[c], "included": False, "src": "bill"})
-        for m in re.finditer(r"usage in ([A-Z][a-z]+(?: [A-Z][a-z]+)?) was included", x):
+        for m in re.finditer(r"(?i:usage in) ([A-Z][a-z]+(?: [A-Z][a-z]+)?) was included", x):
             c = nlu.find_country(m.group(1))
             if c:
                 f["roaming"].append({"country": c, "zone": nlu.COUNTRIES[c], "included": True, "src": "bill"})
@@ -157,6 +163,35 @@ def run_one(cid: str, model: str | None = None, neural: bool | None = None, save
         TRANSCRIPTS.mkdir(parents=True, exist_ok=True)
         (TRANSCRIPTS / f"{cid}.json").write_text(json.dumps(res, indent=1))
     return res
+
+
+def refresh(res: dict) -> dict:
+    """Re-derive acts, redaction, facts and metrics from a saved transcript's text (no re-transcription)."""
+    turns = res["turns"]
+    for t in turns:
+        t["act"] = nlu.classify_act(t["role"], t["text"])
+    phone = next((nlu.find_phone(t["text"]) for t in turns if t["role"] == "caller" and nlu.find_phone(t["text"])), None)
+    acct = _bob.by_phone(phone) if phone else None
+    reds = []
+    for t in turns:
+        t["text_redacted"], red = nlu.redact(t["text"], [acct.first, acct.last] if acct else _names_from_agent(turns),
+                                             identity_turn=t["act"] == "give_identity")
+        reds += red
+    res["redactions"] = [{"type": r["type"]} for r in reds]
+    res["features"] = extract_features(turns)
+    res["eval"] = evaluate(res, json.loads((CORPUS / f"{res['call_id']}.json").read_text()))
+    return res
+
+
+def refresh_all() -> dict:
+    evals = []
+    for p in sorted(TRANSCRIPTS.glob("C*.json")):
+        r = refresh(json.loads(p.read_text()))
+        p.write_text(json.dumps(r, indent=1))
+        evals.append(r["eval"])
+    s = summarize(evals)
+    SUMMARY.write_text(json.dumps(s, indent=1))
+    return s
 
 
 def _worker(cid):

@@ -1,0 +1,123 @@
+{
+ "call_id": "C0096",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.72,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.54,
+   "end": 11.0,
+   "text_raw": "I'm going to Canada next month for 9 days. Do I need a day pass?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'm going to Canada next month for 9 days. Do I need a day pass?",
+   "act": "ask_roaming",
+   "text_redacted": "I'm going to Canada next month for 9 days. Do I need a day pass?"
+  },
+  {
+   "start": 11.98,
+   "end": 18.0,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?"
+  },
+  {
+   "start": 19.04,
+   "end": 25.96,
+   "text_raw": "Sure, it's 646-555-0142 and my PIN is 7248.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 646-555-0142 and my PIN is 7248.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE] and my [PIN]."
+  },
+  {
+   "start": 26.86,
+   "end": 49.16,
+   "text_raw": "Thank you Jorge, you're verified. I see you're on Basic 5 GB. Roaming in Canada isn't included on your plan. The North America day pass is $5 per day, so 9 days would be $45. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you Jorge, you're verified. I see you're on Basic 5 GB Roaming in Canada isn't included on your plan. The North America day pass is $5 per day, so 9 days would be $45. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "act": "answer_roaming",
+   "text_redacted": "Thank you [NAME], you're verified. I see you're on Basic 5 GB Roaming in Canada isn't included on your plan. The North America day pass is $5 per day, so 9 days would be $45. It only charges on days you use your phone there. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 50.44,
+   "end": 52.3,
+   "text_raw": "No, that's all, thank you.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's all, thank you.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's all, thank you."
+  },
+  {
+   "start": 53.38,
+   "end": 57.66,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_roaming",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "Canada",
+    "zone": 1,
+    "included": false,
+    "src": "quote"
+   }
+  ]
+ },
+ "split": "heldout",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9161,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

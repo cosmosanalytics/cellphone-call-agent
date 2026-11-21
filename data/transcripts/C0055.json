@@ -1,0 +1,183 @@
+{
+ "call_id": "C0055",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.5,
+   "end": 5.66,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.62,
+   "end": 12.52,
+   "text_raw": "Honestly, I'm pretty annoyed. Hi, I'm traveling abroad soon and want to know what roaming will cost.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Honestly, I'm pretty annoyed. Hi, I'm traveling abroad soon and want to know what roaming will cost.",
+   "act": "ask_roaming",
+   "text_redacted": "Honestly, I'm pretty annoyed. Hi, I'm traveling abroad soon and want to know what roaming will cost."
+  },
+  {
+   "start": 13.48,
+   "end": 24.6,
+   "text_raw": "I completely understand your frustration and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I completely understand your frustration and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I completely understand your frustration and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 25.62,
+   "end": 29.88,
+   "text_raw": "Sure, it's 206 555. 0163.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 206 555. 0163.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE]."
+  },
+  {
+   "start": 30.92,
+   "end": 33.74,
+   "text_raw": "Thanks. And your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4-digit account PIN?"
+  },
+  {
+   "start": 34.96,
+   "end": 36.7,
+   "text_raw": "My PIN is 1104.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "My PIN is 1104.",
+   "act": "give_identity",
+   "text_redacted": "My [PIN]."
+  },
+  {
+   "start": 37.74,
+   "end": 47.22,
+   "text_raw": "Thank you, Marcus, you're verified. I see you're on Basic 5 GB. Which country are you traveling to and for how many days?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Marcus, you're verified. I see you're on Basic 5 GB Which country are you traveling to and for how many days?",
+   "act": "verify_ok",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Basic 5 GB Which country are you traveling to and for how many days?"
+  },
+  {
+   "start": 48.42,
+   "end": 50.34,
+   "text_raw": "I'm going to Japan for 12 days.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'm going to Japan for 12 days.",
+   "act": "ask_roaming",
+   "text_redacted": "I'm going to Japan for 12 days."
+  },
+  {
+   "start": 51.5,
+   "end": 69.08,
+   "text_raw": "Roaming in Japan isn't included on your plan. The Asia-Pacific and South America day pass is $15 per day, so 12 days would be $180. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Roaming in Japan isn't included on your plan. The Asia-Pacific and South America day pass is $15 per day, so 12 days would be $180. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "act": "answer_roaming",
+   "text_redacted": "Roaming in Japan isn't included on your plan. The Asia-Pacific and South America day pass is $15 per day, so 12 days would be $180. It only charges on days you use your phone there. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 69.86,
+   "end": 71.18,
+   "text_raw": "This is really frustrating.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "This is really frustrating.",
+   "act": "express_frustration",
+   "text_redacted": "This is really frustrating."
+  },
+  {
+   "start": 71.88,
+   "end": 81.98,
+   "text_raw": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "act": "empathize",
+   "text_redacted": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 82.84,
+   "end": 85.02,
+   "text_raw": "Can I talk to a real person, please?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Can I talk to a real person, please?",
+   "act": "request_human",
+   "text_redacted": "Can I talk to a real person, please?"
+  },
+  {
+   "start": 86.14,
+   "end": 91.2,
+   "text_raw": "Of course. I'm transferring you to a specialist now. Please hold.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Of course. I'm transferring you to a specialist now. Please hold.",
+   "act": "transfer_human",
+   "text_redacted": "Of course. I'm transferring you to a specialist now. Please hold."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_roaming",
+  "verified": true,
+  "escalated": true,
+  "roaming": [
+   {
+    "country": "Japan",
+    "zone": 3,
+    "included": false,
+    "src": "quote"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8997,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 13,
+  "turns_hyp": 13,
+  "act_acc": 1.0
+ }
+}

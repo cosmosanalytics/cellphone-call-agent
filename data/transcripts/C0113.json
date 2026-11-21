@@ -1,0 +1,130 @@
+{
+ "call_id": "C0113",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.7,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.5,
+   "end": 10.64,
+   "text_raw": "Hi, my internet has been really slow lately. Is something wrong with my data?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Hi, my internet has been really slow lately. Is something wrong with my data?",
+   "act": "ask_data",
+   "text_redacted": "Hi, my internet has been really slow lately. Is something wrong with my data?"
+  },
+  {
+   "start": 11.56,
+   "end": 17.7,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?"
+  },
+  {
+   "start": 18.56,
+   "end": 24.02,
+   "text_raw": "The number is 512. 555-0190. Pin 2478.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 512. 555-0190. Pin 2478.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE]. [PIN]."
+  },
+  {
+   "start": 25.04,
+   "end": 42.94,
+   "text_raw": "Thank you, Asia. You're verified. I see you're on Unlimited Starter. You've used 105 GB this cycle. You're past your priority data, so speeds are reduced until the cycle resets on December 1st. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Asia. You're verified. I see you're on Unlimited Starter. You've used 105 GB this cycle. You're past your priority data, so speeds are reduced until the cycle resets on December 1st. Is there anything else I can help you with today?",
+   "act": "answer_data",
+   "text_redacted": "Thank you, Asia. You're verified. I see you're on Unlimited Starter. You've used 105 GB this cycle. You're past your priority data, so speeds are reduced until the cycle resets on December 1st. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 44.18,
+   "end": 45.46,
+   "text_raw": "This is really frustrating.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "This is really frustrating.",
+   "act": "express_frustration",
+   "text_redacted": "This is really frustrating."
+  },
+  {
+   "start": 46.62,
+   "end": 57.36,
+   "text_raw": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "act": "empathize",
+   "text_redacted": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 58.26,
+   "end": 59.92,
+   "text_raw": "No, that's all, thank you.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's all, thank you.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's all, thank you."
+  },
+  {
+   "start": 60.78,
+   "end": 64.96,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  }
+ ],
+ "features": {
+  "plan_id": "UNS",
+  "intent": "ask_data",
+  "verified": true,
+  "escalated": false,
+  "roaming": [],
+  "used": 105,
+  "throttled": true
+ },
+ "split": "heldout",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0068,
+  "wer_raw": 0.0068,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9263,
+  "terms_total": 4,
+  "terms_hit": 4,
+  "terms_hit_raw": 4,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 1.0
+ }
+}

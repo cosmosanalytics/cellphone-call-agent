@@ -1,0 +1,109 @@
+{
+ "call_id": "C0072",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.92,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.7,
+   "end": 8.88,
+   "text_raw": "I'd like a credit for the extra charges on my bill.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'd like a credit for the extra charges on my bill.",
+   "act": "request_credit",
+   "text_redacted": "I'd like a credit for the extra charges on my bill."
+  },
+  {
+   "start": 9.8,
+   "end": 16.14,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 17.06,
+   "end": 23.12,
+   "text_raw": "The number is 415-555-0130 PIN 9455.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 415-555-0130 PIN 9455.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE] [PIN]."
+  },
+  {
+   "start": 23.94,
+   "end": 40.12,
+   "text_raw": "Thank you, Nade, you're verified. I see you're on Unlimited Plus. I'm sorry. I can't credit that because only roaming and data overage charges are eligible for a courtesy credit. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Nade, you're verified. I see you're on Unlimited Plus. I'm sorry. I can't credit that because only roaming and data overage charges are eligible for a courtesy credit. Is there anything else I can help you with today?",
+   "act": "answer_credit",
+   "text_redacted": "Thank you, Nade, you're verified. I see you're on Unlimited Plus. I'm sorry. I can't credit that because only roaming and data overage charges are eligible for a courtesy credit. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 41.06,
+   "end": 42.62,
+   "text_raw": "No? That's it. Thanks for your help.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No? That's it. Thanks for your help.",
+   "act": "thank_bye",
+   "text_redacted": "No? That's it. Thanks for your help."
+  },
+  {
+   "start": 43.74,
+   "end": 48.08,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  }
+ ],
+ "features": {
+  "plan_id": "UNP",
+  "intent": "request_credit",
+  "verified": true,
+  "escalated": false,
+  "roaming": [],
+  "credit_approved": false
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0091,
+  "wer_raw": 0.0091,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8967,
+  "terms_total": 7,
+  "terms_hit": 7,
+  "terms_hit_raw": 7,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

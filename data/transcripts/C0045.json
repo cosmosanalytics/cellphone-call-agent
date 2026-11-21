@@ -1,0 +1,123 @@
+{
+ "call_id": "C0045",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.58,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.48,
+   "end": 11.12,
+   "text_raw": "I'm going to Italy next month for 11 days. Do I need a day pass?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'm going to Italy next month for 11 days. Do I need a day pass?",
+   "act": "ask_roaming",
+   "text_redacted": "I'm going to Italy next month for 11 days. Do I need a day pass?"
+  },
+  {
+   "start": 12.04,
+   "end": 18.08,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?"
+  },
+  {
+   "start": 18.72,
+   "end": 26.16,
+   "text_raw": "Sure, it's 305 555 5 0144 and my PIN is 3207.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 305 555 5 0144 and my PIN is 3207.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE] and my [PIN]."
+  },
+  {
+   "start": 27.48,
+   "end": 49.24,
+   "text_raw": "Thank you Hannah, you're verified. I see you're on unlimited starter. Roaming in Italy isn't included on your plan. The Europe day pass is $10 per day, so 11 days would be $110. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you Hannah, you're verified. I see you're on Unlimited Starter. Roaming in Italy isn't included on your plan. The Europe day pass is $10 per day, so 11 days would be $110. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "act": "answer_roaming",
+   "text_redacted": "Thank you [NAME], you're verified. I see you're on Unlimited Starter. Roaming in Italy isn't included on your plan. The Europe day pass is $10 per day, so 11 days would be $110. It only charges on days you use your phone there. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 50.06,
+   "end": 52.62,
+   "text_raw": "No, that's it. Thanks for your help.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's it. Thanks for your help."
+  },
+  {
+   "start": 53.9,
+   "end": 58.08,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "unlimited starter",
+   "to": "Unlimited Starter"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNS",
+  "intent": "ask_roaming",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "Italy",
+    "zone": 2,
+    "included": false,
+    "src": "quote"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0076,
+  "wer_raw": 0.0076,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9191,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

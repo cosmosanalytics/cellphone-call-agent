@@ -1,0 +1,131 @@
+{
+ "call_id": "C0100",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.48,
+   "end": 5.7,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.7,
+   "end": 10.08,
+   "text_raw": "I'd like to upgrade to the new iPhone 16, am I eligible?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'd like to upgrade to the new iPhone 16, am I eligible?",
+   "act": "ask_upgrade",
+   "text_redacted": "I'd like to upgrade to the new iPhone 16, am I eligible?"
+  },
+  {
+   "start": 10.98,
+   "end": 17.06,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 18.04,
+   "end": 22.38,
+   "text_raw": "Sure, it's 206. I'll call 855-0137.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 206. I'll call 855-0137.",
+   "act": "confirm",
+   "text_redacted": "Sure, it's 206. I'll call 855-0137."
+  },
+  {
+   "start": 23.5,
+   "end": 26.32,
+   "text_raw": "Thanks. And your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4-digit account PIN?"
+  },
+  {
+   "start": 27.22,
+   "end": 28.68,
+   "text_raw": "It's 0668.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 0668.",
+   "act": "give_identity",
+   "text_redacted": "It's [PIN]."
+  },
+  {
+   "start": 29.5,
+   "end": 37.28,
+   "text_raw": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4-digit account PIN again?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4-digit account PIN again?",
+   "act": "verify_fail",
+   "text_redacted": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4-digit account PIN again?"
+  },
+  {
+   "start": 38.3,
+   "end": 43.62,
+   "text_raw": "The number is 206-555-0137, PIN 0668.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 206-555-0137, PIN 0668.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE], [PIN]."
+  },
+  {
+   "start": 44.84,
+   "end": 52.3,
+   "text_raw": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold.",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold.",
+   "act": "transfer_human",
+   "text_redacted": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  }
+ ],
+ "features": {
+  "plan_id": null,
+  "intent": "ask_upgrade",
+  "verified": false,
+  "escalated": true,
+  "roaming": []
+ },
+ "split": "heldout",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0367,
+  "wer_raw": 0.0367,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9357,
+  "terms_total": 4,
+  "terms_hit": 4,
+  "terms_hit_raw": 4,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 0.8889
+ }
+}

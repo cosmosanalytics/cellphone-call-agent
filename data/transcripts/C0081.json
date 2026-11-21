@@ -1,0 +1,127 @@
+{
+ "call_id": "C0081",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.8,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.9,
+   "end": 8.76,
+   "text_raw": "Why is my bill so high this month?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Why is my bill so high this month?",
+   "act": "ask_bill",
+   "text_redacted": "Why is my bill so high this month?"
+  },
+  {
+   "start": 10.14,
+   "end": 16.44,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?"
+  },
+  {
+   "start": 17.24,
+   "end": 24.48,
+   "text_raw": "Sure, it's 617-555-0140 and my PIN is 5431.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 617-555-0140 and my PIN is 5431.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE] and my [PIN]."
+  },
+  {
+   "start": 25.54,
+   "end": 56.06,
+   "text_raw": "Thank you, Maria, you're verified. I see you're on Basic 5 GB. Your current bill is $168.75. That's your basic 5 GB plan at $35, the Pixel 9 installment of $27, taxes and fees of $6.75, plus data overage of $40 for 4 GB, plus roaming in Germany for 6 days at $60. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Maria, you're verified. I see you're on Basic 5 GB Your current bill is $168.75. That's your Basic 5 GB plan at $35, the Pixel 9 installment of $27, taxes and fees of $6.75, plus data overage of $40 for 4 GB, plus roaming in Germany for 6 days at $60. Is there anything else I can help you with today?",
+   "act": "answer_bill",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Basic 5 GB Your current bill is $168.75. That's your Basic 5 GB plan at $35, the Pixel 9 installment of $27, taxes and fees of $6.75, plus data overage of $40 for 4 GB, plus roaming in Germany for 6 days at $60. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 57.3,
+   "end": 59.66,
+   "text_raw": "No, that's it. Thanks for your help.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's it. Thanks for your help."
+  },
+  {
+   "start": 61.12,
+   "end": 65.16,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "basic 5 GB",
+   "to": "Basic 5 GB"
+  },
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_bill",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "Germany",
+    "zone": 2,
+    "included": false,
+    "src": "bill"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9298,
+  "terms_total": 10,
+  "terms_hit": 10,
+  "terms_hit_raw": 10,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

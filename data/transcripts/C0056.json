@@ -1,0 +1,160 @@
+{
+ "call_id": "C0056",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.54,
+   "end": 5.9,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 7.12,
+   "end": 9.72,
+   "text_raw": "Can you explain my bill? It's higher than usual.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Can you explain my bill? It's higher than usual.",
+   "act": "ask_bill",
+   "text_redacted": "Can you explain my bill? It's higher than usual."
+  },
+  {
+   "start": 10.74,
+   "end": 17.02,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 18.14,
+   "end": 22.28,
+   "text_raw": "Sure, it's 646-555-0133.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 646-555-0133.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE]."
+  },
+  {
+   "start": 23.22,
+   "end": 26.22,
+   "text_raw": "Thanks. And your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4-digit account PIN?"
+  },
+  {
+   "start": 27.0,
+   "end": 28.42,
+   "text_raw": "It's 0884.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 0884.",
+   "act": "give_identity",
+   "text_redacted": "It's [PIN]."
+  },
+  {
+   "start": 29.66,
+   "end": 58.36,
+   "text_raw": "Thank you, Linde. You're verified. I see you're on Basic 5 GB. Your current bill is $161.75. That's your Basic 5 GB plan at $35. Taxes and fees of $6.75 plus data overage of $50 for 5 GB plus roaming in Germany for 7 days at $70. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Linde. You're verified. I see you're on Basic 5 GB Your current bill is $161.75. That's your Basic 5 GB plan at $35. Taxes and fees of $6.75 plus data overage of $50 for 5 GB plus roaming in Germany for 7 days at $70. Is there anything else I can help you with today?",
+   "act": "answer_bill",
+   "text_redacted": "Thank you, Linde. You're verified. I see you're on Basic 5 GB Your current bill is $161.75. That's your Basic 5 GB plan at $35. Taxes and fees of $6.75 plus data overage of $50 for 5 GB plus roaming in Germany for 7 days at $70. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 59.72,
+   "end": 61.92,
+   "text_raw": "Are you kidding me? I pay for this every month.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Are you kidding me? I pay for this every month.",
+   "act": "express_frustration",
+   "text_redacted": "Are you kidding me? I pay for this every month."
+  },
+  {
+   "start": 63.28,
+   "end": 73.52,
+   "text_raw": "I completely understand your frustration and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I completely understand your frustration and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "act": "empathize",
+   "text_redacted": "I completely understand your frustration and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 74.76,
+   "end": 76.64,
+   "text_raw": "Nope, that's everything. Bye.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "act": "thank_bye",
+   "text_redacted": "Nope, that's everything. Bye."
+  },
+  {
+   "start": 77.52,
+   "end": 81.66,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_bill",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "Germany",
+    "zone": 2,
+    "included": false,
+    "src": "bill"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0057,
+  "wer_raw": 0.0057,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8979,
+  "terms_total": 8,
+  "terms_hit": 8,
+  "terms_hit_raw": 8,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 11,
+  "turns_hyp": 11,
+  "act_acc": 1.0
+ }
+}

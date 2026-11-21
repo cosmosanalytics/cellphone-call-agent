@@ -1,0 +1,113 @@
+{
+ "call_id": "C0074",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.64,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.42,
+   "end": 7.7,
+   "text_raw": "Can I upgrade my phone yet?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Can I upgrade my phone yet?",
+   "act": "ask_upgrade",
+   "text_redacted": "Can I upgrade my phone yet?"
+  },
+  {
+   "start": 8.76,
+   "end": 15.18,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 16.4,
+   "end": 22.76,
+   "text_raw": "The number is 617. 555-0126, PIN 3265.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 617. 555-0126, PIN 3265.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE], [PIN]."
+  },
+  {
+   "start": 23.82,
+   "end": 47.06,
+   "text_raw": "Thank you, Robert. You're verified. I see you're on Unlimited Starter. I'm sorry, you're not eligible to upgrade yet. Your Moto G has 6 of 24 installments paid and your plan needs 12. You can upgrade early if you pay off the remaining balance of $144.00. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Robert. You're verified. I see you're on Unlimited Starter. I'm sorry, you're not eligible to upgrade yet. Your Moto G has 6 of 24 installments paid and your plan needs 12. You can upgrade early if you pay off the remaining balance of $144.00. Is there anything else I can help you with today?",
+   "act": "answer_upgrade",
+   "text_redacted": "Thank you, [NAME]. You're verified. I see you're on Unlimited Starter. I'm sorry, you're not eligible to upgrade yet. Your Moto G has 6 of 24 installments paid and your plan needs 12. You can upgrade early if you pay off the remaining balance of $144.00. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 48.14,
+   "end": 49.66,
+   "text_raw": "Nope, that's everything. Bye.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "act": "thank_bye",
+   "text_redacted": "Nope, that's everything. Bye."
+  },
+  {
+   "start": 50.7,
+   "end": 54.66,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNS",
+  "intent": "ask_upgrade",
+  "verified": true,
+  "escalated": false,
+  "roaming": [],
+  "upgrade_eligible": false,
+  "payments_made": 6
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9173,
+  "terms_total": 5,
+  "terms_hit": 5,
+  "terms_hit_raw": 5,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

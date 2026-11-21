@@ -1,0 +1,134 @@
+{
+ "call_id": "C0105",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.5,
+   "end": 5.68,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.52,
+   "end": 9.7,
+   "text_raw": "I'd like a credit for the extra charges on my bill.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'd like a credit for the extra charges on my bill.",
+   "act": "request_credit",
+   "text_redacted": "I'd like a credit for the extra charges on my bill."
+  },
+  {
+   "start": 10.94,
+   "end": 17.28,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 18.2,
+   "end": 22.8,
+   "text_raw": "It's 512-555-0155.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 512-555-0155.",
+   "act": "give_identity",
+   "text_redacted": "It's [PHONE]."
+  },
+  {
+   "start": 23.66,
+   "end": 26.58,
+   "text_raw": "Thanks. And your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4-digit account PIN?"
+  },
+  {
+   "start": 27.74,
+   "end": 30.1,
+   "text_raw": "My PIN is 5079.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "My PIN is 5079.",
+   "act": "give_identity",
+   "text_redacted": "My [PIN]."
+  },
+  {
+   "start": 31.14,
+   "end": 38.48,
+   "text_raw": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4-digit account PIN again?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4-digit account PIN again?",
+   "act": "verify_fail",
+   "text_redacted": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4-digit account PIN again?"
+  },
+  {
+   "start": 39.54,
+   "end": 47.06,
+   "text_raw": "Sure, it's 512-555-0155 and my PIN is 5079.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 512-555-0155 and my PIN is 5079.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE] and my [PIN]."
+  },
+  {
+   "start": 47.94,
+   "end": 55.86,
+   "text_raw": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold.",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold.",
+   "act": "transfer_human",
+   "text_redacted": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  }
+ ],
+ "features": {
+  "plan_id": null,
+  "intent": "request_credit",
+  "verified": false,
+  "escalated": true,
+  "roaming": []
+ },
+ "split": "heldout",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9383,
+  "terms_total": 2,
+  "terms_hit": 2,
+  "terms_hit_raw": 2,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 1.0
+ }
+}

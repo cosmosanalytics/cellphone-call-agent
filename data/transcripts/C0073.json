@@ -1,0 +1,163 @@
+{
+ "call_id": "C0073",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.5,
+   "end": 5.74,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.5,
+   "end": 10.46,
+   "text_raw": "Hi. I'm travelling abroad soon and want to know what roaming will cost.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Hi. I'm travelling abroad soon and want to know what roaming will cost.",
+   "act": "ask_roaming",
+   "text_redacted": "Hi. I'm travelling abroad soon and want to know what roaming will cost."
+  },
+  {
+   "start": 11.62,
+   "end": 18.04,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?"
+  },
+  {
+   "start": 19.16,
+   "end": 22.56,
+   "text_raw": "8646-555-0142.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "8646-555-0142.",
+   "act": "other",
+   "text_redacted": "[PHONE]."
+  },
+  {
+   "start": 23.62,
+   "end": 26.56,
+   "text_raw": "Thanks. And your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4 digit account PIN?"
+  },
+  {
+   "start": 27.76,
+   "end": 29.04,
+   "text_raw": "It's 7248.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 7248.",
+   "act": "give_identity",
+   "text_redacted": "It's [PIN]."
+  },
+  {
+   "start": 29.76,
+   "end": 38.88,
+   "text_raw": "Thank you Jorge, you're verified. I see you're on Basic 5 GB. Which country are you traveling to and for how many days?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you Jorge, you're verified. I see you're on Basic 5 GB Which country are you traveling to and for how many days?",
+   "act": "verify_ok",
+   "text_redacted": "Thank you [NAME], you're verified. I see you're on Basic 5 GB Which country are you traveling to and for how many days?"
+  },
+  {
+   "start": 39.96,
+   "end": 41.82,
+   "text_raw": "I'm going to Mexico for 5 days.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'm going to Mexico for 5 days.",
+   "act": "ask_roaming",
+   "text_redacted": "I'm going to Mexico for 5 days."
+  },
+  {
+   "start": 42.7,
+   "end": 58.34,
+   "text_raw": "Roaming in Mexico isn't included on your plan. The North America day pass is $5 per day, so 5 days would be $25. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Roaming in Mexico isn't included on your plan. The North America day pass is $5 per day, so 5 days would be $25. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "act": "answer_roaming",
+   "text_redacted": "Roaming in Mexico isn't included on your plan. The North America day pass is $5 per day, so 5 days would be $25. It only charges on days you use your phone there. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 59.36,
+   "end": 60.96,
+   "text_raw": "No, that's all, thank you.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's all, thank you.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's all, thank you."
+  },
+  {
+   "start": 61.8,
+   "end": 65.72,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_roaming",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "Mexico",
+    "zone": 1,
+    "included": false,
+    "src": "quote"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.02,
+  "wer_raw": 0.02,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8761,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 11,
+  "turns_hyp": 11,
+  "act_acc": 0.9091
+ }
+}

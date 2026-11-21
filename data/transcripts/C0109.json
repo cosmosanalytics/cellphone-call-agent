@@ -1,0 +1,118 @@
+{
+ "call_id": "C0109",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.5,
+   "end": 5.56,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.36,
+   "end": 9.08,
+   "text_raw": "Will my phone work in Germany? I'll be there for four days.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Will my phone work in Germany? I'll be there for four days.",
+   "act": "ask_roaming",
+   "text_redacted": "Will my phone work in Germany? I'll be there for four days."
+  },
+  {
+   "start": 9.76,
+   "end": 16.2,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?"
+  },
+  {
+   "start": 16.94,
+   "end": 23.08,
+   "text_raw": "The number is 617-555-0111 PIN 2081.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 617-555-0111 PIN 2081.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE] [PIN]."
+  },
+  {
+   "start": 24.14,
+   "end": 39.5,
+   "text_raw": "Thank you, Kevin. You're verified. I see you're on Unlimited Plus. Good news. Roaming in Germany is included on your plan at no extra charge, so you can use your phone there normally. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Kevin. You're verified. I see you're on Unlimited Plus. Good news. Roaming in Germany is included on your plan at no extra charge, so you can use your phone there normally. Is there anything else I can help you with today?",
+   "act": "answer_roaming",
+   "text_redacted": "Thank you, [NAME]. You're verified. I see you're on Unlimited Plus. Good news. Roaming in Germany is included on your plan at no extra charge, so you can use your phone there normally. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 40.52,
+   "end": 41.94,
+   "text_raw": "Nope, that's everything. Bye.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "act": "thank_bye",
+   "text_redacted": "Nope, that's everything. Bye."
+  },
+  {
+   "start": 42.92,
+   "end": 47.26,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNP",
+  "intent": "ask_roaming",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "Germany",
+    "zone": 2,
+    "included": true,
+    "src": "quote"
+   }
+  ]
+ },
+ "split": "heldout",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8954,
+  "terms_total": 5,
+  "terms_hit": 5,
+  "terms_hit_raw": 5,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

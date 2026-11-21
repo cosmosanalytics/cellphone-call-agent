@@ -1,0 +1,115 @@
+{
+ "call_id": "C0080",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 6.06,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 7.18,
+   "end": 11.14,
+   "text_raw": "I'm travelling to Spain for 11 days next week. Will I be charged for using my phone there?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'm travelling to Spain for 11 days next week. Will I be charged for using my phone there?",
+   "act": "ask_roaming",
+   "text_redacted": "I'm travelling to Spain for 11 days next week. Will I be charged for using my phone there?"
+  },
+  {
+   "start": 12.14,
+   "end": 18.56,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 19.4,
+   "end": 25.68,
+   "text_raw": "The number is 617. 555-0118-PIN-6008.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 617. 555-0118-PIN-6008.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE]-PIN-[PIN]."
+  },
+  {
+   "start": 26.94,
+   "end": 48.56,
+   "text_raw": "Thank you, Sophia, you're verified. I see you're on Unlimited Starter. Roaming in Spain isn't included on your plan. The Europe day pass is $10 per day, so 11 days would be $110. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Sophia, you're verified. I see you're on Unlimited Starter. Roaming in Spain isn't included on your plan. The Europe day pass is $10 per day, so 11 days would be $110. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "act": "answer_roaming",
+   "text_redacted": "Thank you, Sophia, you're verified. I see you're on Unlimited Starter. Roaming in Spain isn't included on your plan. The Europe day pass is $10 per day, so 11 days would be $110. It only charges on days you use your phone there. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 49.6,
+   "end": 51.0,
+   "text_raw": "Nope, that's everything. Bye.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Nope, that's everything. Bye.",
+   "act": "thank_bye",
+   "text_redacted": "Nope, that's everything. Bye."
+  },
+  {
+   "start": 51.94,
+   "end": 56.0,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  }
+ ],
+ "features": {
+  "plan_id": "UNS",
+  "intent": "ask_roaming",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "Spain",
+    "zone": 2,
+    "included": false,
+    "src": "quote"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0155,
+  "wer_raw": 0.0155,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9176,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

@@ -1,0 +1,149 @@
+{
+ "call_id": "C0031",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.54,
+   "end": 5.8,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.78,
+   "end": 9.44,
+   "text_raw": "I'd like a credit for the extra charges on my bill.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'd like a credit for the extra charges on my bill.",
+   "act": "request_credit",
+   "text_redacted": "I'd like a credit for the extra charges on my bill."
+  },
+  {
+   "start": 10.36,
+   "end": 16.34,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?"
+  },
+  {
+   "start": 17.48,
+   "end": 21.0,
+   "text_raw": "It's 720-555-0132.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 720-555-0132.",
+   "act": "give_identity",
+   "text_redacted": "It's [PHONE]."
+  },
+  {
+   "start": 22.22,
+   "end": 25.16,
+   "text_raw": "Thanks. And your four digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your four digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your four digit account PIN?"
+  },
+  {
+   "start": 26.3,
+   "end": 28.02,
+   "text_raw": "My PIN is 6267.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "My PIN is 6267.",
+   "act": "give_identity",
+   "text_redacted": "My [PIN]."
+  },
+  {
+   "start": 29.04,
+   "end": 44.0,
+   "text_raw": "Thank you, Olivier, you're verified. I see you're on Unlimited Plus. I'm sorry, I can't credit that because only Roaming and data overage charges are eligible for a courtesy credit. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Olivier, you're verified. I see you're on Unlimited Plus. I'm sorry, I can't credit that because only Roaming and data overage charges are eligible for a courtesy credit. Is there anything else I can help you with today?",
+   "act": "answer_credit",
+   "text_redacted": "Thank you, Olivier, you're verified. I see you're on Unlimited Plus. I'm sorry, I can't credit that because only Roaming and data overage charges are eligible for a courtesy credit. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 44.76,
+   "end": 47.46,
+   "text_raw": "That's ridiculous, nobody told me about that.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "That's ridiculous, nobody told me about that.",
+   "act": "express_frustration",
+   "text_redacted": "That's ridiculous, nobody told me about that."
+  },
+  {
+   "start": 48.52,
+   "end": 58.64,
+   "text_raw": "I completely understand your frustration and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I completely understand your frustration and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "act": "empathize",
+   "text_redacted": "I completely understand your frustration and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 59.4,
+   "end": 61.08,
+   "text_raw": "Nope, that's everything, bye.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Nope, that's everything, bye.",
+   "act": "thank_bye",
+   "text_redacted": "Nope, that's everything, bye."
+  },
+  {
+   "start": 62.16,
+   "end": 66.18,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  }
+ ],
+ "features": {
+  "plan_id": "UNP",
+  "intent": "request_credit",
+  "verified": true,
+  "escalated": false,
+  "roaming": [],
+  "credit_approved": false
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0066,
+  "wer_raw": 0.0066,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8747,
+  "terms_total": 7,
+  "terms_hit": 7,
+  "terms_hit_raw": 7,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 11,
+  "turns_hyp": 11,
+  "act_acc": 1.0
+ }
+}

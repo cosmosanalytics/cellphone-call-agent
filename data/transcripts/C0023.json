@@ -1,0 +1,113 @@
+{
+ "call_id": "C0023",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.6,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.74,
+   "end": 9.74,
+   "text_raw": "Why is my data so slow? Pages take forever to load.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Why is my data so slow? Pages take forever to load.",
+   "act": "ask_data",
+   "text_redacted": "Why is my data so slow? Pages take forever to load."
+  },
+  {
+   "start": 10.74,
+   "end": 16.74,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?"
+  },
+  {
+   "start": 17.66,
+   "end": 24.1,
+   "text_raw": "The number is 305. 555-0150, PIN 2659.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 305. 555-0150, PIN 2659.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE], [PIN]."
+  },
+  {
+   "start": 24.9,
+   "end": 41.48,
+   "text_raw": "Thank you, Priya, you're verified. I see you're on Unlimited Starter. You've used 97 GB this cycle. You're past your priority data, so speeds are reduced until the cycle resets on December 1st. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Priya, you're verified. I see you're on Unlimited Starter. You've used 97 GB this cycle. You're past your priority data, so speeds are reduced until the cycle resets on December 1st. Is there anything else I can help you with today?",
+   "act": "answer_data",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Unlimited Starter. You've used 97 GB this cycle. You're past your priority data, so speeds are reduced until the cycle resets on December 1st. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 42.34,
+   "end": 43.82,
+   "text_raw": "No? That's it. Thanks for your help.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No? That's it. Thanks for your help.",
+   "act": "thank_bye",
+   "text_redacted": "No? That's it. Thanks for your help."
+  },
+  {
+   "start": 44.88,
+   "end": 49.06,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNS",
+  "intent": "ask_data",
+  "verified": true,
+  "escalated": false,
+  "roaming": [],
+  "used": 97,
+  "throttled": true
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9022,
+  "terms_total": 4,
+  "terms_hit": 4,
+  "terms_hit_raw": 4,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

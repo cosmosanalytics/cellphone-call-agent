@@ -1,0 +1,118 @@
+{
+ "call_id": "C0007",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.5,
+   "end": 5.66,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.8,
+   "end": 9.94,
+   "text_raw": "Will my phone work in Japan? I'll be there for 12 days.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Will my phone work in Japan? I'll be there for 12 days.",
+   "act": "ask_roaming",
+   "text_redacted": "Will my phone work in Japan? I'll be there for 12 days."
+  },
+  {
+   "start": 11.1,
+   "end": 17.5,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 18.72,
+   "end": 23.98,
+   "text_raw": "Sure, it's 415-555-0109 and my PIN is 4564.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 415-555-0109 and my PIN is 4564.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE] and my [PIN]."
+  },
+  {
+   "start": 24.88,
+   "end": 48.0,
+   "text_raw": "Thank you, Marcus. You're verified. I see you're on Unlimited Starter. Roaming in Japan isn't included on your plan. The Asia-Pacific and South America day pass is $15 per day, so 12 days would be $180. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Marcus. You're verified. I see you're on Unlimited Starter. Roaming in Japan isn't included on your plan. The Asia-Pacific and South America day pass is $15 per day, so 12 days would be $180. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "act": "answer_roaming",
+   "text_redacted": "Thank you, [NAME]. You're verified. I see you're on Unlimited Starter. Roaming in Japan isn't included on your plan. The Asia-Pacific and South America day pass is $15 per day, so 12 days would be $180. It only charges on days you use your phone there. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 49.08,
+   "end": 51.14,
+   "text_raw": "No, that's it. Thanks for your help.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's it. Thanks for your help."
+  },
+  {
+   "start": 51.92,
+   "end": 55.88,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNS",
+  "intent": "ask_roaming",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "Japan",
+    "zone": 3,
+    "included": false,
+    "src": "quote"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9193,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

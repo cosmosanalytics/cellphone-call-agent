@@ -1,0 +1,158 @@
+{
+ "call_id": "C0000",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.54,
+   "end": 6.08,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 7.3,
+   "end": 11.92,
+   "text_raw": "Honestly, I am pretty annoyed. I'm going to India next month for 10 days. Do I need a day pass?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Honestly, I am pretty annoyed. I'm going to India next month for 10 days. Do I need a day pass?",
+   "act": "ask_roaming",
+   "text_redacted": "Honestly, I am pretty annoyed. I'm going to India next month for 10 days. Do I need a day pass?"
+  },
+  {
+   "start": 12.84,
+   "end": 23.4,
+   "text_raw": "I completely understand your frustration and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I completely understand your frustration and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I completely understand your frustration and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?"
+  },
+  {
+   "start": 24.08,
+   "end": 28.32,
+   "text_raw": "Sure. It's 646. 555-0184.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure. It's 646. 555-0184.",
+   "act": "give_identity",
+   "text_redacted": "Sure. It's [PHONE]."
+  },
+  {
+   "start": 28.98,
+   "end": 31.78,
+   "text_raw": "Thanks. And your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4 digit account PIN?"
+  },
+  {
+   "start": 32.56,
+   "end": 34.56,
+   "text_raw": "My PIN is 0717.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "My PIN is 0717.",
+   "act": "give_identity",
+   "text_redacted": "My [PIN]."
+  },
+  {
+   "start": 35.46,
+   "end": 58.2,
+   "text_raw": "Thank you, Tyler. You're verified. I see you're on Unlimited Plus. Roaming in India isn't included on your plan. The Asia-Pacific and South America day pass is $15 per day, so 10 days would be $150. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Tyler. You're verified. I see you're on Unlimited Plus. Roaming in India isn't included on your plan. The Asia-Pacific and South America day pass is $15 per day, so 10 days would be $150. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "act": "answer_roaming",
+   "text_redacted": "Thank you, [NAME]. You're verified. I see you're on Unlimited Plus. Roaming in India isn't included on your plan. The Asia-Pacific and South America day pass is $15 per day, so 10 days would be $150. It only charges on days you use your phone there. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 59.32,
+   "end": 61.14,
+   "text_raw": "Are you kidding me? I pay for this every month.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Are you kidding me? I pay for this every month.",
+   "act": "express_frustration",
+   "text_redacted": "Are you kidding me? I pay for this every month."
+  },
+  {
+   "start": 62.18,
+   "end": 72.4,
+   "text_raw": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "act": "empathize",
+   "text_redacted": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 73.42,
+   "end": 74.88,
+   "text_raw": "I want to speak to his supervisor.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I want to speak to his supervisor.",
+   "act": "request_human",
+   "text_redacted": "I want to speak to his supervisor."
+  },
+  {
+   "start": 75.64,
+   "end": 81.0,
+   "text_raw": "Of course. I'm transferring you to a specialist now. Please hold.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Of course. I'm transferring you to a specialist now. Please hold.",
+   "act": "transfer_human",
+   "text_redacted": "Of course. I'm transferring you to a specialist now. Please hold."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNP",
+  "intent": "ask_roaming",
+  "verified": true,
+  "escalated": true,
+  "roaming": [
+   {
+    "country": "India",
+    "zone": 3,
+    "included": false,
+    "src": "quote"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0152,
+  "wer_raw": 0.0152,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8856,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 11,
+  "turns_hyp": 11,
+  "act_acc": 1.0
+ }
+}

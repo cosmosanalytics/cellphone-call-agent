@@ -1,0 +1,138 @@
+{
+ "call_id": "C0040",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.72,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.66,
+   "end": 10.2,
+   "text_raw": "I'm going to Germany next month for 4 days. Do I need a day pass?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'm going to Germany next month for 4 days. Do I need a day pass?",
+   "act": "ask_roaming",
+   "text_redacted": "I'm going to Germany next month for 4 days. Do I need a day pass?"
+  },
+  {
+   "start": 11.22,
+   "end": 17.48,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?"
+  },
+  {
+   "start": 18.3,
+   "end": 21.72,
+   "text_raw": "8646 555. 0184.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "8646 555. 0184.",
+   "act": "other",
+   "text_redacted": "[PHONE]."
+  },
+  {
+   "start": 22.96,
+   "end": 25.8,
+   "text_raw": "Thanks. And your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4 digit account PIN?"
+  },
+  {
+   "start": 26.56,
+   "end": 28.48,
+   "text_raw": "My PIN is 0717.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "My PIN is 0717.",
+   "act": "give_identity",
+   "text_redacted": "My [PIN]."
+  },
+  {
+   "start": 29.68,
+   "end": 45.26,
+   "text_raw": "Thank you, Tyler. You're verified. I see you're on Unlimited Plus. Good news. Roaming in Germany is included on your plan at no extra charge. So you can use your phone there normally. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Tyler. You're verified. I see you're on Unlimited Plus. Good news. Roaming in Germany is included on your plan at no extra charge. So you can use your phone there normally. Is there anything else I can help you with today?",
+   "act": "answer_roaming",
+   "text_redacted": "Thank you, [NAME]. You're verified. I see you're on Unlimited Plus. Good news. Roaming in Germany is included on your plan at no extra charge. So you can use your phone there normally. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 46.04,
+   "end": 47.84,
+   "text_raw": "No, that's all. Thank you.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's all. Thank you.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's all. Thank you."
+  },
+  {
+   "start": 48.86,
+   "end": 52.96,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNP",
+  "intent": "ask_roaming",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "Germany",
+    "zone": 2,
+    "included": true,
+    "src": "quote"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0164,
+  "wer_raw": 0.0164,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8446,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 0.8889
+ }
+}

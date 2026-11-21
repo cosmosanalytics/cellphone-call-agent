@@ -1,0 +1,136 @@
+{
+ "call_id": "C0033",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.54,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.6,
+   "end": 8.62,
+   "text_raw": "I want to check how much data I've used this month.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I want to check how much data I've used this month.",
+   "act": "ask_data",
+   "text_redacted": "I want to check how much data I've used this month."
+  },
+  {
+   "start": 9.82,
+   "end": 16.38,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?"
+  },
+  {
+   "start": 17.46,
+   "end": 21.9,
+   "text_raw": "Sure. It's 206. 555-0170.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure. It's 206. 555-0170.",
+   "act": "give_identity",
+   "text_redacted": "Sure. It's [PHONE]."
+  },
+  {
+   "start": 22.96,
+   "end": 25.96,
+   "text_raw": "Thanks. And your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4 digit account PIN?"
+  },
+  {
+   "start": 26.9,
+   "end": 28.02,
+   "text_raw": "It's 1328.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 1328.",
+   "act": "give_identity",
+   "text_redacted": "It's [PIN]."
+  },
+  {
+   "start": 28.8,
+   "end": 44.54,
+   "text_raw": "Thank you, Andre. You're verified. I see you're on Basic 5 GB. You've used 1 GB of your 5 GB this cycle, so you have 4 GB left until December 1st. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Andre. You're verified. I see you're on Basic 5 GB You've used 1 GB of your 5 GB this cycle, so you have 4 GB left until December 1st. Is there anything else I can help you with today?",
+   "act": "answer_data",
+   "text_redacted": "Thank you, [NAME]. You're verified. I see you're on Basic 5 GB You've used 1 GB of your 5 GB this cycle, so you have 4 GB left until December 1st. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 45.58,
+   "end": 46.9,
+   "text_raw": "No, that's all. Thank you.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's all. Thank you.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's all. Thank you."
+  },
+  {
+   "start": 47.6,
+   "end": 51.6,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_data",
+  "verified": true,
+  "escalated": false,
+  "roaming": []
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.838,
+  "terms_total": 3,
+  "terms_hit": 3,
+  "terms_hit_raw": 3,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 1.0
+ }
+}

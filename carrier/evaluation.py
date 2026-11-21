@@ -84,9 +84,13 @@ def llm_judge(rec: dict) -> dict | None:
         return None
     ex = _load(EXAMPLES_FILE, [])[-3:]
     shots = "".join(f"\nExample (human-corrected): {e['summary']} -> {json.dumps(e['scores'])}" for e in ex)
-    prompt = ("You grade a cell phone carrier support call. Score each of tone (empathetic, professional) and "
-              "outcome (caller's request answered, or transferred when they asked for a person) as 1 (pass) or 0 (fail). "
-              "Withholding account details until the caller is verified is correct behaviour. "
+    prompt = ("You grade a call between a cell phone carrier's AI agent and a caller. Policy the agent must follow: "
+              "verify phone number and PIN before sharing account details; transfer to a specialist after two failed "
+              "verifications, or when the caller asks for a person or to cancel. Following this policy is correct, so a "
+              "transfer in those cases PASSES outcome.\n"
+              "tone = 1 unless the agent is rude, dismissive, or ignores frustration the caller clearly expressed.\n"
+              "outcome = 1 if the caller's question was answered (even if the answer is not what they hoped) or the call "
+              "was transferred per policy; 0 only if the request was left unanswered.\n"
               'Reply with JSON only: {"tone": 0|1, "outcome": 0|1, "rationale": "one sentence"}.' + shots
               + "\n\nCall:\n" + transcript_text(rec))
     t = time.time()
@@ -103,12 +107,11 @@ def judge(rec: dict, use_llm: bool = False, precomputed: dict | None = None) -> 
     rc = rule_checks(rec)
     lj = llm_judge(rec) if use_llm else precomputed
     scores = dict(rc["scores"])
-    if lj and lj.get("scores"):
-        for k, v in lj["scores"].items():
-            if k not in RULE_AUTHORITATIVE:
-                scores[k] = min(scores[k], v) if k == "tone" else v
+    # The LLM is advisory: where it disagrees with the rule checks the call goes to a human reviewer,
+    # whose verdict (not the LLM's) becomes a judge example.
+    disagree = [k for k, v in ((lj or {}).get("scores") or {}).items() if v != scores.get(k)]
     return {"call_id": rec.get("call_id"), "scores": scores, "pass": all(scores.values()),
-            "rule_findings": rc["findings"], "llm": lj, "source": rec.get("source", "live")}
+            "rule_findings": rc["findings"], "llm": lj, "llm_disagrees": disagree, "source": rec.get("source", "live")}
 
 
 def save_judgment(j: dict):
@@ -150,11 +153,12 @@ def replay(rs: RuleSet, use_llm: bool = False) -> dict:
     rows = []
     for c in held:
         rec = replay_call(c, rs)
-        j = judge(rec, use_llm, pre.get(rec["call_id"]) if not use_llm else None)
+        key = rec["call_id"] + ("+learned" if rs.overrides else "")
+        j = judge(rec, use_llm, pre.get(key) if not use_llm else None)
         save_judgment(j | {"transcript": rec["turns"]})
         rows.append({"call_id": rec["call_id"], "outcome_match": rec["outcome_match"], "act_match": rec["act_match"],
                      "facts_match": j["scores"]["accuracy"] == 1, "judge_pass": j["pass"],
-                     "findings": "; ".join(j["rule_findings"])})
+                     "findings": "; ".join(j["rule_findings"]), "llm_disagrees": j["llm_disagrees"]})
     n = max(1, len(rows))
     return {"calls": len(rows), "outcome_match": round(sum(r["outcome_match"] for r in rows) / n, 4),
             "mean_act_match": round(sum(r["act_match"] for r in rows) / n, 4),
@@ -169,7 +173,7 @@ def in_review_sample(call_id: str) -> bool:
 
 def review_queue() -> list[dict]:
     done = _load(REVIEW_FILE, {})
-    return [j for cid, j in judgments().items() if cid not in done and (in_review_sample(cid) or not j["pass"])]
+    return [j for cid, j in judgments().items() if cid not in done and (in_review_sample(cid) or not j["pass"] or j.get("llm_disagrees"))]
 
 
 def submit_review(call_id: str, scores: dict, note: str = ""):
@@ -189,9 +193,13 @@ def reviews() -> dict:
 
 
 def agreement() -> dict:
+    """Agreement with human reviewers, for the final (rules) judge and for the LLM judge alone."""
     js, rv = judgments(), reviews()
     out = {}
     for d in DIMS:
         pairs = [(js[c]["scores"][d], r["scores"][d]) for c, r in rv.items() if c in js and d in r["scores"]]
-        out[d] = {"n": len(pairs), "agreement": round(sum(a == b for a, b in pairs) / len(pairs), 3) if pairs else None}
+        lpairs = [((js[c].get("llm") or {}).get("scores", {})[d], r["scores"][d]) for c, r in rv.items()
+                  if c in js and d in ((js[c].get("llm") or {}).get("scores") or {}) and d in r["scores"]]
+        out[d] = {"n": len(pairs), "judge_agreement": round(sum(a == b for a, b in pairs) / len(pairs), 3) if pairs else None,
+                  "llm_n": len(lpairs), "llm_agreement": round(sum(a == b for a, b in lpairs) / len(lpairs), 3) if lpairs else None}
     return out

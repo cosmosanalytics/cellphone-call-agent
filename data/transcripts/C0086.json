@@ -1,0 +1,164 @@
+{
+ "call_id": "C0086",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.5,
+   "end": 5.78,
+   "text_raw": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless, this is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.64,
+   "end": 9.84,
+   "text_raw": "Will my phone work in United Kingdom? I'll be there for five days.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Will my phone work in United Kingdom? I'll be there for five days.",
+   "act": "ask_roaming",
+   "text_redacted": "Will my phone work in United Kingdom? I'll be there for five days."
+  },
+  {
+   "start": 10.5,
+   "end": 16.8,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?"
+  },
+  {
+   "start": 17.6,
+   "end": 24.02,
+   "text_raw": "Sure, it's 617. My phone number is 555-0126 and my PIN is 4376.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 617. My phone number is 555-0126 and my PIN is 4376.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's 617. My phone number is 555-[PIN] and my [PIN]."
+  },
+  {
+   "start": 25.08,
+   "end": 32.94,
+   "text_raw": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your four digit account PIN again?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your four digit account PIN again?",
+   "act": "verify_fail",
+   "text_redacted": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your four digit account PIN again?"
+  },
+  {
+   "start": 33.76,
+   "end": 37.44,
+   "text_raw": "It's 617-555-0126.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 617-555-0126.",
+   "act": "give_identity",
+   "text_redacted": "It's [PHONE]."
+  },
+  {
+   "start": 38.36,
+   "end": 41.24,
+   "text_raw": "Thanks. And your four digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your four digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your four digit account PIN?"
+  },
+  {
+   "start": 42.14,
+   "end": 43.5,
+   "text_raw": "It's 3265.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 3265.",
+   "act": "give_identity",
+   "text_redacted": "It's [PIN]."
+  },
+  {
+   "start": 44.18,
+   "end": 64.64,
+   "text_raw": "Thank you, Robert. You're verified. I see you're on Unlimited Starter. Roaming in United Kingdom isn't included on your plan. The Europe day pass is $10 per day, so five days would be $50. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Robert. You're verified. I see you're on Unlimited Starter. Roaming in United Kingdom isn't included on your plan. The Europe day pass is $10 per day, so five days would be $50. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "act": "answer_roaming",
+   "text_redacted": "Thank you, [NAME]. You're verified. I see you're on Unlimited Starter. Roaming in United Kingdom isn't included on your plan. The Europe day pass is $10 per day, so five days would be $50. It only charges on days you use your phone there. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 65.5,
+   "end": 67.0,
+   "text_raw": "Nope, that's everything, bye.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Nope, that's everything, bye.",
+   "act": "thank_bye",
+   "text_redacted": "Nope, that's everything, bye."
+  },
+  {
+   "start": 67.88,
+   "end": 71.88,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNS",
+  "intent": "ask_roaming",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "United Kingdom",
+    "zone": 2,
+    "included": false,
+    "src": "quote"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.037,
+  "wer_raw": 0.037,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8906,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 11,
+  "turns_hyp": 11,
+  "act_acc": 1.0
+ }
+}

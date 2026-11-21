@@ -1,0 +1,112 @@
+{
+ "call_id": "C0107",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.5,
+   "end": 5.8,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.98,
+   "end": 9.76,
+   "text_raw": "I was charged for roaming on my last bill. Can you take that off?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I was charged for roaming on my last bill. Can you take that off?",
+   "act": "request_credit",
+   "text_redacted": "I was charged for roaming on my last bill. Can you take that off?"
+  },
+  {
+   "start": 10.82,
+   "end": 16.84,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 17.72,
+   "end": 24.06,
+   "text_raw": "The number is 617-555-0111 PIN-2081.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 617-555-0111 PIN-2081.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE] PIN-[PIN]."
+  },
+  {
+   "start": 24.88,
+   "end": 38.46,
+   "text_raw": "Thank you, Kevin. You're verified. I see you're on Unlimited Plus. I'm sorry. I can't credit that because there is no charge of that type on the current bill. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Kevin. You're verified. I see you're on Unlimited Plus. I'm sorry. I can't credit that because there is no charge of that type on the current bill. Is there anything else I can help you with today?",
+   "act": "answer_credit",
+   "text_redacted": "Thank you, [NAME]. You're verified. I see you're on Unlimited Plus. I'm sorry. I can't credit that because there is no charge of that type on the current bill. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 39.34,
+   "end": 40.86,
+   "text_raw": "No? That's it. Thanks for your help.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No? That's it. Thanks for your help.",
+   "act": "thank_bye",
+   "text_redacted": "No? That's it. Thanks for your help."
+  },
+  {
+   "start": 42.0,
+   "end": 46.06,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNP",
+  "intent": "request_credit",
+  "verified": true,
+  "escalated": false,
+  "roaming": [],
+  "credit_approved": false
+ },
+ "split": "heldout",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8974,
+  "terms_total": 4,
+  "terms_hit": 4,
+  "terms_hit_raw": 4,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

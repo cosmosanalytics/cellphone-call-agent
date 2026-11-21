@@ -1,0 +1,111 @@
+{
+ "call_id": "C0068",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.54,
+   "end": 6.04,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.94,
+   "end": 8.68,
+   "text_raw": "Why is my bill so high this month?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Why is my bill so high this month?",
+   "act": "ask_bill",
+   "text_redacted": "Why is my bill so high this month?"
+  },
+  {
+   "start": 9.96,
+   "end": 16.24,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 17.24,
+   "end": 24.08,
+   "text_raw": "The number is 646 555 0134 PIN 5071.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 646 555 0134 PIN 5071.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE] [PIN]."
+  },
+  {
+   "start": 25.3,
+   "end": 47.7,
+   "text_raw": "Thank you, Daniel, you're verified. I see you're on Unlimited Starter. Your current bill is $95.75. That's your Unlimited Starter plan at $55. The Galaxy S25 installment of $34. Taxes and fees of $6.75. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Daniel, you're verified. I see you're on Unlimited Starter. Your current bill is $95.75. That's your Unlimited Starter plan at $55. The Galaxy S25 installment of $34. Taxes and fees of $6.75. Is there anything else I can help you with today?",
+   "act": "answer_bill",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Unlimited Starter. Your current bill is $95.75. That's your Unlimited Starter plan at $55. The Galaxy S25 installment of $34. Taxes and fees of $6.75. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 48.52,
+   "end": 51.02,
+   "text_raw": "No, that's it. Thanks for your help.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's it. Thanks for your help."
+  },
+  {
+   "start": 52.1,
+   "end": 56.32,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNS",
+  "intent": "ask_bill",
+  "verified": true,
+  "escalated": false,
+  "roaming": []
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9147,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

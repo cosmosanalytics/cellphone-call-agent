@@ -1,0 +1,134 @@
+{
+ "call_id": "C0005",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.54,
+   "end": 5.84,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.76,
+   "end": 10.48,
+   "text_raw": "I just got back from Japan and I want to know if I was charged roaming on my bill.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I just got back from Japan and I want to know if I was charged roaming on my bill.",
+   "act": "ask_bill",
+   "text_redacted": "I just got back from Japan and I want to know if I was charged roaming on my bill."
+  },
+  {
+   "start": 11.38,
+   "end": 17.78,
+   "text_raw": "I can't help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "I can't help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can't help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 18.7,
+   "end": 24.76,
+   "text_raw": "The number is 646. 555-0150, PIN 847-7.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 646. 555-0150, PIN 847-7.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE], [PIN]."
+  },
+  {
+   "start": 25.42,
+   "end": 32.78,
+   "text_raw": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4-digit account PIN again?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4-digit account PIN again?",
+   "act": "verify_fail",
+   "text_redacted": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4-digit account PIN again?"
+  },
+  {
+   "start": 33.96,
+   "end": 37.62,
+   "text_raw": "It's 646. 555-0150.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 646. 555-0150.",
+   "act": "give_identity",
+   "text_redacted": "It's [PHONE]."
+  },
+  {
+   "start": 38.72,
+   "end": 41.64,
+   "text_raw": "Thanks. And your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4-digit account PIN?"
+  },
+  {
+   "start": 42.6,
+   "end": 44.64,
+   "text_raw": "My PIN is 847-7.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "My PIN is 847-7.",
+   "act": "give_identity",
+   "text_redacted": "My [PIN]."
+  },
+  {
+   "start": 45.42,
+   "end": 52.78,
+   "text_raw": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold.",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold.",
+   "act": "transfer_human",
+   "text_redacted": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  }
+ ],
+ "features": {
+  "plan_id": null,
+  "intent": "ask_bill",
+  "verified": false,
+  "escalated": true,
+  "roaming": []
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0085,
+  "wer_raw": 0.0085,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.7919,
+  "terms_total": 4,
+  "terms_hit": 4,
+  "terms_hit_raw": 4,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 1.0
+ }
+}

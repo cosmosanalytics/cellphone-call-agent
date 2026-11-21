@@ -1,0 +1,140 @@
+{
+ "call_id": "C0093",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.5,
+   "end": 5.74,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.58,
+   "end": 8.32,
+   "text_raw": "Why is my bill so high this month?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Why is my bill so high this month?",
+   "act": "ask_bill",
+   "text_redacted": "Why is my bill so high this month?"
+  },
+  {
+   "start": 9.2,
+   "end": 15.64,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 16.4,
+   "end": 20.06,
+   "text_raw": "It's 512-555-0104.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 512-555-0104.",
+   "act": "give_identity",
+   "text_redacted": "It's [PHONE]."
+  },
+  {
+   "start": 21.24,
+   "end": 24.06,
+   "text_raw": "Thanks. And your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4-digit account PIN?"
+  },
+  {
+   "start": 25.08,
+   "end": 26.98,
+   "text_raw": "My PIN is 7 0 8 0.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "My PIN is 7 0 8 0.",
+   "act": "give_identity",
+   "text_redacted": "My [PIN]."
+  },
+  {
+   "start": 27.66,
+   "end": 53.98,
+   "text_raw": "Thank you, Olivia, you're verified. I see you're on Basic 5 GB. Your current bill is $89.75. That's your Basic 5 GB plan at $35, the Moto G installment of $8, taxes and fees of $6.75, plus data overage of $40 for 4 GB. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Olivia, you're verified. I see you're on Basic 5 GB Your current bill is $89.75. That's your Basic 5 GB plan at $35, the Moto G installment of $8, taxes and fees of $6.75, plus data overage of $40 for 4 GB Is there anything else I can help you with today?",
+   "act": "answer_bill",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Basic 5 GB Your current bill is $89.75. That's your Basic 5 GB plan at $35, the Moto G installment of $8, taxes and fees of $6.75, plus data overage of $40 for 4 GB Is there anything else I can help you with today?"
+  },
+  {
+   "start": 54.74,
+   "end": 56.22,
+   "text_raw": "No? That's it. Thanks for your help.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No? That's it. Thanks for your help.",
+   "act": "thank_bye",
+   "text_redacted": "No? That's it. Thanks for your help."
+  },
+  {
+   "start": 57.28,
+   "end": 61.52,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  },
+  {
+   "from": "4 GB.",
+   "to": "4 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_bill",
+  "verified": true,
+  "escalated": false,
+  "roaming": []
+ },
+ "split": "heldout",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0074,
+  "wer_raw": 0.0074,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8688,
+  "terms_total": 8,
+  "terms_hit": 8,
+  "terms_hit_raw": 8,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 1.0
+ }
+}

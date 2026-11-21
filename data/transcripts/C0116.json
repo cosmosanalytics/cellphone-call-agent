@@ -1,0 +1,136 @@
+{
+ "call_id": "C0116",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 6.08,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.94,
+   "end": 12.38,
+   "text_raw": "Honestly, I'm pretty annoyed. I want to check how much data I've used this month.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Honestly, I'm pretty annoyed. I want to check how much data I've used this month.",
+   "act": "ask_data",
+   "text_redacted": "Honestly, I'm pretty annoyed. I want to check how much data I've used this month."
+  },
+  {
+   "start": 13.46,
+   "end": 24.2,
+   "text_raw": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 25.08,
+   "end": 31.78,
+   "text_raw": "The number is 646 555 0133 PIN 0884.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 646 555 0133 PIN 0884.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE] [PIN]."
+  },
+  {
+   "start": 32.62,
+   "end": 51.88,
+   "text_raw": "Thank you, Linda, you're verified. I see you're on Basic 5 GB. You've used 9 GB of your 5 GB this cycle, so 4 GB is billed as data overage at $10 per GB, $40 so far. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Linda, you're verified. I see you're on Basic 5 GB You've used 9 GB of your 5 GB this cycle, so 4 GB is billed as data overage at $10 per GB, $40 so far. Is there anything else I can help you with today?",
+   "act": "answer_data",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Basic 5 GB You've used 9 GB of your 5 GB this cycle, so 4 GB is billed as data overage at $10 per GB, $40 so far. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 52.82,
+   "end": 56.08,
+   "text_raw": "That's ridiculous. Nobody told me about that.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "That's ridiculous. Nobody told me about that.",
+   "act": "express_frustration",
+   "text_redacted": "That's ridiculous. Nobody told me about that."
+  },
+  {
+   "start": 57.14,
+   "end": 67.84,
+   "text_raw": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "act": "empathize",
+   "text_redacted": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 68.72,
+   "end": 70.62,
+   "text_raw": "No, that's all. Thank you.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's all. Thank you.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's all. Thank you."
+  },
+  {
+   "start": 71.64,
+   "end": 75.7,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_data",
+  "verified": true,
+  "escalated": false,
+  "roaming": []
+ },
+ "split": "heldout",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.94,
+  "terms_total": 5,
+  "terms_hit": 5,
+  "terms_hit_raw": 5,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 1.0
+ }
+}

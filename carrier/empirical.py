@@ -117,7 +117,8 @@ def find_contradictions(feats: list[tuple[str, dict]], rs: RuleSet = PUBLISHED) 
         hi = min([u for _, u, t in obs if t], default=None)
         if hi is None:
             continue
-        cand = next((x for x in range(5, 1000, 5) if lo < x <= hi), hi)
+        # published thresholds are round numbers: take the roundest value between the two observations
+        cand = next((x for step in (50, 25, 10, 5, 1) for x in range(step, 1001, step) if lo < x <= hi), hi)
         ok = sum((u >= cand) == t for _, u, t in obs)
         if ok / len(obs) >= MIN_RATE:
             out.append({"key": ["throttle_gb", p], "current": rule, "proposed": cand,

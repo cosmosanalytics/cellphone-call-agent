@@ -1,0 +1,131 @@
+{
+ "call_id": "C0037",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.94,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.76,
+   "end": 8.34,
+   "text_raw": "Why is my bill so high this month?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Why is my bill so high this month?",
+   "act": "ask_bill",
+   "text_redacted": "Why is my bill so high this month?"
+  },
+  {
+   "start": 9.32,
+   "end": 15.6,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 16.28,
+   "end": 20.3,
+   "text_raw": "Sure, it's 2-0-6. 555-0134.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 2-0-6. 555-0134.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE]."
+  },
+  {
+   "start": 21.7,
+   "end": 24.68,
+   "text_raw": "Thanks. And your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4-digit account PIN?"
+  },
+  {
+   "start": 25.84,
+   "end": 27.32,
+   "text_raw": "It's 9079.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 9079.",
+   "act": "give_identity",
+   "text_redacted": "It's [PIN]."
+  },
+  {
+   "start": 28.18,
+   "end": 51.4,
+   "text_raw": "Thank you, Maria, you're verified. I see you're on Unlimited Starter. Your current bill is $95.75. That's your Unlimited Starter plan at $55, the Galaxy S25 installment of $34, taxes and fees of $6.75. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Maria, you're verified. I see you're on Unlimited Starter. Your current bill is $95.75. That's your Unlimited Starter plan at $55, the Galaxy S25 installment of $34, taxes and fees of $6.75. Is there anything else I can help you with today?",
+   "act": "answer_bill",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Unlimited Starter. Your current bill is $95.75. That's your Unlimited Starter plan at $55, the Galaxy S25 installment of $34, taxes and fees of $6.75. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 52.26,
+   "end": 53.92,
+   "text_raw": "No, that's all. Thank you.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's all. Thank you.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's all. Thank you."
+  },
+  {
+   "start": 55.24,
+   "end": 59.34,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNS",
+  "intent": "ask_bill",
+  "verified": true,
+  "escalated": false,
+  "roaming": []
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0083,
+  "wer_raw": 0.0083,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8605,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 1.0
+ }
+}

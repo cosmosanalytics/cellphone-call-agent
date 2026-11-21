@@ -1,0 +1,118 @@
+{
+ "call_id": "C0104",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.54,
+   "end": 6.02,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 7.06,
+   "end": 8.82,
+   "text_raw": "Can I upgrade my phone yet?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Can I upgrade my phone yet?",
+   "act": "ask_upgrade",
+   "text_redacted": "Can I upgrade my phone yet?"
+  },
+  {
+   "start": 10.1,
+   "end": 16.2,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 17.38,
+   "end": 24.52,
+   "text_raw": "Sure, it's 206 555 0111 and my PIN is 2084.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 206 555 0111 and my PIN is 2084.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE] and my [PIN]."
+  },
+  {
+   "start": 25.72,
+   "end": 48.88,
+   "text_raw": "Thank you, Marcus. You're verified. I see you're on Basic 5 GB. I'm sorry, you're not eligible to upgrade yet. Your iPhone 16 has 2 of 24 installments paid and your plan needs 12. You can upgrade early if you pay off the remaining balance of $770.00. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Marcus. You're verified. I see you're on Basic 5 GB I'm sorry, you're not eligible to upgrade yet. Your iPhone 16 has 2 of 24 installments paid and your plan needs 12. You can upgrade early if you pay off the remaining balance of $770.00. Is there anything else I can help you with today?",
+   "act": "answer_upgrade",
+   "text_redacted": "Thank you, [NAME]. You're verified. I see you're on Basic 5 GB I'm sorry, you're not eligible to upgrade yet. Your iPhone 16 has 2 of 24 installments paid and your plan needs 12. You can upgrade early if you pay off the remaining balance of $770.00. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 49.76,
+   "end": 52.2,
+   "text_raw": "No, that's it. Thanks for your help.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's it. Thanks for your help.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's it. Thanks for your help."
+  },
+  {
+   "start": 53.56,
+   "end": 57.72,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_upgrade",
+  "verified": true,
+  "escalated": false,
+  "roaming": [],
+  "upgrade_eligible": false,
+  "payments_made": 2
+ },
+ "split": "heldout",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9172,
+  "terms_total": 5,
+  "terms_hit": 5,
+  "terms_hit_raw": 5,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

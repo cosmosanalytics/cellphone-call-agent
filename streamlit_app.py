@@ -266,7 +266,7 @@ def live_page():
             if j["rule_findings"]:
                 st.warning("; ".join(j["rule_findings"]))
             if j.get("llm"):
-                st.caption(f"LLM judge: {j['llm']}")
+                st.caption(f"LLM judge (advisory): {j['llm'].get('scores')} - {j['llm'].get('rationale')}")
     with right:
         st.subheader("Decision")
         st.markdown(f"Verified: **{call.acct is not None}** | Mood: **{call.mood}** | Failed checks: {call.failed}")
@@ -296,8 +296,8 @@ def eval_page():
         c[2].metric("Facts match billing/network", f"{r['facts_match']:.0%}")
         c[3].metric("Judge pass rate", f"{r['judge_pass_rate']:.0%}")
         st.dataframe(pd.DataFrame(r["rows"]), hide_index=True)
-        st.caption("LLM judge scores for replays were precomputed offline with Qwen2.5 3B (llama.cpp); "
-                   "compliance and accuracy always come from the rule checks.")
+        st.caption("Scores come from the rule checks. The LLM judge (Qwen2.5 3B via llama.cpp, precomputed offline for "
+                   f"replays) is advisory: it disagreed on {sum(bool(x['llm_disagrees']) for x in r['rows'])} calls, which go to human review.")
     with t2:
         ag = evaluation.agreement()
         st.dataframe(pd.DataFrame([{"dimension": k} | v for k, v in ag.items()]), hide_index=True)
@@ -307,6 +307,8 @@ def eval_page():
         if q:
             j = q[0]
             st.markdown(f"**{j['call_id']}** judge: {j['scores']} {j['rule_findings']}")
+            if j.get("llm"):
+                st.caption(f"LLM judge: {j['llm'].get('scores')} - {j['llm'].get('rationale')}")
             for t in j.get("transcript", []):
                 st.markdown(f"**{t['role']}**: {t['text']}")
             with st.form("rev"):

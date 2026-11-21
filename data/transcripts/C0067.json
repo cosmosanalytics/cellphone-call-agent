@@ -1,0 +1,153 @@
+{
+ "call_id": "C0067",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.5,
+   "end": 5.5,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.38,
+   "end": 11.32,
+   "text_raw": "Hi, my internet has been really slow lately. Is something wrong with my data?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Hi, my internet has been really slow lately. Is something wrong with my data?",
+   "act": "ask_data",
+   "text_redacted": "Hi, my internet has been really slow lately. Is something wrong with my data?"
+  },
+  {
+   "start": 12.58,
+   "end": 18.9,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?"
+  },
+  {
+   "start": 19.68,
+   "end": 24.22,
+   "text_raw": "It's 206 555 0137.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 206 555 0137.",
+   "act": "give_identity",
+   "text_redacted": "It's [PHONE]."
+  },
+  {
+   "start": 25.34,
+   "end": 28.34,
+   "text_raw": "Thanks. And your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4 digit account PIN?"
+  },
+  {
+   "start": 29.48,
+   "end": 31.44,
+   "text_raw": "It's 9557.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 9557.",
+   "act": "give_identity",
+   "text_redacted": "It's [PIN]."
+  },
+  {
+   "start": 32.24,
+   "end": 49.22,
+   "text_raw": "Thank you Jorge, you're verified. I see you're on Unlimited Starter. You've used 52 GB this cycle. You're past your priority data, so speeds are reduced until the cycle resets on December 1st. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you Jorge, you're verified. I see you're on Unlimited Starter. You've used 52 GB this cycle. You're past your priority data, so speeds are reduced until the cycle resets on December 1st. Is there anything else I can help you with today?",
+   "act": "answer_data",
+   "text_redacted": "Thank you [NAME], you're verified. I see you're on Unlimited Starter. You've used 52 GB this cycle. You're past your priority data, so speeds are reduced until the cycle resets on December 1st. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 50.44,
+   "end": 53.7,
+   "text_raw": "That's ridiculous. Nobody told me about that.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "That's ridiculous. Nobody told me about that.",
+   "act": "express_frustration",
+   "text_redacted": "That's ridiculous. Nobody told me about that."
+  },
+  {
+   "start": 54.64,
+   "end": 64.68,
+   "text_raw": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "act": "empathize",
+   "text_redacted": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 65.58,
+   "end": 67.38,
+   "text_raw": "No, that's all. Thank you.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's all. Thank you.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's all. Thank you."
+  },
+  {
+   "start": 68.42,
+   "end": 72.74,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNS",
+  "intent": "ask_data",
+  "verified": true,
+  "escalated": false,
+  "roaming": [],
+  "used": 52,
+  "throttled": true
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8822,
+  "terms_total": 4,
+  "terms_hit": 4,
+  "terms_hit_raw": 4,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 11,
+  "turns_hyp": 11,
+  "act_acc": 1.0
+ }
+}

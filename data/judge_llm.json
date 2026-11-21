@@ -1,0 +1,542 @@
+{
+ "R-C0090": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications, or when the caller asked for a person or to cancel.",
+  "seconds": 6.5,
+  "model": "qwen2.5"
+ },
+ "R-C0090+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications, or when the caller asked for a person or to cancel.",
+  "seconds": 6.5,
+  "model": "qwen2.5"
+ },
+ "R-C0091": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not fully answered as the account details were not verified and the caller did not ask for anything else.",
+  "seconds": 5.2,
+  "model": "qwen2.5"
+ },
+ "R-C0091+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not fully answered as the account details were not verified and the caller did not ask for anything else.",
+  "seconds": 5.2,
+  "model": "qwen2.5"
+ },
+ "R-C0092": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's request was not fully answered as the call was transferred to a billing specialist without providing the full credit for the extra charges.",
+  "seconds": 4.0,
+  "model": "qwen2.5"
+ },
+ "R-C0092+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's request was not fully answered as the call was transferred to a billing specialist without providing the full credit for the extra charges.",
+  "seconds": 4.0,
+  "model": "qwen2.5"
+ },
+ "R-C0093": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and verified, meeting the policy requirements.",
+  "seconds": 3.8,
+  "model": "qwen2.5"
+ },
+ "R-C0093+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and verified, meeting the policy requirements.",
+  "seconds": 3.8,
+  "model": "qwen2.5"
+ },
+ "R-C0094": {
+  "scores": {
+   "tone": 0,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not fully answered as the agent did not transfer the call to a specialist after the second failed verification and the caller did not ask for a specialist.",
+  "seconds": 5.1,
+  "model": "qwen2.5"
+ },
+ "R-C0094+learned": {
+  "scores": {
+   "tone": 0,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not fully answered as the agent did not transfer the call to a specialist after the second failed verification and the caller did not ask for a specialist.",
+  "seconds": 5.1,
+  "model": "qwen2.5"
+ },
+ "R-C0095": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's request was not fully answered as the account verification failed again and the caller was transferred to a specialist.",
+  "seconds": 4.1,
+  "model": "qwen2.5"
+ },
+ "R-C0095+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's request was not fully answered as the account verification failed again and the caller was transferred to a specialist.",
+  "seconds": 4.1,
+  "model": "qwen2.5"
+ },
+ "R-C0096": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications (since the caller provided only one phone number and PIN).",
+  "seconds": 4.9,
+  "model": "qwen2.5"
+ },
+ "R-C0096+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications (since the caller provided only one phone number and PIN).",
+  "seconds": 4.9,
+  "model": "qwen2.5"
+ },
+ "R-C0097": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to the next step per policy.",
+  "seconds": 3.6,
+  "model": "qwen2.5"
+ },
+ "R-C0097+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to the next step per policy.",
+  "seconds": 3.6,
+  "model": "qwen2.5"
+ },
+ "R-C0098": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications (none in this case).",
+  "seconds": 4.0,
+  "model": "qwen2.5"
+ },
+ "R-C0098+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications (none in this case).",
+  "seconds": 4.0,
+  "model": "qwen2.5"
+ },
+ "R-C0099": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications (none in this case).",
+  "seconds": 4.1,
+  "model": "qwen2.5"
+ },
+ "R-C0099+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications (none in this case).",
+  "seconds": 4.1,
+  "model": "qwen2.5"
+ },
+ "R-C0100": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's request was not fully answered as the account verification failed again and the agent did not transfer the call to a specialist as per policy.",
+  "seconds": 4.2,
+  "model": "qwen2.5"
+ },
+ "R-C0100+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's request was not fully answered as the account verification failed again and the agent did not transfer the call to a specialist as per policy.",
+  "seconds": 4.2,
+  "model": "qwen2.5"
+ },
+ "R-C0101": {
+  "scores": {
+   "tone": 0,
+   "outcome": 0
+  },
+  "rationale": "The caller's request was not fully answered as the agent was unable to verify the account and transferred the call without providing a resolution or alternative course of action.",
+  "seconds": 4.4,
+  "model": "qwen2.5"
+ },
+ "R-C0101+learned": {
+  "scores": {
+   "tone": 0,
+   "outcome": 0
+  },
+  "rationale": "The caller's request was not fully answered as the agent was unable to verify the account and transferred the call without providing a resolution or alternative course of action.",
+  "seconds": 4.4,
+  "model": "qwen2.5"
+ },
+ "R-C0102": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications.",
+  "seconds": 4.0,
+  "model": "qwen2.5"
+ },
+ "R-C0102+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications.",
+  "seconds": 4.0,
+  "model": "qwen2.5"
+ },
+ "R-C0103": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered, and the call was transferred to a specialist after two failed verifications (the caller did not provide the PIN).",
+  "seconds": 4.5,
+  "model": "qwen2.5"
+ },
+ "R-C0103+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered, and the call was transferred to a specialist after two failed verifications (the caller did not provide the PIN).",
+  "seconds": 4.5,
+  "model": "qwen2.5"
+ },
+ "R-C0104": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not fully answered as they were not eligible to upgrade yet and were not given a way to pay off the remaining balance.",
+  "seconds": 4.4,
+  "model": "qwen2.5"
+ },
+ "R-C0104+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not fully answered as they were not eligible to upgrade yet and were not given a way to pay off the remaining balance.",
+  "seconds": 4.4,
+  "model": "qwen2.5"
+ },
+ "R-C0105": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's request was not fully answered as the agent was unable to verify the account and transferred the call without providing an alternative solution.",
+  "seconds": 3.8,
+  "model": "qwen2.5"
+ },
+ "R-C0105+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's request was not fully answered as the agent was unable to verify the account and transferred the call without providing an alternative solution.",
+  "seconds": 3.8,
+  "model": "qwen2.5"
+ },
+ "R-C0106": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications, or when the caller asked for a person or to cancel.",
+  "seconds": 4.7,
+  "model": "qwen2.5"
+ },
+ "R-C0106+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications, or when the caller asked for a person or to cancel.",
+  "seconds": 4.7,
+  "model": "qwen2.5"
+ },
+ "R-C0107": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not fully answered as the agent could not credit the charge because it was not on the current bill.",
+  "seconds": 3.7,
+  "model": "qwen2.5"
+ },
+ "R-C0107+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not fully answered as the agent could not credit the charge because it was not on the current bill.",
+  "seconds": 3.7,
+  "model": "qwen2.5"
+ },
+ "R-C0108": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and verified, meeting the policy requirements.",
+  "seconds": 3.1,
+  "model": "qwen2.5"
+ },
+ "R-C0108+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and verified, meeting the policy requirements.",
+  "seconds": 3.1,
+  "model": "qwen2.5"
+ },
+ "R-C0109": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications (only one verification was attempted, but the caller provided the correct information).",
+  "seconds": 4.7,
+  "model": "qwen2.5"
+ },
+ "R-C0109+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications, or when the caller asked for a person or to cancel.",
+  "seconds": 3.4,
+  "model": "qwen2.5"
+ },
+ "R-C0110": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and verified, meeting the policy requirements.",
+  "seconds": 3.8,
+  "model": "qwen2.5"
+ },
+ "R-C0110+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and verified, meeting the policy requirements.",
+  "seconds": 3.8,
+  "model": "qwen2.5"
+ },
+ "R-C0111": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not answered as they were not eligible to upgrade and the agent did not transfer the call to a specialist as per the policy.",
+  "seconds": 4.6,
+  "model": "qwen2.5"
+ },
+ "R-C0111+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not answered as they were not eligible to upgrade and the agent did not transfer the call to a specialist as per the policy.",
+  "seconds": 4.6,
+  "model": "qwen2.5"
+ },
+ "R-C0112": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not fully answered as the account details were not verified and the caller did not ask for anything else.",
+  "seconds": 4.9,
+  "model": "qwen2.5"
+ },
+ "R-C0112+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not fully answered as the account details were not verified and the caller did not ask for anything else.",
+  "seconds": 4.9,
+  "model": "qwen2.5"
+ },
+ "R-C0113": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not fully answered as they asked for a specialist but did not specify who they wanted to speak with or if they wanted to cancel.",
+  "seconds": 4.3,
+  "model": "qwen2.5"
+ },
+ "R-C0113+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not fully answered as they asked for a specialist but did not specify who they wanted to speak with or if they wanted to cancel.",
+  "seconds": 4.3,
+  "model": "qwen2.5"
+ },
+ "R-C0114": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications (the caller provided the correct phone number and PIN).",
+  "seconds": 4.3,
+  "model": "qwen2.5"
+ },
+ "R-C0114+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications (the caller provided the correct phone number and PIN).",
+  "seconds": 4.3,
+  "model": "qwen2.5"
+ },
+ "R-C0115": {
+  "scores": {
+   "tone": 0,
+   "outcome": 0
+  },
+  "rationale": "The caller's request was not fully answered as the agent was unable to verify the account and transferred the call without providing an alternative solution.",
+  "seconds": 4.1,
+  "model": "qwen2.5"
+ },
+ "R-C0115+learned": {
+  "scores": {
+   "tone": 0,
+   "outcome": 0
+  },
+  "rationale": "The caller's request was not fully answered as the agent was unable to verify the account and transferred the call without providing an alternative solution.",
+  "seconds": 4.1,
+  "model": "qwen2.5"
+ },
+ "R-C0116": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not fully answered as they wanted to cancel their account or transfer to a specialist, which was not done according to the policy.",
+  "seconds": 4.9,
+  "model": "qwen2.5"
+ },
+ "R-C0116+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 0
+  },
+  "rationale": "The caller's question was not fully answered as they wanted to cancel their account or transfer to a specialist, which was not done according to the policy.",
+  "seconds": 4.9,
+  "model": "qwen2.5"
+ },
+ "R-C0117": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications (since the caller provided the correct PIN and number, no verification was needed).",
+  "seconds": 7.8,
+  "model": "qwen2.5"
+ },
+ "R-C0117+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications (since the caller provided the correct PIN and number, no verification was needed).",
+  "seconds": 7.8,
+  "model": "qwen2.5"
+ },
+ "R-C0118": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred per policy after two failed verifications.",
+  "seconds": 10.5,
+  "model": "qwen2.5"
+ },
+ "R-C0118+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred per policy after two failed verifications.",
+  "seconds": 10.5,
+  "model": "qwen2.5"
+ },
+ "R-C0119": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications, or when the caller asked for a person or to cancel.",
+  "seconds": 7.3,
+  "model": "qwen2.5"
+ },
+ "R-C0119+learned": {
+  "scores": {
+   "tone": 1,
+   "outcome": 1
+  },
+  "rationale": "The caller's question was answered and the call was transferred to a specialist after two failed verifications, or when the caller asked for a person or to cancel.",
+  "seconds": 5.9,
+  "model": "qwen2.5"
+ }
+}

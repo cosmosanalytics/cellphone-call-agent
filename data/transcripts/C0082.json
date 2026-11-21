@@ -1,0 +1,138 @@
+{
+ "call_id": "C0082",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.5,
+   "end": 5.54,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.44,
+   "end": 10.02,
+   "text_raw": "Hi, I'm traveling abroad soon and want to know what roaming will cost.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Hi, I'm traveling abroad soon and want to know what roaming will cost.",
+   "act": "ask_roaming",
+   "text_redacted": "Hi, I'm traveling abroad soon and want to know what roaming will cost."
+  },
+  {
+   "start": 10.9,
+   "end": 16.8,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?"
+  },
+  {
+   "start": 17.6,
+   "end": 24.06,
+   "text_raw": "The number is 646. 555-0167-PIN0510.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 646. 555-0167-PIN0510.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE]-[PIN]."
+  },
+  {
+   "start": 24.74,
+   "end": 33.08,
+   "text_raw": "Thank you, Daniel, you're verified. I see you're on Unlimited Plus. Which country are you traveling to and for how many days?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Daniel, you're verified. I see you're on Unlimited Plus. Which country are you traveling to and for how many days?",
+   "act": "verify_ok",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Unlimited Plus. Which country are you traveling to and for how many days?"
+  },
+  {
+   "start": 34.02,
+   "end": 35.38,
+   "text_raw": "I'm going to Brazil for four days.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'm going to Brazil for four days.",
+   "act": "ask_roaming",
+   "text_redacted": "I'm going to Brazil for four days."
+  },
+  {
+   "start": 36.2,
+   "end": 52.74,
+   "text_raw": "Roaming in Brazil isn't included on your plan. The Asia Pacific and South America day pass is $15 per day, so four days would be $60. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Roaming in Brazil isn't included on your plan. The Asia Pacific and South America day pass is $15 per day, so four days would be $60. It only charges on days you use your phone there. Is there anything else I can help you with today?",
+   "act": "answer_roaming",
+   "text_redacted": "Roaming in Brazil isn't included on your plan. The Asia Pacific and South America day pass is $15 per day, so four days would be $60. It only charges on days you use your phone there. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 53.78,
+   "end": 55.02,
+   "text_raw": "No, that's all. Thank you.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's all. Thank you.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's all. Thank you."
+  },
+  {
+   "start": 55.96,
+   "end": 60.1,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNP",
+  "intent": "ask_roaming",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "Brazil",
+    "zone": 3,
+    "included": false,
+    "src": "quote"
+   }
+  ]
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0136,
+  "wer_raw": 0.0136,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9212,
+  "terms_total": 6,
+  "terms_hit": 6,
+  "terms_hit_raw": 6,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 1.0
+ }
+}

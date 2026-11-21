@@ -1,0 +1,136 @@
+{
+ "call_id": "C0038",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.54,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.54,
+   "end": 9.22,
+   "text_raw": "Hi there, how much data do I have left?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Hi there, how much data do I have left?",
+   "act": "ask_data",
+   "text_redacted": "Hi there, how much data do I have left?"
+  },
+  {
+   "start": 10.04,
+   "end": 16.24,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?"
+  },
+  {
+   "start": 17.18,
+   "end": 24.04,
+   "text_raw": "The number is 617-555-0140 PIN5431.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "The number is 617-555-0140 PIN5431.",
+   "act": "give_identity",
+   "text_redacted": "The number is [PHONE] [PIN]."
+  },
+  {
+   "start": 25.06,
+   "end": 45.18,
+   "text_raw": "Thank you, Maria, you're verified. I see you're on Basic 5 GB. You've used 10 GB of your 5 GB this cycle, so 5 GB is billed as data overage at $10 per GB, $50 so far. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Maria, you're verified. I see you're on Basic 5 GB You've used 10 GB of your 5 GB this cycle, so 5 GB is billed as data overage at $10 per GB, $50 so far. Is there anything else I can help you with today?",
+   "act": "answer_data",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Basic 5 GB You've used 10 GB of your 5 GB this cycle, so 5 GB is billed as data overage at $10 per GB, $50 so far. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 46.3,
+   "end": 49.7,
+   "text_raw": "That's ridiculous. Nobody told me about that.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "That's ridiculous. Nobody told me about that.",
+   "act": "express_frustration",
+   "text_redacted": "That's ridiculous. Nobody told me about that."
+  },
+  {
+   "start": 50.56,
+   "end": 60.68,
+   "text_raw": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?",
+   "act": "empathize",
+   "text_redacted": "I completely understand your frustration, and I'm sorry for the trouble. If you'd like a specialist, just let me know. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 61.4,
+   "end": 63.86,
+   "text_raw": "Can I talk to a real person, please?",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Can I talk to a real person, please?",
+   "act": "request_human",
+   "text_redacted": "Can I talk to a real person, please?"
+  },
+  {
+   "start": 64.8,
+   "end": 69.72,
+   "text_raw": "Of course. I'm transferring you to a specialist now. Please hold.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Of course. I'm transferring you to a specialist now. Please hold.",
+   "act": "transfer_human",
+   "text_redacted": "Of course. I'm transferring you to a specialist now. Please hold."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_data",
+  "verified": true,
+  "escalated": true,
+  "roaming": []
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0128,
+  "wer_raw": 0.0128,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9204,
+  "terms_total": 5,
+  "terms_hit": 5,
+  "terms_hit_raw": 5,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 1.0
+ }
+}

@@ -1,0 +1,134 @@
+{
+ "call_id": "C0101",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.54,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.34,
+   "end": 8.8,
+   "text_raw": "I'd like a credit for the extra charges on my bill.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I'd like a credit for the extra charges on my bill.",
+   "act": "request_credit",
+   "text_redacted": "I'd like a credit for the extra charges on my bill."
+  },
+  {
+   "start": 9.92,
+   "end": 16.2,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your four digit account PIN?"
+  },
+  {
+   "start": 16.92,
+   "end": 22.42,
+   "text_raw": "Sure, it's 646. 555-0162 and my PIN is 0849.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 646. 555-0162 and my PIN is 0849.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE] and my [PIN]."
+  },
+  {
+   "start": 23.48,
+   "end": 31.1,
+   "text_raw": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your four digit account PIN again?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your four digit account PIN again?",
+   "act": "verify_fail",
+   "text_redacted": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your four digit account PIN again?"
+  },
+  {
+   "start": 32.02,
+   "end": 35.58,
+   "text_raw": "It's 646. 555-0162.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 646. 555-0162.",
+   "act": "give_identity",
+   "text_redacted": "It's [PHONE]."
+  },
+  {
+   "start": 36.56,
+   "end": 39.38,
+   "text_raw": "Thanks. And your four digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your four digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your four digit account PIN?"
+  },
+  {
+   "start": 40.48,
+   "end": 41.88,
+   "text_raw": "It's 0849.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 0849.",
+   "act": "give_identity",
+   "text_redacted": "It's [PIN]."
+  },
+  {
+   "start": 42.98,
+   "end": 50.48,
+   "text_raw": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold.",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold.",
+   "act": "transfer_human",
+   "text_redacted": "I'm sorry, I still couldn't verify the account. I'm transferring you to a specialist who can help. Please hold."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  }
+ ],
+ "features": {
+  "plan_id": null,
+  "intent": "request_credit",
+  "verified": false,
+  "escalated": true,
+  "roaming": []
+ },
+ "split": "heldout",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9331,
+  "terms_total": 2,
+  "terms_hit": 2,
+  "terms_hit_raw": 2,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 9,
+  "turns_hyp": 9,
+  "act_acc": 1.0
+ }
+}

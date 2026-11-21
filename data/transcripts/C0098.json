@@ -1,0 +1,116 @@
+{
+ "call_id": "C0098",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.5,
+   "end": 5.86,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.94,
+   "end": 10.18,
+   "text_raw": "I want to check how much data I've used this month.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "I want to check how much data I've used this month.",
+   "act": "ask_data",
+   "text_redacted": "I want to check how much data I've used this month."
+  },
+  {
+   "start": 11.4,
+   "end": 17.76,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 18.9,
+   "end": 26.68,
+   "text_raw": "Sure, it's 512-555-0155 and my PIN is 3968.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 512-555-0155 and my PIN is 3968.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE] and my [PIN]."
+  },
+  {
+   "start": 27.7,
+   "end": 44.2,
+   "text_raw": "Thank you, Marcus, you're verified. I see you're on Basic 5 GB. You've used 2 GB of your 5 GB this cycle, so you have 3 GB left until December 1st. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Marcus, you're verified. I see you're on Basic 5 GB You've used 2 GB of your 5 GB this cycle, so you have 3 GB left until December 1st. Is there anything else I can help you with today?",
+   "act": "answer_data",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Basic 5 GB You've used 2 GB of your 5 GB this cycle, so you have 3 GB left until December 1st. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 45.12,
+   "end": 47.02,
+   "text_raw": "No, that's all, thank you.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "No, that's all, thank you.",
+   "act": "thank_bye",
+   "text_redacted": "No, that's all, thank you."
+  },
+  {
+   "start": 48.0,
+   "end": 52.2,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day!",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day!",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day!"
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "ask_data",
+  "verified": true,
+  "escalated": false,
+  "roaming": []
+ },
+ "split": "heldout",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9074,
+  "terms_total": 3,
+  "terms_hit": 3,
+  "terms_hit_raw": 3,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

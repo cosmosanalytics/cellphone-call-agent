@@ -1,0 +1,117 @@
+{
+ "call_id": "C0049",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.52,
+   "end": 5.86,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.72,
+   "end": 11.42,
+   "text_raw": "Honestly, I'm pretty annoyed. Can you waive the data overage charge? I didn't realize I went over.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Honestly, I'm pretty annoyed. Can you waive the data overage charge? I didn't realize I went over.",
+   "act": "request_credit",
+   "text_redacted": "Honestly, I'm pretty annoyed. Can you waive the data overage charge? I didn't realize I went over."
+  },
+  {
+   "start": 12.52,
+   "end": 23.26,
+   "text_raw": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I completely understand your frustration, and I'm sorry for the trouble. I can help with that. First, can you give me the phone number on the account and your 4 digit account PIN?"
+  },
+  {
+   "start": 23.98,
+   "end": 27.38,
+   "text_raw": "It's 512. 555-0104.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 512. 555-0104.",
+   "act": "give_identity",
+   "text_redacted": "It's [PHONE]."
+  },
+  {
+   "start": 28.44,
+   "end": 31.22,
+   "text_raw": "Thanks. And your 4 digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4 digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4 digit account PIN?"
+  },
+  {
+   "start": 32.28,
+   "end": 34.26,
+   "text_raw": "My PIN is 7 0 8 0.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "My PIN is 7 0 8 0.",
+   "act": "give_identity",
+   "text_redacted": "My [PIN]."
+  },
+  {
+   "start": 35.26,
+   "end": 50.12,
+   "text_raw": "Thank you, Olivia, you're verified. I see you're on Basic 5 GB. That charge is $60.00. Which is above what I can credit on this call, so I'm transferring you to a billing specialist who can review it. Please hold.",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Olivia, you're verified. I see you're on Basic 5 GB That charge is $60.00. Which is above what I can credit on this call, so I'm transferring you to a billing specialist who can review it. Please hold.",
+   "act": "transfer_human",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Basic 5 GB That charge is $60.00. Which is above what I can credit on this call, so I'm transferring you to a billing specialist who can review it. Please hold."
+  }
+ ],
+ "term_fixes": [
+  {
+   "from": "5 GB.",
+   "to": "5 GB"
+  }
+ ],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "BAS",
+  "intent": "request_credit",
+  "verified": true,
+  "escalated": true,
+  "roaming": [],
+  "credit_approved": false
+ },
+ "split": "train",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0085,
+  "wer_raw": 0.0085,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.9365,
+  "terms_total": 5,
+  "terms_hit": 5,
+  "terms_hit_raw": 5,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 7,
+  "turns_hyp": 7,
+  "act_acc": 1.0
+ }
+}

@@ -1,0 +1,184 @@
+{
+ "call_id": "C0091",
+ "model": "small.en",
+ "turns": [
+  {
+   "start": 0.5,
+   "end": 5.66,
+   "text_raw": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?",
+   "act": "greeting",
+   "text_redacted": "Thanks for calling Northstar Wireless. This is Amy. How can I help you today?"
+  },
+  {
+   "start": 6.48,
+   "end": 9.14,
+   "text_raw": "Can you explain my bill? It's higher than usual.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Can you explain my bill? It's higher than usual.",
+   "act": "ask_bill",
+   "text_redacted": "Can you explain my bill? It's higher than usual."
+  },
+  {
+   "start": 9.9,
+   "end": 16.44,
+   "text_raw": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "I can help with that. First, can you give me the phone number on the account and your 4-digit account PIN?"
+  },
+  {
+   "start": 17.6,
+   "end": 21.8,
+   "text_raw": "Sure, it's 305-555-0150.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure, it's 305-555-0150.",
+   "act": "give_identity",
+   "text_redacted": "Sure, it's [PHONE]."
+  },
+  {
+   "start": 22.64,
+   "end": 25.6,
+   "text_raw": "Thanks. And your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4-digit account PIN?"
+  },
+  {
+   "start": 26.48,
+   "end": 28.04,
+   "text_raw": "It's 3770.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "It's 3770.",
+   "act": "give_identity",
+   "text_redacted": "It's [PIN]."
+  },
+  {
+   "start": 28.88,
+   "end": 36.98,
+   "text_raw": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4-digit account PIN again?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4-digit account PIN again?",
+   "act": "verify_fail",
+   "text_redacted": "I'm sorry, that doesn't match our records. Could you give me the phone number on the account and your 4-digit account PIN again?"
+  },
+  {
+   "start": 37.72,
+   "end": 41.78,
+   "text_raw": "Sure. It's 305-555-0150.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Sure. It's 305-555-0150.",
+   "act": "give_identity",
+   "text_redacted": "Sure. It's [PHONE]."
+  },
+  {
+   "start": 42.86,
+   "end": 45.8,
+   "text_raw": "Thanks. And your 4-digit account PIN?",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thanks. And your 4-digit account PIN?",
+   "act": "request_verification",
+   "text_redacted": "Thanks. And your 4-digit account PIN?"
+  },
+  {
+   "start": 47.02,
+   "end": 48.82,
+   "text_raw": "My PIN is 2659.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "My PIN is 2659.",
+   "act": "give_identity",
+   "text_redacted": "My [PIN]."
+  },
+  {
+   "start": 49.66,
+   "end": 76.1,
+   "text_raw": "Thank you, Priya, you're verified. I see you're on Unlimited Starter. Your current bill is $216.75. That's your Unlimited Starter plan at $55, the iPhone 16 installment of $35, taxes and fees of $6.75, plus roaming in India for 8 days at $120. Is there anything else I can help you with today?",
+   "role": "agent",
+   "role_textonly": "agent",
+   "text": "Thank you, Priya, you're verified. I see you're on Unlimited Starter. Your current bill is $216.75. That's your Unlimited Starter plan at $55, the iPhone 16 installment of $35, taxes and fees of $6.75, plus roaming in India for 8 days at $120. Is there anything else I can help you with today?",
+   "act": "answer_bill",
+   "text_redacted": "Thank you, [NAME], you're verified. I see you're on Unlimited Starter. Your current bill is $216.75. That's your Unlimited Starter plan at $55, the iPhone 16 installment of $35, taxes and fees of $6.75, plus roaming in India for 8 days at $120. Is there anything else I can help you with today?"
+  },
+  {
+   "start": 76.9,
+   "end": 78.7,
+   "text_raw": "Nope, that's everything, bye.",
+   "role": "caller",
+   "role_textonly": "caller",
+   "text": "Nope, that's everything, bye.",
+   "act": "thank_bye",
+   "text_redacted": "Nope, that's everything, bye."
+  },
+  {
+   "start": 79.84,
+   "end": 84.04,
+   "text_raw": "Thank you for calling Northstar Wireless. Have a great day.",
+   "role": "agent",
+   "role_textonly": "caller",
+   "text": "Thank you for calling Northstar Wireless. Have a great day.",
+   "act": "closing",
+   "text_redacted": "Thank you for calling Northstar Wireless. Have a great day."
+  }
+ ],
+ "term_fixes": [],
+ "redactions": [
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "PHONE"
+  },
+  {
+   "type": "PIN"
+  },
+  {
+   "type": "NAME"
+  }
+ ],
+ "features": {
+  "plan_id": "UNS",
+  "intent": "ask_bill",
+  "verified": true,
+  "escalated": false,
+  "roaming": [
+   {
+    "country": "India",
+    "zone": 3,
+    "included": false,
+    "src": "bill"
+   }
+  ]
+ },
+ "split": "heldout",
+ "source": "batch",
+ "eval": {
+  "wer": 0.0,
+  "wer_raw": 0.0,
+  "role_acc": 1.0,
+  "role_acc_textonly": 0.8605,
+  "terms_total": 8,
+  "terms_hit": 8,
+  "terms_hit_raw": 8,
+  "pii_total": 3,
+  "pii_leaked": 0,
+  "turns_truth": 13,
+  "turns_hyp": 13,
+  "act_acc": 1.0
+ }
+}
